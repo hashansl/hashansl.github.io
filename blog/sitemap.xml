@@ -2,17 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hashansl.github.io/blog/</loc>
-    <lastmod>2025-05-03T22:12:58-04:00</lastmod>
-  </url><url>
-    <loc>https://hashansl.github.io/blog/post/</loc>
-    <lastmod>2025-05-03T22:12:58-04:00</lastmod>
-  </url><url>
-    <loc>https://hashansl.github.io/blog/post/test_post/</loc>
-    <lastmod>2025-05-03T22:12:58-04:00</lastmod>
+    <loc>https://hashansl.github.io/blog/tags/bayesian/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hashansl.github.io/blog/categories/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/post/test_post/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/post/test_post_4/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/post/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/categories/research/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://hashansl.github.io/blog/tags/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/tags/tda/</loc>
+    <lastmod>2025-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/post/test_post_2/</loc>
+    <lastmod>2025-05-03T22:12:58-04:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/post/test_post_3/</loc>
+    <lastmod>2025-05-03T22:12:58-04:00</lastmod>
+  </url><url>
+    <loc>https://hashansl.github.io/blog/about/</loc>
   </url>
 </urlset>
