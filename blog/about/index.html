@@ -148,7 +148,7 @@ I&rsquo;m currently exploring:">
   <div class="row justify-content-center">
     <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
 
-      <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+      <nav  id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top p-0">
         <div class="container">
 
           
@@ -269,18 +269,20 @@ I&rsquo;m currently exploring:">
               
 
               
-              <h1 class="fw-semibold display-5 lh-1 mb-3"> 
+              <h1 class="fw-semibold display-5 lh-1 mb-3">
                 About
-                
+              </h1>
+            
+
+              
+
               </h1>
               
               
 
               
 
-              
-              
-              
+         
             </div>
           </div>
           
@@ -296,11 +298,56 @@ I&rsquo;m currently exploring:">
     
 <div class="container" role="main">
   <div class="row">
+    
+    <div class="col-12 mb-4">
+      <h1 class="post-title">About</h1>
+      
+
+      
+      
+    </div>
 
     
+    <div class="col-12 mb-4">
+      <div class="post-metadata">
+        <div class="author-info">
+          <span class="metadata-label">AUTHOR</span>
+          <span class="metadata-value">
+            
+              Author
+            
+          </span>
+        </div>
+        <div class="publish-info">
+          <span class="metadata-label">PUBLISHED</span>
+          <span class="metadata-value">January 1, 0001</span>
+        </div>
+      </div>
+    </div>
 
-    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 pt-4">
-      <article role="main" class="blog-post">
+    
+    <div class="col-lg-3 d-none d-lg-block">
+      <div class="toc-sidebar position-sticky" style="top: 100px;">
+        <h4>Table of contents</h4>
+        <nav id="TableOfContents">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#-hi-im-hashan">👋 Hi, I&rsquo;m Hashan</a>
+      <ul>
+        <li><a href="#-my-research-interests">🧪 My Research Interests</a></li>
+        <li><a href="#-what-im-learning">🌱 What I&rsquo;m Learning</a></li>
+        <li><a href="#-get-in-touch">📫 Get in Touch</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </nav>
+      </div>
+    </div>
+    
+    
+    <div class="col-md-9">
+      <article class="blog-post">
         <h1 id="-hi-im-hashan">👋 Hi, I&rsquo;m Hashan</h1>
 <p>I&rsquo;m a PhD candidate in Data Science &amp; Engineering at the University of Tennessee and a Research Assistant at Oak Ridge National Lab. My work focuses on applying <strong>topological data analysis</strong>, <strong>Bayesian modeling</strong>, and <strong>AI</strong> to real-world problems like the opioid epidemic.</p>
 <p>This blog is a place where I share:</p>
@@ -335,19 +382,176 @@ I&rsquo;m currently exploring:">
 </ul>
 
       </article>
+
+      
+      
+      
+      
+      
     </div>
   </div>
 
   
+  
+  
+
+  
+  
 </div>
 
-<div class="">
-  
-  
+<style>
+ 
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
 
-  
+.post-subtitle {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 1rem;
+}
 
-</div>
+.category-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.post-metadata {
+  display: flex;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+}
+
+.author-info, .publish-info {
+  margin-right: 2rem;
+}
+
+.metadata-label {
+  display: block;
+  text-transform: uppercase;
+  color: #666;
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.metadata-value {
+  color: #333;
+}
+
+.toc-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.toc-sidebar h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.toc-sidebar nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.toc-sidebar nav ul ul {
+  padding-left: 1rem;
+}
+
+.toc-sidebar nav a {
+  display: block;
+  padding: 0.25rem 0;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.toc-sidebar nav a:hover, .toc-sidebar nav a.active {
+  border-bottom-color: #333;
+}
+
+.blog-post {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.blog-post blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.blog-post pre {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 3px;
+  overflow-x: auto;
+}
+
+.blog-tags {
+  margin-top: 2rem;
+}
+
+.blog-tags a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 3px 8px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.blog-tags a:hover {
+  background-color: #e0e0e0;
+}
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.next-post {
+  margin-left: auto;
+}
+
+.prev-post a, .next-post a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ 
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+
+ 
+.blog-post p + p {
+  margin-top: 2rem;
+}
+
+ 
+.blog-post h2 {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+</style>
 
     
 
@@ -394,6 +598,27 @@ I&rsquo;m currently exploring:">
 </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
+    
+
+    
+    <script>
+      let prevScrollPos = window.pageYOffset;
+      const navbar = document.getElementById("navbar");
+    
+      window.addEventListener("scroll", () => {
+        const currentScrollPos = window.pageYOffset;
+    
+        if (prevScrollPos > currentScrollPos) {
+          
+          navbar.style.top = "0";
+        } else {
+          
+          navbar.style.top = "-80px"; 
+        }
+    
+        prevScrollPos = currentScrollPos;
+      });
+    </script>
     
   </body>
 </html>
