@@ -260,66 +260,72 @@
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    
-    <div class="col-12 mb-4">
-      <h1 class="post-title">Making Meaningful Models - 2</h1>
-      
 
-      
-      
-        <div class="post-categories">
-          
-            <span class="category-badge">Research</span>
-          
-        </div>
-      
-    </div>
+  
+  <div class="post-hero py-4 mb-5">
+    <div class="container">
+      <div class="row">
+        
+        
+          <div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        
 
-    
-    <div class="col-12 mb-4">
-      <div class="post-metadata">
-        <div class="author-info">
-          <span class="metadata-label">AUTHOR</span>
-          <span class="metadata-value">
+            <h1 class="post-title">Making Meaningful Models - 2</h1>
+
             
-              Hashan Fernando
+
             
-          </span>
-        </div>
-        <div class="publish-info">
-          <span class="metadata-label">PUBLISHED</span>
-          <span class="metadata-value">May 5, 2025</span>
-        </div>
+              <p class="post-description text-muted small mb-3">Exploring spatial TDA &#43; Bayesian models</p>
+            
+
+            
+              <div class="post-categories">
+                
+                  <span class="category-badge">Research</span>
+                
+              </div>
+            
+          </div>
       </div>
     </div>
+  </div>
 
-    
-    <div class="col-lg-3 d-none d-lg-block">
-      <div class="toc-sidebar position-sticky" style="top: 100px;">
-        <h4>Table of contents</h4>
-        <nav id="TableOfContents">
-          <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#motivation">Motivation</a></li>
-        <li><a href="#methods">Methods</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-        </nav>
-      </div>
-    </div>
-    
-    
-    <div class="col-md-9">
-      <article class="blog-post">
-        <h2 id="motivation">Motivation</h2>
+  
+  <div class="container" role="main">
+    <div class="row">
+
+      
+      
+        <div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 mb-4">
+      
+          <div class="post-metadata">
+            <div class="author-info">
+              <span class="metadata-label">AUTHOR</span>
+              <span class="metadata-value">
+                Hashan Fernando
+              </span>
+            </div>
+            <div class="publish-info">
+              <span class="metadata-label">PUBLISHED</span>
+              <span class="metadata-value">May 5, 2025</span>
+            </div>
+          </div>
+        </div>
+
+      
+      
+
+      
+      <div
+        id="postContent"
+        class="col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+        data-bs-spy="scroll"
+        data-bs-target="#TableOfContents"
+        data-bs-offset="100"
+        tabindex="0"
+      >
+        <article class="blog-post">
+          <h2 id="motivation">Motivation</h2>
 <p>In epidemiological modeling, we often rely on spatial covariates like poverty or unemployment. But even with rich data, <strong>unmeasured spatial factors</strong> continue to influence disease risk. Traditional models like the <strong>Besag-York-Mollié (BYM)</strong> framework attempt to capture these unknowns with structured random effects, but they don’t always tell us <em>why</em> certain patterns emerge.</p>
 <p>This post explores how <strong>Topological Data Analysis (TDA)</strong> can help us understand latent spatial structures and augment Bayesian disease models with geometric insight.</p>
 <hr>
@@ -354,203 +360,59 @@
 <hr>
 <p><em>Want to dive deeper? Feel free to reach out or check out the code on GitHub.</em></p>
 
-      </article>
+        </article>
 
-      
-      
-      <div class="blog-tags mt-4">
         
-        <a href="https://hashansl.github.io/blog/tags/tda/">TDA</a>
         
-        <a href="https://hashansl.github.io/blog/tags/bayesian/">Bayesian</a>
+          <div class="blog-tags mt-4">
+            
+              <a href="https://hashansl.github.io/blog/tags/tda/">TDA</a>
+            
+              <a href="https://hashansl.github.io/blog/tags/bayesian/">Bayesian</a>
+            
+          </div>
         
-      </div>
-      
-      
-      
-      
-      <div class="post-navigation mt-5">
+
         
-        <div class="prev-post">
-          <a href="https://hashansl.github.io/blog/post/test_post_2/" title="This is my first post about my blog!">
-            &larr; Previous Post
-          </a>
+        
+        <div class="post-navigation mt-5">
+          
+            <div class="prev-post">
+              <a href="https://hashansl.github.io/blog/post/test_post_2/" title="This is my first post about my blog!">&larr; Previous Post</a>
+            </div>
+          
+          
+            <div class="next-post">
+              <a href="https://hashansl.github.io/blog/post/test_post/" title="Making Meaningful Models">Next Post &rarr;</a>
+            </div>
+          
         </div>
         
+      </div> 
+    </div> 
 
-        
-        <div class="next-post">
-          <a href="https://hashansl.github.io/blog/post/test_post/" title="Making Meaningful Models">
-            Next Post &rarr;
-          </a>
-        </div>
-        
-      </div>
-      
-    </div>
-  </div>
+    
+    
+    
 
-  
-  
-  
+    
+    
+
+  </div> 
 
   
-  
-</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toc = document.getElementById('TableOfContents');
+      if (toc) {
+        new bootstrap.ScrollSpy(
+          document.getElementById('postContent'),
+          { target: '#TableOfContents', offset: 100 }
+        );
+      }
+    });
+  </script>
 
-<style>
- 
-.post-title {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  color: #333;
-}
-
-.post-subtitle {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.category-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.post-metadata {
-  display: flex;
-  margin-bottom: 2rem;
-  font-size: 0.85rem;
-}
-
-.author-info, .publish-info {
-  margin-right: 2rem;
-}
-
-.metadata-label {
-  display: block;
-  text-transform: uppercase;
-  color: #666;
-  font-size: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.metadata-value {
-  color: #333;
-}
-
-.toc-sidebar {
-  position: sticky;
-  top: 2rem;
-}
-
-.toc-sidebar h4 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.toc-sidebar nav ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.toc-sidebar nav ul ul {
-  padding-left: 1rem;
-}
-
-.toc-sidebar nav a {
-  display: block;
-  padding: 0.25rem 0;
-  color: #333;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.toc-sidebar nav a:hover, .toc-sidebar nav a.active {
-  border-bottom-color: #333;
-}
-
-.blog-post {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.blog-post blockquote {
-  border-left: 3px solid #ddd;
-  padding-left: 1rem;
-  font-style: italic;
-  color: #666;
-}
-
-.blog-post pre {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 3px;
-  overflow-x: auto;
-}
-
-.blog-tags {
-  margin-top: 2rem;
-}
-
-.blog-tags a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 3px 8px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  color: #666;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-.blog-tags a:hover {
-  background-color: #e0e0e0;
-}
-
-.post-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-}
-
-.next-post {
-  margin-left: auto;
-}
-
-.prev-post a, .next-post a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
- 
-.blog-post p {
-  margin-bottom: 1.5rem;
-}
-
- 
-.blog-post p + p {
-  margin-top: 2rem;
-}
-
- 
-.blog-post h2 {
-  font-size: 1.3rem;
-  font-style: italic;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-}
-</style>
 
     
 
@@ -586,7 +448,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; 
           
         </p>
       </div>

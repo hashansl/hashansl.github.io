@@ -260,240 +260,120 @@
 
 
     
-<div class="container" role="main">
-  <div class="row">
-    
-    <div class="col-12 mb-4">
-      <h1 class="post-title">This is my first post about my blog!</h1>
-      
 
-      
-      
-    </div>
+  
+  <div class="post-hero py-4 mb-5">
+    <div class="container">
+      <div class="row">
+        
+        
+          <div class="col-12 col-lg-9 offset-lg-3">
+        
 
-    
-    <div class="col-12 mb-4">
-      <div class="post-metadata">
-        <div class="author-info">
-          <span class="metadata-label">AUTHOR</span>
-          <span class="metadata-value">
+            <h1 class="post-title">This is my first post about my blog!</h1>
+
             
-              Author
+
             
-          </span>
-        </div>
-        <div class="publish-info">
-          <span class="metadata-label">PUBLISHED</span>
-          <span class="metadata-value">May 3, 2025</span>
-        </div>
-      </div>
-    </div>
 
-    
-    <div class="col-lg-3 d-none d-lg-block">
-      <div class="toc-sidebar position-sticky" style="top: 100px;">
-        <h4>Table of contents</h4>
-        <nav id="TableOfContents">
-          <nav id="TableOfContents"></nav>
-        </nav>
+            
+          </div>
       </div>
-    </div>
-    
-    
-    <div class="col-md-9">
-      <article class="blog-post">
-        <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">spatial</span><span class="o">-</span><span class="n">tda</span> 
-</span></span></code></pre></div>
-      </article>
-
-      
-      
-      
-      
-      
-      <div class="post-navigation mt-5">
-        
-        <div class="prev-post">
-          <a href="https://hashansl.github.io/blog/post/test_post_3/" title="This is my first post about my blog!">
-            &larr; Previous Post
-          </a>
-        </div>
-        
-
-        
-        <div class="next-post">
-          <a href="https://hashansl.github.io/blog/post/test_post_4/" title="Making Meaningful Models - 2">
-            Next Post &rarr;
-          </a>
-        </div>
-        
-      </div>
-      
     </div>
   </div>
 
   
-  
-  
+  <div class="container" role="main">
+    <div class="row">
+
+      
+      
+        <div class="col-12 col-lg-9 offset-lg-3 mb-4">
+      
+          <div class="post-metadata">
+            <div class="author-info">
+              <span class="metadata-label">AUTHOR</span>
+              <span class="metadata-value">
+                Author
+              </span>
+            </div>
+            <div class="publish-info">
+              <span class="metadata-label">PUBLISHED</span>
+              <span class="metadata-value">May 3, 2025</span>
+            </div>
+          </div>
+        </div>
+
+      
+      
+        <div class="col-lg-2 d-none d-lg-block">
+          <div class="toc-sidebar position-sticky" style="top: 100px;">
+            <h4 class="fw-normal fs-6 mb-2">Table of Contents</h4>
+            <nav id="TableOfContents">
+              <nav id="TableOfContents"></nav>
+            </nav>
+          </div>
+        </div>
+      
+
+      
+      <div
+        id="postContent"
+        class="col-md-9"
+        data-bs-spy="scroll"
+        data-bs-target="#TableOfContents"
+        data-bs-offset="100"
+        tabindex="0"
+      >
+        <article class="blog-post">
+          <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">spatial</span><span class="o">-</span><span class="n">tda</span> 
+</span></span></code></pre></div>
+        </article>
+
+        
+        
+
+        
+        
+        <div class="post-navigation mt-5">
+          
+            <div class="prev-post">
+              <a href="https://hashansl.github.io/blog/post/test_post_3/" title="This is my first post about my blog!">&larr; Previous Post</a>
+            </div>
+          
+          
+            <div class="next-post">
+              <a href="https://hashansl.github.io/blog/post/test_post_4/" title="Making Meaningful Models - 2">Next Post &rarr;</a>
+            </div>
+          
+        </div>
+        
+      </div> 
+    </div> 
+
+    
+    
+    
+
+    
+    
+
+  </div> 
 
   
-  
-</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toc = document.getElementById('TableOfContents');
+      if (toc) {
+        new bootstrap.ScrollSpy(
+          document.getElementById('postContent'),
+          { target: '#TableOfContents', offset: 100 }
+        );
+      }
+    });
+  </script>
 
-<style>
- 
-.post-title {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-  color: #333;
-}
-
-.post-subtitle {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.category-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-}
-
-.post-metadata {
-  display: flex;
-  margin-bottom: 2rem;
-  font-size: 0.85rem;
-}
-
-.author-info, .publish-info {
-  margin-right: 2rem;
-}
-
-.metadata-label {
-  display: block;
-  text-transform: uppercase;
-  color: #666;
-  font-size: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.metadata-value {
-  color: #333;
-}
-
-.toc-sidebar {
-  position: sticky;
-  top: 2rem;
-}
-
-.toc-sidebar h4 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.toc-sidebar nav ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.toc-sidebar nav ul ul {
-  padding-left: 1rem;
-}
-
-.toc-sidebar nav a {
-  display: block;
-  padding: 0.25rem 0;
-  color: #333;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-
-.toc-sidebar nav a:hover, .toc-sidebar nav a.active {
-  border-bottom-color: #333;
-}
-
-.blog-post {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.blog-post blockquote {
-  border-left: 3px solid #ddd;
-  padding-left: 1rem;
-  font-style: italic;
-  color: #666;
-}
-
-.blog-post pre {
-  background-color: #f8f8f8;
-  padding: 1rem;
-  border-radius: 3px;
-  overflow-x: auto;
-}
-
-.blog-tags {
-  margin-top: 2rem;
-}
-
-.blog-tags a {
-  display: inline-block;
-  margin-right: 0.5rem;
-  padding: 3px 8px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  color: #666;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-.blog-tags a:hover {
-  background-color: #e0e0e0;
-}
-
-.post-navigation {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-}
-
-.next-post {
-  margin-left: auto;
-}
-
-.prev-post a, .next-post a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
- 
-.blog-post p {
-  margin-bottom: 1.5rem;
-}
-
- 
-.blog-post p + p {
-  margin-top: 2rem;
-}
-
- 
-.blog-post h2 {
-  font-size: 1.3rem;
-  font-style: italic;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-}
-</style>
 
     
 
@@ -529,7 +409,7 @@
         </p>
         
         <p class="credits theme-by text-muted">
-          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; Made with ❤ by <a href="https://binovarghese.com">Bino</a>
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; 
           
         </p>
       </div>
