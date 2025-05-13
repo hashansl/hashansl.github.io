@@ -6,35 +6,14 @@
     <description>Recent content in Posts on Hashan&#39;s Data Science Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hashansl.github.io/blog/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Making Meaningful Models</title>
-      <link>https://hashansl.github.io/blog/post/test_post/</link>
-      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://hashansl.github.io/blog/post/test_post/</guid>
-      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;&#xA;&lt;p&gt;In epidemiological modeling, we often rely on spatial covariates like poverty or unemployment. But even with rich data, &lt;strong&gt;unmeasured spatial factors&lt;/strong&gt; continue to influence disease risk. Traditional models like the &lt;strong&gt;Besag-York-Mollié (BYM)&lt;/strong&gt; framework attempt to capture these unknowns with structured random effects, but they don’t always tell us &lt;em&gt;why&lt;/em&gt; certain patterns emerge.&lt;/p&gt;&#xA;&lt;p&gt;This post explores how &lt;strong&gt;Topological Data Analysis (TDA)&lt;/strong&gt; can help us understand latent spatial structures and augment Bayesian disease models with geometric insight.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Making Meaningful Models - 2</title>
-      <link>https://hashansl.github.io/blog/post/test_post_4/</link>
-      <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://hashansl.github.io/blog/post/test_post_4/</guid>
-      <description>&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;&#xA;&lt;p&gt;In epidemiological modeling, we often rely on spatial covariates like poverty or unemployment. But even with rich data, &lt;strong&gt;unmeasured spatial factors&lt;/strong&gt; continue to influence disease risk. Traditional models like the &lt;strong&gt;Besag-York-Mollié (BYM)&lt;/strong&gt; framework attempt to capture these unknowns with structured random effects, but they don’t always tell us &lt;em&gt;why&lt;/em&gt; certain patterns emerge.&lt;/p&gt;&#xA;&lt;p&gt;This post explores how &lt;strong&gt;Topological Data Analysis (TDA)&lt;/strong&gt; can help us understand latent spatial structures and augment Bayesian disease models with geometric insight.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>This is my first post about my blog!</title>
-      <link>https://hashansl.github.io/blog/post/test_post_2/</link>
-      <pubDate>Sat, 03 May 2025 22:12:58 -0400</pubDate>
-      <guid>https://hashansl.github.io/blog/post/test_post_2/</guid>
-      <description>This is a summary for the homepage preview.</description>
-    </item>
-    <item>
-      <title>This is my first post about my blog!</title>
-      <link>https://hashansl.github.io/blog/post/test_post_3/</link>
-      <pubDate>Sat, 03 May 2025 22:12:58 -0400</pubDate>
-      <guid>https://hashansl.github.io/blog/post/test_post_3/</guid>
-      <description>This is a summary for the homepage preview.</description>
+      <title>Welcome to My Second Brain!</title>
+      <link>https://hashansl.github.io/blog/post/myfirstpost/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://hashansl.github.io/blog/post/myfirstpost/</guid>
+      <description>&lt;p&gt;Over the past few years, I have been steadily working and growing in the field of data science! navigating its steep learning curves, celebrating small breakthroughs, and wrestling with the occasional late-night bug that just wouldn’t go away. But it wasn’t until a recent conversation with a Senior Data Scientist at Apple that something clicked.&lt;/p&gt;&#xA;&lt;p&gt;During our mentoring session, he casually mentioned that he is been keeping a blog to document his journey, sharing insights, reflecting on lessons learned, and even using it to connect with others in the field. That simple idea stuck with me. It felt like a nudge I didn’t know I needed.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
