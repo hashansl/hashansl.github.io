@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on Hashan&#39;s Data Science Blog</title>
+    <link>https://hashansl.github.io/blog/tags/algorithms/</link>
+    <description>Recent content in Algorithms on Hashan&#39;s Data Science Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hashansl.github.io/blog/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recursion</title>
+      <link>https://hashansl.github.io/blog/post/recursion/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://hashansl.github.io/blog/post/recursion/</guid>
+      <description>&lt;p&gt;As a student of Statistics and Data Science, I used to overlook certain topics in Data Structures and Algorithms. To be honest, I never really needed them in my research work, so I let myself believe they weren’t relevant. But as I started taking on different kinds of projects, especially ones involving coding challenges and system design, I realized I was missing something important.&lt;/p&gt;&#xA;&lt;p&gt;One of the concepts I struggled with the most was &lt;strong&gt;recursion&lt;/strong&gt;. It felt confusing and even a bit intimidating. I would look at recursive code and wonder, &lt;em&gt;Where does it end? How does it even work?&lt;/em&gt; So, I ignored it until I couldn’t anymore.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

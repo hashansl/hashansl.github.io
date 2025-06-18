@@ -6,8 +6,15 @@
     <description>Recent content on Hashan&#39;s Data Science Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://hashansl.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recursion</title>
+      <link>https://hashansl.github.io/blog/post/recursion/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://hashansl.github.io/blog/post/recursion/</guid>
+      <description>&lt;p&gt;As a student of Statistics and Data Science, I used to overlook certain topics in Data Structures and Algorithms. To be honest, I never really needed them in my research work, so I let myself believe they weren’t relevant. But as I started taking on different kinds of projects, especially ones involving coding challenges and system design, I realized I was missing something important.&lt;/p&gt;&#xA;&lt;p&gt;One of the concepts I struggled with the most was &lt;strong&gt;recursion&lt;/strong&gt;. It felt confusing and even a bit intimidating. I would look at recursive code and wonder, &lt;em&gt;Where does it end? How does it even work?&lt;/em&gt; So, I ignored it until I couldn’t anymore.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Welcome to My Second Brain!</title>
       <link>https://hashansl.github.io/blog/post/myfirstpost/</link>
@@ -20,7 +27,7 @@
       <link>https://hashansl.github.io/blog/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://hashansl.github.io/blog/about/</guid>
-      <description>&lt;h1 id=&#34;-hi-im-hashan&#34;&gt;👋 Hi, I&amp;rsquo;m Hashan&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a PhD candidate in Data Science &amp;amp; Engineering at the University of Tennessee and a Research Assistant at Oak Ridge National Lab. My work focuses on applying &lt;strong&gt;topological data analysis&lt;/strong&gt;, &lt;strong&gt;Bayesian modeling&lt;/strong&gt;, and &lt;strong&gt;AI&lt;/strong&gt; to real-world problems like the opioid epidemic.&lt;/p&gt;&#xA;&lt;p&gt;This blog is a place where I share:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Insights from my research&lt;/li&gt;&#xA;&lt;li&gt;Notes and summaries of technical topics&lt;/li&gt;&#xA;&lt;li&gt;Thoughts on data, science, and learning&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;my-research-interests&#34;&gt;My Research Interests&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Topological data analysis (TDA)&lt;/li&gt;&#xA;&lt;li&gt;Bayesian spatial modeling (BYM, MCMC)&lt;/li&gt;&#xA;&lt;li&gt;Natural Language Processing (NLP) in healthcare&lt;/li&gt;&#xA;&lt;li&gt;Computational epidemiology&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-im-learning&#34;&gt;What I&amp;rsquo;m Learning&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently exploring:&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hi-im-hashan&#34;&gt;Hi, I&amp;rsquo;m Hashan&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a PhD candidate in Data Science &amp;amp; Engineering at the University of Tennessee and a Research Assistant at Oak Ridge National Lab. My work focuses on applying &lt;strong&gt;topological data analysis&lt;/strong&gt;, &lt;strong&gt;Bayesian modeling&lt;/strong&gt;, and &lt;strong&gt;AI&lt;/strong&gt; to real-world problems like the opioid epidemic.&lt;/p&gt;&#xA;&lt;p&gt;This blog is a place where I share:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Insights from my research&lt;/li&gt;&#xA;&lt;li&gt;Notes and summaries of technical topics&lt;/li&gt;&#xA;&lt;li&gt;Thoughts on data, science, and learning&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;my-research-interests&#34;&gt;My Research Interests&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Topological data analysis (TDA)&lt;/li&gt;&#xA;&lt;li&gt;Bayesian spatial modeling (BYM, MCMC)&lt;/li&gt;&#xA;&lt;li&gt;Natural Language Processing (NLP) in healthcare&lt;/li&gt;&#xA;&lt;li&gt;Computational epidemiology&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-im-learning&#34;&gt;What I&amp;rsquo;m Learning&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m currently exploring:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

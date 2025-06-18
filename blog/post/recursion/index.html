@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Recursion - Hashan&#39;s Data Science Blog</title>
+<meta name="description" content="As with so many things in life, something that I used to think was really difficult and cumbersome turns out to be really easy if you just take the time to understand it.">
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Hashan\u0027s Data Science Blog",
+    
+    "url": "https:\/\/hashansl.github.io\/blog\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/hashansl.github.io\/blog\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/hashansl.github.io\/blog\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/hashansl.github.io\/blog\/post\/recursion\/",
+          "name": "Recursion"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Recursion",
+  "description" : "As with so many things in life, something that I used to think was really difficult and cumbersome turns out to be really easy if you just take the time to understand it.",
+  "inLanguage" : "en",
+  "wordCount":  836 ,
+  "datePublished" : "2025-06-18T00:00:00",
+  "dateModified" : "2025-06-18T00:00:00",
+  "image" : "https:\/\/hashansl.github.io\/blog\/",
+  "keywords" : [ "Algorithms, DSA" ],
+  "mainEntityOfPage" : "https:\/\/hashansl.github.io\/blog\/post\/recursion\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/hashansl.github.io\/blog\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/hashansl.github.io\/blog\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Recursion" />
+<meta property="og:description" content="As with so many things in life, something that I used to think was really difficult and cumbersome turns out to be really easy if you just take the time to understand it.">
+<meta property="og:image" content="https://hashansl.github.io/blog/card-img.jpg" />
+<meta property="og:url" content="https://hashansl.github.io/blog/post/recursion/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hashan&#39;s Data Science Blog" />
+
+
+<link rel="icon" type="image/png"  href="https://hashansl.github.io/blog/favicon/logo.png">
+
+
+<meta name="generator" content="Hugo 0.147.1">
+<link rel="alternate" href="https://hashansl.github.io/blog/index.xml" type="application/rss+xml" title="Hashan&#39;s Data Science Blog">
+<script src="https://hashansl.github.io/blog/js/dark-mode.js"></script><link rel="stylesheet" href="/blog/style.min.css">
+
+
+
+
+
+
+
+ 
+
+<link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+<script  src="https://hashansl.github.io/blog/vendor/glightbox/js/glightbox.min.js"></script>
+ 
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav  id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/blog/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/blog/about"> About</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Posts"
+                  href="/blog/post"> Posts</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/blog/tags"> Tags</a>
+              </li>
+
+              
+              
+
+
+                
+            
+
+            
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              
+            </ul>
+
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="post-heading">
+              
+
+              
+
+              
+
+              
+
+              
+              
+
+              
+
+         
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+
+  
+  <div class="post-hero py-4 mb-5">
+    <div class="container">
+      <div class="row">
+        
+        
+          <div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        
+
+            <h1 class="post-title">Recursion</h1>
+
+            
+
+            
+              <p class="post-description text-muted small mb-3">As with so many things in life, something that I used to think was really difficult and cumbersome turns out to be really easy if you just take the time to understand it.</p>
+            
+
+            
+              <div class="post-categories">
+                
+                  <span class="category-badge">DSA</span>
+                
+              </div>
+            
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="container" role="main">
+    <div class="row">
+
+      
+      
+        <div class="col-12 col-lg-8 offset-lg-2 col-md-10 offset-md-1 mb-4">
+      
+          <div class="post-metadata">
+            <div class="author-info">
+              <span class="metadata-label">AUTHOR</span>
+              <span class="metadata-value">
+                Hashan Fernando
+              </span>
+            </div>
+            <div class="publish-info">
+              <span class="metadata-label">PUBLISHED</span>
+              <span class="metadata-value">June 18, 2025</span>
+            </div>
+          </div>
+        </div>
+
+      
+      
+
+      
+      <div
+        id="postContent"
+        class="col-lg-8 offset-lg-2 col-md-10 offset-md-1"
+        data-bs-spy="scroll"
+        data-bs-target="#TableOfContents"
+        data-bs-offset="100"
+        tabindex="0"
+      >
+        <article class="blog-post">
+          <p>As a student of Statistics and Data Science, I used to overlook certain topics in Data Structures and Algorithms. To be honest, I never really needed them in my research work, so I let myself believe they weren’t relevant. But as I started taking on different kinds of projects, especially ones involving coding challenges and system design, I realized I was missing something important.</p>
+<p>One of the concepts I struggled with the most was <strong>recursion</strong>. It felt confusing and even a bit intimidating. I would look at recursive code and wonder, <em>Where does it end? How does it even work?</em> So, I ignored it until I couldn’t anymore.</p>
+<p>Eventually, I decided to face it head-on. And when I did, I felt kind of silly… because it wasn’t as complicated as I had built it up to be.</p>
+<hr>
+<h2 id="where-it-went-wrong">Where It Went Wrong</h2>
+<p>The part that always tripped me up was understanding what happens after a function calls itself. I couldn’t wrap my head around the idea that the code <em>after</em> the recursive call still gets executed—<em>but only after</em> the function starts returning.</p>
+<p>Back then, I had this image in my mind that recursion just keeps going deeper and deeper, never to return. So I gave up. But what I didn’t grasp was the power of the <strong>base case</strong>—that small but crucial condition that stops the recursion from going on forever.</p>
+<p>Once I truly understood that each recursive call pauses and stacks up, waiting for the one below it to finish, it clicked. Everything after the recursive call <em>does</em> run—just in reverse order as the call stack unwinds. It was like watching a row of dominoes fall… and then suddenly realizing they were being picked up in reverse.</p>
+<hr>
+<h2 id="base-case">Base case</h2>
+<p>Recursion function needs to have a base case, otherwise it will keep calling itself and never return. The base case is the condition that stops the recursion. For example, in the following code, the base case is when <code>n</code> is equal to 0,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>  <span class="c1"># Base case</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Recursive case</span>
+</span></span></code></pre></div><p>In this example, the function <code>factorial</code> calculates the factorial of a number <code>n</code>. If <code>n</code> is 0, it returns 1 (the base case). Otherwise, it multiplies <code>n</code> by the factorial of <code>n - 1</code>, which is the recursive case.</p>
+<h2 id="stack-frames">Stack frames</h2>
+<p>When a recursive function is called, it creates a new stack frame for each call. The stack is a data structure that stores the function calls in a last-in-first-out (LIFO) order. Each time the function calls itself, a new stack frame is created, and when the function returns, the stack frame is removed from the stack.</p>
+<p>To understand this better, let&rsquo;s look at the example of calculating the factorial of a number using recursion. When you call <code>factorial(3)</code>, the following happens,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factorial</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Call 1</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>  <span class="c1"># Base case</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Recursive case</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factorial</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Call 2</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>  <span class="c1"># Base case</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Recursive case</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Call 3</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>  <span class="c1"># Base case</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Recursive case</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Call 4</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">1</span>  <span class="c1"># Base case</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Recursive case</span>
+</span></span></code></pre></div><p>In this example, the function <code>factorial</code> is called four times. Each call creates a new stack frame. The first call is <code>factorial(3)</code>, which checks if <code>n</code> is 0. Since it is not, it calls <code>factorial(2)</code>. This process continues until it reaches the base case, <code>factorial(0)</code>, which returns 1.
+After reaching the base case, the function starts returning back through the stack frames. The return value of <code>factorial(0)</code> is 1, which is then used to calculate <code>factorial(1)</code>, and so on, until it finally returns the result for <code>factorial(3)</code>.</p>
+<p>This is how recursion works. Each time the function calls itself, it creates a new stack frame, and when it reaches the base case, it starts returning back through the stack frames until it reaches the original call.</p>
+<p>It is also important to understand that recursion can lead to stack overflow if the recursion depth is too high. This happens when the function calls itself too many times without reaching the base case.</p>
+<p><img src="card-img.jpg" alt="Recursion illustration">
+<em>Figure: A visual metaphor for recursion: like a robot entering a spaceship again and again.</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Silly thing I understood is code after the recursive call runs only after the function starts returning! Also all the stack functions will be executed in reverse order! The first function call will be the last one to return! This solved my confusion about recursion and made it much easier to understand.</p>
+<p>I hope this post helps you understand recursion better. It’s not as scary as it seems once you get the hang of it. Just remember to always define a base case, and you’ll be on your way to mastering this powerful technique.</p>
+
+        </article>
+
+        
+        
+          <div class="blog-tags mt-4">
+            
+              <a href="https://hashansl.github.io/blog/tags/algorithms/">Algorithms</a>
+            
+              <a href="https://hashansl.github.io/blog/tags/dsa/">DSA</a>
+            
+          </div>
+        
+
+        
+        
+        <div class="post-navigation mt-5">
+          
+            <div class="prev-post">
+              <a href="https://hashansl.github.io/blog/post/myfirstpost/" title="Welcome to My Second Brain!">&larr; Previous Post</a>
+            </div>
+          
+          
+        </div>
+        
+      </div> 
+    </div> 
+
+    
+    
+    
+
+    
+    
+
+  </div> 
+
+  
+  <script>
+    window.addEventListener('load', function () {
+      var toc = document.getElementById('TableOfContents');
+      if (toc) {
+        new bootstrap.ScrollSpy(
+          document.getElementById('postContent'),
+          { target: '#TableOfContents', offset: 100 }
+        );
+      }
+    });
+  </script>
+
+   
+   <script>
+    window.addEventListener('pageshow', function (e) {
+      
+      if (e.persisted || (performance.navigation && performance.navigation.type === 2)) {
+        window.scrollTo(0, 0);
+      }
+    });
+  </script>
+  
+
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2025
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="https://hashansl.github.io/blog/">Hashan&#39;s Data Science Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; 
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    
+
+    
+    <script>
+      let prevScrollPos = window.pageYOffset;
+      const navbar = document.getElementById("navbar");
+    
+      window.addEventListener("scroll", () => {
+        const currentScrollPos = window.pageYOffset;
+    
+        if (prevScrollPos > currentScrollPos) {
+          
+          navbar.style.top = "0";
+        } else {
+          
+          navbar.style.top = "-80px"; 
+        }
+    
+        prevScrollPos = currentScrollPos;
+      });
+    </script>
+    
+  </body>
+</html>
+
