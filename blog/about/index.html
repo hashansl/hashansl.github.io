@@ -141,6 +141,22 @@ I&rsquo;m currently exploring:">
 
 <script  src="https://hashansl.github.io/blog/vendor/glightbox/js/glightbox.min.js"></script>
  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$',  right: '$',  display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError: false
+            });"></script>
+    
   </head>
   <body>
     
@@ -401,22 +417,11 @@ I&rsquo;m currently exploring:">
     <script>
       let prevScrollPos = window.pageYOffset;
       const navbar = document.getElementById("navbar");
-    
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
-    
-        if (prevScrollPos > currentScrollPos) {
-          
-          navbar.style.top = "0";
-        } else {
-          
-          navbar.style.top = "-80px"; 
-        }
-    
+        navbar.style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
         prevScrollPos = currentScrollPos;
       });
     </script>
-    
   </body>
 </html>
-

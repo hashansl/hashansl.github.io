@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Linear Algebra: 1 - Hashan&#39;s Data Science Blog</title>
+<meta name="description" content="Let&#39;s dive into basics!">
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Hashan\u0027s Data Science Blog",
+    
+    "url": "https:\/\/hashansl.github.io\/blog\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/hashansl.github.io\/blog\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/hashansl.github.io\/blog\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/hashansl.github.io\/blog\/post\/linearalgebra-1\/",
+          "name": "Linear algebra 1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Linear Algebra: 1",
+  "description" : "Let\u0027s dive into basics!",
+  "inLanguage" : "en",
+  "wordCount":  1752 ,
+  "datePublished" : "2025-10-14T00:00:00",
+  "dateModified" : "2025-10-14T00:00:00",
+  "image" : "https:\/\/hashansl.github.io\/blog\/",
+  "keywords" : [ "Math" ],
+  "mainEntityOfPage" : "https:\/\/hashansl.github.io\/blog\/post\/linearalgebra-1\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/hashansl.github.io\/blog\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/hashansl.github.io\/blog\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Linear Algebra: 1" />
+<meta property="og:description" content="Let&#39;s dive into basics!">
+<meta property="og:image" content="https://hashansl.github.io/blog/card-img.jpg" />
+<meta property="og:url" content="https://hashansl.github.io/blog/post/linearalgebra-1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Hashan&#39;s Data Science Blog" />
+
+
+<link rel="icon" type="image/png"  href="https://hashansl.github.io/blog/favicon/logo.png">
+
+
+<meta name="generator" content="Hugo 0.147.1">
+<link rel="alternate" href="https://hashansl.github.io/blog/index.xml" type="application/rss+xml" title="Hashan&#39;s Data Science Blog">
+<script src="https://hashansl.github.io/blog/js/dark-mode.js"></script><link rel="stylesheet" href="/blog/style.min.css">
+
+
+
+
+
+
+
+ 
+
+<link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+<script  src="https://hashansl.github.io/blog/vendor/glightbox/js/glightbox.min.js"></script>
+ 
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$',  right: '$',  display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError: false
+            });"></script>
+    
+  </head>
+  <body>
+    
+<div class="container fixed-top mw-100">
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+
+      <nav  id="navbar" class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+        <div class="container">
+
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-baseline">
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Home"
+                  href="/blog/"> Home</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="About"
+                  href="/blog/about"> About</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Posts"
+                  href="/blog/post"> Posts</a>
+              </li>
+
+              
+              
+              
+
+              <li class="nav-item">
+                
+                
+                
+                
+                
+
+                <a class="nav-link " title="Tags"
+                  href="/blog/tags"> Tags</a>
+              </li>
+
+              
+              
+
+
+                
+            
+
+            
+              <li class="nav-item nav-link">
+                <a id="dark-mode-toggle" class="bi bi-moon-stars" role="button"></a>
+              </li>
+
+              
+              
+            </ul>
+
+            
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+<header class="header-section ">
+
+  <div class="intro-header no-img mt-10">
+    <div class="container">
+      <div class="row justify-content-center">
+        
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          
+
+          
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            
+
+            <div class="post-heading">
+              
+
+              
+
+              
+
+              
+
+              
+              
+
+              
+
+         
+            </div>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</header>
+
+
+
+    
+
+  
+  <div class="post-hero py-4 mb-5">
+    <div class="container">
+      <div class="row">
+        
+        
+          <div class="col-12 col-lg-9 offset-lg-3">
+        
+
+            <h1 class="post-title">Linear Algebra: 1</h1>
+
+            
+
+            
+              <p class="post-description text-muted small mb-3">Let&#39;s dive into basics!</p>
+            
+
+            
+              <div class="post-categories">
+                
+                  <span class="category-badge">IMPROVEMENTS</span>
+                
+              </div>
+            
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="container" role="main">
+    <div class="row">
+
+      
+      
+        <div class="col-12 col-lg-9 offset-lg-3 mb-4">
+      
+          <div class="post-metadata">
+            <div class="author-info">
+              <span class="metadata-label">AUTHOR</span>
+              <span class="metadata-value">
+                Hashan Fernando
+              </span>
+            </div>
+            <div class="publish-info">
+              <span class="metadata-label">PUBLISHED</span>
+              <span class="metadata-value">October 14, 2025</span>
+            </div>
+          </div>
+        </div>
+
+      
+      
+        <div class="col-lg-2 d-none d-lg-block">
+          <div class="toc-sidebar position-sticky" style="top: 100px;">
+            <h4 class="fw-normal fs-6 mb-2">Table of Contents</h4>
+            <nav id="TableOfContents">
+              <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#linear-algebra">Linear Algebra</a></li>
+        <li><a href="#linearity">Linearity</a></li>
+        <li><a href="#why-linear-transformations-change-of-basis-is-important">Why linear transformations, change of basis is important?</a></li>
+        <li><a href="#what-is-linear-combinations-span-and-basis-vectors">What is Linear combinations, span, and basis vectors?</a></li>
+        <li><a href="#how-to-think-about-coordinate-systems">How to think about coordinate systems?</a></li>
+        <li><a href="#standard-coordinate-system">Standard coordinate system</a></li>
+        <li><a href="#basis">Basis</a></li>
+        <li><a href="#linear-combinations">Linear combinations</a></li>
+        <li><a href="#span">Span</a></li>
+        <li><a href="#vectors-and-points">Vectors and points</a></li>
+        <li><a href="#linearly-dependent">Linearly dependent</a></li>
+        <li><a href="#linearly-independent">Linearly independent</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </nav>
+          </div>
+        </div>
+      
+
+      
+      <div
+        id="postContent"
+        class="col-md-9"
+        data-bs-spy="scroll"
+        data-bs-target="#TableOfContents"
+        data-bs-offset="100"
+        tabindex="0"
+      >
+        <article class="blog-post">
+          <h2 id="linear-algebra">Linear Algebra</h2>
+<p>I think, most of us those who studied know when to use linear algebra, and when to use matrices and vectors. But do we actually understand what happening underneath the hood?</p>
+<p>Recently, I started to write. Mainly because my writing is bad, and I am having an sense of urgency to improve it. While doing this, I started to understand the value of writing. This is my take on linear algebra basics,  not all but things that required. If you want a high level picture, I highly recommend 3Blue1Brown’s <a href="https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab&amp;si=RRPEX1vV0uRBu6ch">Essence of Linear Algebra series</a>.</p>
+<p>When we learn linear algebra for the first time, we might not grasp the intuitive concept clearly. This is because there are a lot of definitions and unfamiliar symbols, and we surely know how to use them, but we don&rsquo;t know the reason behind them. We should study the linear algebra backwards, usually we learn linear algebra this way:</p>
+<ol>
+<li><strong>Vectors and matrices</strong></li>
+<li><strong>How to use vectors/matrices:</strong> matrix–vector products, matrix multiplication, determinants, etc.</li>
+<li><strong>More use cases:</strong> projections, various kinds of decompositions</li>
+<li><strong>Null spaces, bases, dimensions, kernels, etc.</strong></li>
+<li><strong>Eigenvalues and eigenvectors</strong></li>
+<li><strong>Finally, we talk about <em>linear transformations</em>!</strong></li>
+</ol>
+<p>This way of learning is not going to give us intuitive  understanding. Linear transformations helps us to understand the math behind vectors, matrices and vector- matrix product and all. Knowing how to play with these concepts are important, but it is more important to understand the concepts rather than trying to remember it. We will start to learn in this order:</p>
+<ol>
+<li><strong>Linearity and linear transformations</strong></li>
+<li><strong>Concepts of a basis, vector, and matrix</strong></li>
+<li><strong>Matrix multiplication, eigenvalues, and eigenvectors</strong></li>
+<li><strong>Rest of linear algebra</strong></li>
+</ol>
+<p>I am not sure how long it will take me to cover this, but I am going to do it. In this post, I am only going to discuss up-to matrix multiplications.</p>
+<h2 id="linearity">Linearity</h2>
+<p><strong>Linear algebra is the study of linear transformations!</strong> A function is linear if it has these properties:</p>
+<ul>
+<li><strong>Homogeneity (scaling):</strong> $$f(ax) = af(x)$$</li>
+<li><strong>Additivity:</strong> $$ f(x_1 + x_2) = f(x_1) + f(x_2)$$</li>
+</ul>
+<p>In words: Scaling the input by a scales the output by a. Adding two input produces same output as applying each input individually and adding the two separate outputs.</p>
+<p>If we have two related physical properties, for example the speed you can run and the distance you can run. If you double your speed, you will double your distance. If you triple your speed, you triple your distance. This is called a <em>linear</em> relationship. The term <em>linearity</em> refers to the property of <em>scaling</em>.</p>
+<p>The term &ldquo;linear&rdquo; in everyday use describes something resembling a line ( Latin word <em>linearis</em> is “made of lines”).. Also, in high school mathematics, the word linear is used to describe a straight line (Geometry, a line), $y = ax+b$. This use of the term linear is not what we are talking about here. A function like this does not satisfy above properties. So the difference is that in linear algebra, <em>linear</em> refers to transformations that pass through the origin and preserve the structure of vector addition and scaling, not just to shapes that look like straight lines.</p>
+<p>What do I mean by  “passing through the origin”? In linear algebra, the <strong>origin</strong> corresponds to the <strong>zero vector</strong>. A <em>linear transformation</em> T must satisfy:</p>
+<p>$$
+T(0) = 0
+$$</p>
+<p>This comes directly from the scaling property:</p>
+<p>$$
+T(cx) = cT(x)
+$$</p>
+<p>If you set <code>c=0</code>, you get <code>T(0)=0</code>.</p>
+<p>In linear transformations, transformation must send the origin to the origin. Mathematically, any map that doesn’t send zero to zero breaks the linear rule. Also, linear transformations are supposed to stretch, rotate, or flip vectors, <strong>but never shift them somewhere else!</strong></p>
+<h2 id="why-linear-transformations-change-of-basis-is-important">Why linear transformations, change of basis is important?</h2>
+<p>Answering this would get us into the heart of the linear algebra. Linear transformations are everywhere because they are the building blocks of complex transformations. In linear transformations, change of basis means we are changing the coordinate system that &ldquo;fits: the problem structure. Then the interpretation becomes easier. Let&rsquo;s take couple of examples that use linear transformations:</p>
+<ul>
+<li>Physics and engineering</li>
+<li>Signal processing and Fourier transform</li>
+<li>Robotics and navigation</li>
+<li>Statistics (regression)</li>
+<li>Machine learning</li>
+<li>Data science (PCA — Principal Component Analysis)</li>
+<li>Computer graphics</li>
+</ul>
+<p>Since we are focusing on AI/ML let&rsquo;s dive into use cases of them. Computer games that we are playing requires computer graphics. In computer graphics, the whole rendering pipeline is metrics/vector multiplication. In here linear transformations are used to rotate objects, resize objects, flatten objects. Also in computer vision, every photo is a matrix of pixel values. when we rotate,flip, or resize images for data augmentations, we are applying linear transformations. Also, an important problem in the field of computer vision is &ldquo;Edge detection&rdquo;. This uses linear transformations and calculus. In the edge detection, linear transformation transforms images into new representation where edges are highlighted.</p>
+<p>We use PCA for dimensionality reduction (I will explain this in a separate blog). PCA finds new coordinate system that best explains the variation in the data. It doesn&rsquo;t change the data, it changes our perspective.</p>
+<p>Neural networks are set of transformation chains! Each layer in neural network is a linear transformation (Wx), followed by an activation function. Each layer&rsquo;s weight matrix ($W^l$) learns how to define a new coordinate system. So that it easier for the network to separate outcomes! That means loss is low! Crazy right?</p>
+<p>You can find more examples with math here (<a href="https://understandinglinearalgebra.org/sec-bases.html">https://understandinglinearalgebra.org/sec-bases.html</a>)</p>
+<h2 id="what-is-linear-combinations-span-and-basis-vectors">What is Linear combinations, span, and basis vectors?</h2>
+<p>Basis is singular, bases is plural. Read about <a href="https://www.3blue1brown.com/lessons/vectors">vectors here</a>.</p>
+<h2 id="how-to-think-about-coordinate-systems">How to think about coordinate systems?</h2>
+<p>To main perspectives of linear algebra happens in coordinate systems. Therefore it is important to have a solid understanding. If we focus on two dimensions, you have a horizontal line (x-axis), and a vertical line (y-axis). The place where they intersect called the origin. Think it as center of the space. After choosing <strong>arbitrary</strong> length to represent length of 1, you make tick marks on each axis spaced out by this distance,</p>
+<ul>
+<li>Coordinates of a vector are a pair of numbers that give instructions on how to get from the tail of the vector (at the origin) to its tip.</li>
+<li>It is conventional to write this pair of numbers vertically, using square brackets, to distinguish vectors from points.</li>
+</ul>
+<p><img src="images/CoordinateSystemTickMarks.svg" alt="Coordinate system"></p>
+<h2 id="standard-coordinate-system">Standard coordinate system</h2>
+<p>When we say <em>standard (or xy) coordinate system</em> in $\mathbb{R}^2$, we mean:</p>
+<ul>
+<li>
+<p>There is a horizontal axis (x) and a vertical axis (y).</p>
+</li>
+<li>
+<p>The two axes intersect at the origin ((0, 0)).</p>
+</li>
+<li>
+<p>Every point in the plane (think of it like a sheet of paper) can be described by how far you move along the (x)-axis and the (y)-axis.</p>
+</li>
+<li>
+<p>All of the above are common to many coordinate systems, but what makes this the <strong>standard coordinate system</strong> is <strong>the choice of basis</strong>, and the fact that the axes are perpendicular.</p>
+<ul>
+<li>A unit vector in the (x)-direction:</li>
+</ul>
+<p>$$
+\hat{i} = \begin{bmatrix}
+1 \
+0
+\end{bmatrix}
+$$</p>
+<ul>
+<li>A unit vector in the (y)-direction:</li>
+</ul>
+<p>$$
+\hat{j} = \begin{bmatrix}
+0 \
+1
+\end{bmatrix}
+$$</p>
+<ul>
+<li><a href="https://www.underleaf.ai/learn/latex/vectors">Notations and best practice</a></li>
+</ul>
+</li>
+</ul>
+<p>x coordinates scales $\hat{i} $, and y coordinates scales $\hat{j} $. A vector of these coordinate describes a sum of two scaled  vectors. If we choose a different basis vectors, we get completely different coordinate system. Anytime we describe vectors numerically, it depends on an implicit choice of what basis vectors are we choosing.</p>
+<h2 id="basis">Basis</h2>
+<p><img src="images/UnitVectors.svg" alt="Unit vector"></p>
+<p>In xy coordinate system there are two special vectors:  $\hat{i},  \hat{j}$. A unit vector on x direction(right), and a unit vector on y direction(up). Let&rsquo;s take a vector $ \begin{bmatrix} 3 \ -2 \end{bmatrix}$.</p>
+<p><img src="images/VectorCoordinatesAsScalarsOfUnitVectors.svg" alt="A vector"></p>
+<p>Now think x coordinates as a scalar that scales $\hat{i}$, stretching it by a factor 3, and y coordinates as a scalar that scales $\hat{j}$, flipping and stretching by a factor 2. The concept of adding together two scaled vectors is important. Those two vector $\hat{i} , \hat{j}$ together they are called the &ldquo;basis&rdquo; of the coordinate system. When we think coordinates as scalars, the basis vectors are what those actually scale.</p>
+<p>% So finally, Do using these two ij you can define any vector in that space!!!!</p>
+<h2 id="linear-combinations">Linear combinations</h2>
+<p>Any time you are scaling two vectors and adding them like this is called &ldquo;linear combination&rdquo; of those two vectors.
+<img src="images/LinearCombinationWithDescription.svg" alt="Linearly combination span"></p>
+<p>Where does the word &ldquo;linear&rdquo; come from here? What does this have to do with lines? When you multiply scalar by a vector, it changes the magnitude of that vector. If you multiply every possible real number by the vector, you will get an infinite line that passes through the origin and the point defined by the vector.</p>
+<p>So, linear combination of two vectors is a method of combining these two lines. For most pairs of vectors, if you let both scalars range freely and consider every possible vector you could get, you will be able to reach every possible point on the plane. Every two-dimensional vector is within your grasp.</p>
+<p>However, if your two original vectors happen to line up, the lines produced by the scalar multiplication will be the same line, so adding them together can&rsquo;t yield a vector outside of that line.</p>
+<h2 id="span">Span</h2>
+<p>The set of all possible vectors you can reach with linear combinations of a given pair of vectors is called the &ldquo;span&rdquo; of those two vectors. The span of most pairs of 2D vectors is all vectors in 2D space, but when they line up, their span is all  vectors whose tip cit on a certain line.</p>
+<p><img src="images/SpanOfLinearCombination.svg" alt="Linearly combination span"></p>
+<h2 id="vectors-and-points">Vectors and points</h2>
+<p>People commonly think vectors as points(not as a arrow drawing from the origin). It becomes difficult to think about whole collection of vectors all at once.</p>
+<p><img src="images/point_space.png" alt="Point space"></p>
+<p>So how do you supposed to think about vectors? In general, if you&rsquo;re thinking of a vector on its own, think of it as an arrow, and if you&rsquo;re thinking of a collection, it&rsquo;s convenient to think of them as points.</p>
+<h2 id="linearly-dependent">Linearly dependent</h2>
+<p><img src="images/LinearlyDependent.svg" alt="Linearly dependent 2D">
+<img src="images/LinearlyDependent3d.svg" alt="Linearly dependent 3D"></p>
+<p>When you have multiple vectors, can remove them without reducing the span (if linearly dependent)
+One of the vectors can be expressed as linear combination of others .since it is already in the span of the others.</p>
+<p>$$
+w = a v
+$$</p>
+<p>$$
+z = a v + b w
+$$</p>
+<h2 id="linearly-independent">Linearly independent</h2>
+<p>On the other hand, if each vector really does add another dimension to the span, they are said to be “linearly independent”.</p>
+<p>$$
+w \neq a v
+$$</p>
+<p>$$
+z \neq a v + b w
+$$</p>
+<p><strong>The technical definition for the “basis” of a space is a set of linearly independent vectors that span that space.</strong></p>
+
+        </article>
+
+        
+        
+          <div class="blog-tags mt-4">
+            
+              <a href="https://hashansl.github.io/blog/tags/math/">Math</a>
+            
+          </div>
+        
+
+        
+        
+        <div class="post-navigation mt-5">
+          
+            <div class="prev-post">
+              <a href="https://hashansl.github.io/blog/post/writingplan/" title="Writing Is Thinking: A Cognitive Approach to Learning">&larr; Previous Post</a>
+            </div>
+          
+          
+        </div>
+        
+      </div> 
+    </div> 
+
+    
+    
+    
+
+    
+    
+
+  </div> 
+
+  
+  <script>
+    window.addEventListener('load', function () {
+      var toc = document.getElementById('TableOfContents');
+      if (toc) {
+        new bootstrap.ScrollSpy(
+          document.getElementById('postContent'),
+          { target: '#TableOfContents', offset: 100 }
+        );
+      }
+    });
+  </script>
+
+   
+   <script>
+    window.addEventListener('pageshow', function (e) {
+      
+      if (e.persisted || (performance.navigation && performance.navigation.type === 2)) {
+        window.scrollTo(0, 0);
+      }
+    });
+  </script>
+  
+
+
+    
+
+
+<footer>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul
+          class="list-inline list-group list-group-horizontal text-center footer-links d-flex justify-content-center flex-row">
+
+          
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+          2025
+          
+
+          
+          &nbsp;&bull;&nbsp;
+          <a href="https://hashansl.github.io/blog/">Hashan&#39;s Data Science Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Powered by <a href="https://gohugo.io">Hugo</a> & <a href="https://github.com/binokochumolvarghese/lightbi-hugo">Lightbi.</a>&nbsp; 
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    
+
+    
+    <script>
+      let prevScrollPos = window.pageYOffset;
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        const currentScrollPos = window.pageYOffset;
+        navbar.style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
+        prevScrollPos = currentScrollPos;
+      });
+    </script>
+  </body>
+</html>

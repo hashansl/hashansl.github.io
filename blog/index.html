@@ -57,6 +57,22 @@
 
 <script  src="https://hashansl.github.io/blog/vendor/glightbox/js/glightbox.min.js"></script>
  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$',  right: '$',  display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError: false
+            });"></script>
+    
   </head>
   <body>
     
@@ -193,6 +209,69 @@
 
 
     
+    
+    
+<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
+    <a href="https://hashansl.github.io/blog/post/linearalgebra-1/">
+        <div class="card h-100 single-post-card shadow-effect bg-faded-light">
+            <div class="card-body">
+                <h3 class="fw-medium post-title">Linear Algebra: 1</h3>
+                
+
+                <p class="post-meta">
+                    <span class="post-meta text-muted">
+  
+  
+
+  October 14, 2025
+
+  
+
+  
+
+  
+
+  
+</span>
+
+                </p>
+                
+
+                <div class="post-entry">
+                    
+                    Let&#39;s dive into basics!
+
+                    
+                </div>
+                
+                
+                
+                <div class="post-tags mt-2">
+                    
+                    <a href="/blog/tags/math/"  class="badge">#Math</a>
+                    
+                </div>
+                
+                            
+
+
+                <div class="read-more-section">
+                    
+                    <h6 class="text-muted link-underline">Read More <i class="bi bi-arrow-right"></i></h6>
+                </div>
+            </div>
+
+            
+            <img src="/blog/post/linearalgebra-1/card-img_hu_c35c4d5c3195ce3.jpg" alt="card-img.jpg"
+                class="card-img-bottom img-fluid lazyload">
+            
+
+            
+        </div>
+    </a>
+</div>
+
+
     
     
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  mb-4">
@@ -454,22 +533,11 @@
     <script>
       let prevScrollPos = window.pageYOffset;
       const navbar = document.getElementById("navbar");
-    
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
-    
-        if (prevScrollPos > currentScrollPos) {
-          
-          navbar.style.top = "0";
-        } else {
-          
-          navbar.style.top = "-80px"; 
-        }
-    
+        navbar.style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
         prevScrollPos = currentScrollPos;
       });
     </script>
-    
   </body>
 </html>
-

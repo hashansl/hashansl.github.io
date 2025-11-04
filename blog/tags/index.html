@@ -8,7 +8,7 @@
 
 
 <title>Overview of all pages with the tag #Tags - Hashan&#39;s Data Science Blog</title>
-<meta name="description" content="Overview of all pages with the tag #Tags, such as: Writing">
+<meta name="description" content="Overview of all pages with the tag #Tags, such as: Math">
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -56,6 +56,22 @@
 
 <script  src="https://hashansl.github.io/blog/vendor/glightbox/js/glightbox.min.js"></script>
  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js"
+            onload="renderMathInElement(document.body, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$',  right: '$',  display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError: false
+            });"></script>
+    
   </head>
   <body>
     
@@ -281,6 +297,26 @@
         
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsemath">
+                      <h4 class="accordion-header ms-2"> math
+                        <span class="badge rounded-pill text-bg-light position-absolute text-end">1</span>
+                      </h4>
+                </button>
+              </h2>
+              <div id="collapsemath" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <a href="https://hashansl.github.io/blog//tags/math/" class="post-title list-group-item view-all">View all</a>
+                  <div class="list-group">
+                    
+                    <a href="https://hashansl.github.io/blog/post/linearalgebra-1/" class="list-group-item">Linear Algebra: 1</a>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsemeaning">
                       <h4 class="accordion-header ms-2"> meaning
                         <span class="badge rounded-pill text-bg-light position-absolute text-end">1</span>
@@ -375,22 +411,11 @@
     <script>
       let prevScrollPos = window.pageYOffset;
       const navbar = document.getElementById("navbar");
-    
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
-    
-        if (prevScrollPos > currentScrollPos) {
-          
-          navbar.style.top = "0";
-        } else {
-          
-          navbar.style.top = "-80px"; 
-        }
-    
+        navbar.style.top = (prevScrollPos > currentScrollPos) ? "0" : "-80px";
         prevScrollPos = currentScrollPos;
       });
     </script>
-    
   </body>
 </html>
-
