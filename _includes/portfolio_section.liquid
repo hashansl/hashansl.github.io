@@ -1,0 +1,12 @@
+<article>
+  <div class="cv">
+    {% for entry in site.data.resume %}
+      {% if entry[0] == include.section %}
+        <div class="card mt-3 p-3">
+          {%- assign partial = "resume/" | append: include.section | append: ".liquid" -%}
+          {% include {{ partial }} %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</article>

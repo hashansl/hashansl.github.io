@@ -1,221 +1,324 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Hashan Fernando",
+    "label": "Data Scientist & Researcher",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "hashan.dan@gmail.com",
+    "phone": "(865) 321-5237",
+    "url": "https://hashansl.github.io/",
+    "summary": "Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to healthcare and public health problems. Proficient in R, Python, and high-performance computing environments. Experienced in extracting real-world clinical data, building reproducible pipelines, and translating technical research into practical solutions. Strong background in applied statistics, deep learning, and large language models.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "",
+      "postalCode": "TN 37996",
+      "city": "Knoxville",
       "countryCode": "US",
-      "region": "California"
+      "region": "Tennessee"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "hashansl",
+        "url": "https://github.com/hashansl/"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "hashandananjaya1",
+        "url": "https://linkedin.com/in/hashandananjaya1"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "Advanced Computing in Health Sciences Section, Oak Ridge National Laboratory",
+      "position": "Graduate Research Assistant",
+      "location": "Oak Ridge, TN",
+      "url": "https://www.ornl.gov/section/achss",
+      "startDate": "2022-08-01",
+      "endDate": "2026-04-30",
+      "summary": "",
+      "highlights": [
+        "Extracted, cleaned, and integrated VA electronic health record and mortality data, mapping ICD diagnosis and cause-of-death codes to standardized risk categories to build research-ready datasets for county-level opioid overdose modeling.",
+        "Designed a novel algorithm integrating topological data analysis and Bayesian spatial modeling to identify complex spatial patterns in opioid overdose risk across the USA, reducing uncertainty in baseline Bayesian spatial model estimates.",
+        "Built custom multi-channel CNN architectures in PyTorch to classify regional health risk strata across the USA using high-dimensional topological persistence images."
+      ]
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
+      "name": "Department of Statistics and Computer Science, University of Peradeniya",
+      "position": "Researcher",
+      "location": "Sri Lanka",
+      "url": "https://sci.pdn.ac.lk/scs/",
+      "startDate": "2019-12-01",
+      "endDate": "2022-02-28",
       "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "highlights": [
+        "Developed a smart seal and audio detection system for protecting steel cargo from tampering, leveraging IoT sensors for real-time monitoring."
+      ]
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
+      "name": "Freelance",
+      "position": "Marketing Analytics Consultant",
+      "location": "Remote",
+      "url": "",
+      "startDate": "2020-06-01",
+      "endDate": "2022-02-28",
       "summary": "",
-      "highlights": []
+      "highlights": [
+        "Designed and analyzed marketing performance and sales dashboards (React, Google Data Studio) pulling multi-channel spend data via Supermetrics, Shopify, and the Facebook Ads API to identify trends and inform client optimization decisions.",
+        "Managed client relationships and reporting cycles independently."
+      ]
     },
     {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
+      "name": "VizuaMatix",
+      "position": "Data Scientist Intern",
+      "location": "Colombo, Sri Lanka",
+      "url": "https://www.vizuamatix.com/",
+      "startDate": "2019-01-01",
+      "endDate": "2019-07-31",
       "summary": "",
-      "highlights": []
+      "highlights": [
+        "Engineered a machine learning model to identify non-performing customers in a banking system.",
+        "Developed a route optimization pipeline for food distribution trucks to improve efficiency and reduce operational costs."
+      ]
     },
     {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
+      "name": "MAS Holdings",
+      "position": "Planning Intern",
+      "location": "Biyagama, Sri Lanka",
+      "url": "https://masholdings.com/",
+      "startDate": "2018-10-01",
+      "endDate": "2019-01-31",
       "summary": "",
-      "highlights": []
+      "highlights": [
+        "Developed multiple VBA applications for planning inventory."
+      ]
     }
   ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
-  ],
+  "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Haslam College of Business, University of Tennessee, Knoxville",
+      "location": "Knoxville, TN",
+      "url": "https://haslam.utk.edu/business-analytics-statistics/statistics/",
+      "area": "Statistics",
+      "studyType": "M.S.",
+      "startDate": "2022-08-01",
+      "endDate": "2026-05-01",
+      "score": "GPA: 4.00 / 4.00",
+      "courses": []
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
+      "institution": "Postgraduate Institute of Science, University of Peradeniya",
+      "location": "Sri Lanka",
+      "url": "http://www.pgis.pdn.ac.lk/Academic/masters/Data_Science.php",
+      "area": "Data Science",
+      "studyType": "M.S.",
+      "startDate": "2020-01-01",
+      "endDate": "2022-01-01",
+      "score": "GPA: 3.75 / 4.00",
+      "courses": []
+    },
+    {
+      "institution": "Faculty of Science, University of Peradeniya",
+      "location": "Sri Lanka",
+      "url": "https://sci.pdn.ac.lk/study-programme/statistics-and-operations-research.php",
+      "area": "Statistics and Operations Research",
+      "studyType": "B.Sc.",
+      "startDate": "2015-01-01",
+      "endDate": "2018-12-30",
       "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "courses": []
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Merit Award for M.S. in Data Science",
+      "date": "",
+      "awarder": "University of Peradeniya",
+      "url": "",
+      "summary": ""
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
+      "title": "Half Colors",
+      "date": "2017",
+      "awarder": "Colors Awarding Ceremony, University of Peradeniya, Sri Lanka",
+      "url": "",
       "summary": ""
     }
   ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
-    }
-  ],
+  "certificates": [],
   "publications": [
     {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Unmeasured Spatial Risk in Disease Modeling: A Topological Data Analysis Approach",
+      "publisher": "Manuscript in preparation",
+      "releaseDate": "2026-01-01",
+      "url": "",
+      "summary": "H. Fernando. Manuscript in preparation, 2026."
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "Identifying spatiotemporal patterns in opioid vulnerability: investigating the links between disability, prescription opioids and opioid-related mortality",
+      "publisher": "BMC Public Health 25, no. 1 (2025): 1759",
+      "releaseDate": "2025-01-01",
+      "url": "https://link.springer.com/article/10.1186/s12889-025-23044-0",
+      "summary": "A. Deas, H. Fernando, A. Heidi, A. Kapadia, J. Trafton, A. Spannaus, V. Maroulas."
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "A Geospatial Study of Opioid Overdose Risk in Diverse Regions",
+      "publisher": "Conference Proceedings for International Population Data Linkage Conference, vol. 9, no. 5",
+      "releaseDate": "2024-01-01",
+      "url": "https://doi.org/10.23889/ijpds.v9i5.2700",
+      "summary": "H. Fernando, A. Spannaus, A. Kapadia."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
+      "name": "Languages",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "R",
+        "Python",
+        "SQL",
+        "Spark",
+        "C/C++",
+        "Java"
+      ]
+    },
+    {
+      "name": "Statistics & Methods",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Regression",
+        "Mixed-Effects Models",
+        "Bayesian Hierarchical & Spatial Modeling",
+        "MCMC",
+        "Causal Inference",
+        "Machine Learning",
+        "Deep Learning",
+        "NLP",
+        "LLMs",
+        "Operations Research",
+        "Topological Data Analysis"
+      ]
+    },
+    {
+      "name": "Data & Databases",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "SQL & Relational Databases",
+        "Data Extraction / ETL",
+        "Data Cleaning & QA",
+        "REST / Web APIs",
+        "Spark"
+      ]
+    },
+    {
+      "name": "Dashboards & Visualization",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "Shiny",
+        "Tableau",
+        "Looker (Data Studio)",
+        "React"
+      ]
+    },
+    {
+      "name": "Frameworks & Tools",
+      "level": "Master",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "scikit-learn",
+        "RStudio",
+        "Git",
+        "GCP",
+        "AWS",
+        "Slurm"
       ]
     }
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "English",
+      "fluency": "Fluent",
       "icon": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
+      "language": "Sinhala",
+      "fluency": "Native speaker",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Bayesian Modeling",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "keywords": []
     },
     {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "name": "Spatial Statistics",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Topological Data Analysis",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Machine Learning & Deep Learning",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "NLP & Large Language Models",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Causal Inference",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Healthcare & Public Health",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "High-Performance Computing",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
     }
   ],
+  "references": [],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
+      "name": "1st Place Winner — MOSSAIC Hackathon (ORNL, National Cancer Institute & Leidos Biomedical)",
+      "summary": "Co-led a research team and empirically demonstrated data privacy leakage in cross-silo Federated Learning architectures by deploying gradient-based adversarial attacks against text transformer models.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "name": "Clinical Document Classification & NLP Clustering (COSC-526: Data Mining & Analytics)",
+      "summary": "Developed an end-to-end NLP pipeline on unstructured clinical notes; generated contextual embeddings for supervised classification and applied NER, Mapper-based TDA clustering, cosine similarity, and t-SNE/UMAP for medical terminology extraction and visualization.",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "name": "Spatial-TDA",
+      "summary": "Developed an open-source Python package designed for extracting topological information from spatial data.",
+      "highlights": [],
+      "url": "https://hashansl.github.io/spatial-tda/"
+    },
+    {
+      "name": "Causal Inference for Marketing Analytics (BZAN-593: Independent Study)",
+      "summary": "Developed a Bayesian marketing mix model to estimate causal ROI of marketing spend from observational time-series data.",
+      "highlights": [],
+      "url": ""
     }
   ]
 }

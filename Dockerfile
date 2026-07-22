@@ -27,8 +27,11 @@ RUN apt-get update -y && \
         git \
         imagemagick \
         inotify-tools \
+        libxml2-dev \
+        libxslt1-dev \
         locales \
         nodejs \
+        pkg-config \
         procps \
         python3-pip \
         zlib1g-dev && \

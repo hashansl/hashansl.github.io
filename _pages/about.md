@@ -1,34 +1,74 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle:
 
 profile:
-  align: right
-  image: prof_pic.jpg
+  align: left
+  image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
+  contact: true
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<p align="justify">
+I'm a Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to healthcare and public health problems.
+<br>
+<br>
+My research work centers on extracting real-world clinical data, building reproducible pipelines, and translating technical methods into practical solutions. As a Graduate Research Assistant at Oak Ridge National Laboratory, I designed novel algorithms combining topological data analysis with Bayesian spatial modeling to uncover complex spatial patterns in opioid overdose risk across the USA.
+<br>
+<br>
+I work fluently in R, Python, and high-performance computing environments, with a strong background in applied statistics, deep learning, and large language models. I care about rigor, reproducibility, and turning research into usable, well-documented tools.
+<br>
+<br>
+I hold an M.S. in Statistics from the University of Tennessee, Knoxville (GPA 4.00), an M.S. in Data Science from the University of Peradeniya, and a B.Sc. in Statistics and Operations Research.
+</p>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<div class="home-skills-wrapper">
+  <div class="home-skills-block">
+    <div class="home-skills-label home-skills-label--ai">Data Scientist</div>
+    <div class="apple-tag-grid home-tech-stack">
+      <span class="apple-tag">Python</span>
+      <span class="apple-tag">R</span>
+      <span class="apple-tag">SQL &amp; Spark</span>
+      <span class="apple-tag">Machine Learning</span>
+      <span class="apple-tag">Deep Learning</span>
+      <span class="apple-tag">NLP &amp; LLMs</span>
+      <span class="apple-tag">PyTorch</span>
+      <span class="apple-tag">TensorFlow</span>
+      <span class="apple-tag">scikit-learn</span>
+      <span class="apple-tag">Data Pipelines &amp; ETL</span>
+      <span class="apple-tag">Shiny / Tableau</span>
+    </div>
+  </div>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+  <div class="home-skills-block">
+    <div class="home-skills-label home-skills-label--gamedev">Researcher</div>
+    <div class="apple-tag-grid home-tech-stack--gamedev">
+      <span class="apple-tag apple-tag--gamedev">Bayesian Modeling</span>
+      <span class="apple-tag apple-tag--gamedev">Spatial Modeling</span>
+      <span class="apple-tag apple-tag--gamedev">Topological Data Analysis</span>
+      <span class="apple-tag apple-tag--gamedev">Causal Inference</span>
+      <span class="apple-tag apple-tag--gamedev">MCMC</span>
+      <span class="apple-tag apple-tag--gamedev">Mixed-Effects Models</span>
+      <span class="apple-tag apple-tag--gamedev">Applied Statistics</span>
+      <span class="apple-tag apple-tag--gamedev">Healthcare &amp; Public Health</span>
+      <span class="apple-tag apple-tag--gamedev">Operations Research</span>
+      <span class="apple-tag apple-tag--gamedev">HPC / Slurm</span>
+    </div>
+  </div>
+</div>

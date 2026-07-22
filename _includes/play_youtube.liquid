@@ -1,0 +1,14 @@
+<a href="https://www.youtube.com/watch?v={{ include.id }}"
+   data-fancybox="{{ include.category | replace: ' ', '-' }}"
+   data-caption="{{ include.caption }}"
+   data-type="iframe"
+   class="youtube-thumb-link"
+   style="position:relative; display:block;">
+
+  <img src="https://img.youtube.com/vi/{{ include.id }}/maxresdefault.jpg"
+       alt="{{ include.caption }}"
+       class="img-fluid rounded z-depth-1"
+       style="width:100%; height:auto;">
+  <span class="youtube-play-btn"></span>
+</a>
+<p class="text-center small mb-0" style="font-weight: 400; margin-top: 10px;">{{ include.caption }}</p>

@@ -1,0 +1,13 @@
+<a href="{{ include.full }}"
+   data-fancybox="{{ include.category | replace: ' ', '-' }}"
+   data-caption="{{ include.caption }}">
+  {% include figure.liquid
+    loading=include.loading
+    path=include.thumb
+    title=include.caption
+    class="img-fluid rounded z-depth-1"
+  %}
+</a>
+{% if include.caption %}
+  <p class="text-center small mb-0 mt-1" style="font-weight: 400; margin-top: 1px;">{{ include.caption }}</p>
+{% endif %}

@@ -1,0 +1,31 @@
+<div class="cv-entries">
+  {% assign education = data[1] | sort: 'startDate' | reverse %}
+  {% for content in education %}
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <div class="cv-entry-title-group">
+          <a href="{{ content.url }}" class="cv-entry-title">{{ content.studyType }}</a>
+          {% if content.area %}<span class="cv-entry-subtitle">{{ content.area }}</span>{% endif %}
+        </div>
+        {% if content.startDate and content.startDate != '' %}
+          {% assign startYear = content.startDate | split: '-' | first %}
+          {% assign endYear = content.endDate | split: '-' | first | default: 'Present' %}
+          <span class="apple-chip flex-shrink-0">{{ startYear }} – {{ endYear }}</span>
+        {% endif %}
+      </div>
+      <div class="cv-entry-body">
+        <span class="cv-entry-institution">
+          {{ content.institution }}{% if content.location %} · {{ content.location }}{% endif %}
+        </span>
+        {% if content.score %}<span class="apple-chip apple-chip--blue">{{ content.score }}</span>{% endif %}
+      </div>
+      {% if content.courses.size > 0 %}
+        <div class="apple-tag-grid cv-entry-courses">
+          {% for item in content.courses %}
+            <span class="apple-chip">{{ item }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

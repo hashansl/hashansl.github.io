@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_sass/**"
+      - "_scripts/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -23,10 +25,10 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
+      - "!CONTRIBUTING.md"
+      - "!CUSTOMIZE.md"
+      - "!FAQ.md"
+      - "!INSTALL.md"
       - "!README.md"
   pull_request:
     branches:
@@ -34,6 +36,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_sass/**"
+      - "_scripts/**"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -50,40 +54,45 @@ on:
       - "!.github/workflows/lighthouse-badger.yml"
       - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
+      - "!CONTRIBUTING.md"
+      - "!CUSTOMIZE.md"
+      - "!FAQ.md"
+      - "!INSTALL.md"
       - "!README.md"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
       - name: Setup Python 🐍
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
-      - name: Setup Node 🧰
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-      - name: Install JS deps 📦
-        run: npm ci
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -93,7 +102,9 @@ jobs:
           value: ${{ github.repository }}
       - name: Install and Build 🔧
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
+          sudo apt-get update && sudo apt-get install -y imagemagick build-essential pkg-config libxml2-dev libxslt1-dev
+          bundle install
+          bundle exec ruby -e "require 'nokogiri'; puts 'Nokogiri loaded successfully'" || (bundle exec gem uninstall nokogiri -x --force; bundle exec gem install nokogiri --platform=ruby; bundle install)
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
@@ -101,8 +112,14 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
-      - name: Deploy 🚀
+      - name: Upload Pages artifact 📦
         if: github.event_name != 'pull_request'
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/upload-pages-artifact@v5
         with:
-          folder: _site
+          path: _site
+      - name: Deploy to GitHub Pages 🚀
+        if: github.event_name != 'pull_request'
+        id: deployment
+        uses: actions/deploy-pages@v5
+        with:
+          timeout: 1200000

@@ -1,0 +1,13 @@
+{% comment %}
+  Apple-style section header.
+
+  Parameters:
+    eyebrow  – all-caps micro label, e.g. "What I Built"
+    title    – section heading
+    lead     – (optional) one-sentence lead below the heading
+{% endcomment %}
+<header class="apple-section-head">
+  {% if include.eyebrow %}<span class="apple-eyebrow-sm">{{ include.eyebrow }}</span>{% endif %}
+  <h2 class="apple-section-title">{{ include.title }}</h2>
+  {% if include.lead %}<p class="apple-section-lead">{{ include.lead }}</p>{% endif %}
+</header>

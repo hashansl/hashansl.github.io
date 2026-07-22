@@ -1,0 +1,15 @@
+<a href="{{ include.video }}"
+   data-fancybox="{{ include.category | replace: ' ', '-' }}"
+   data-caption="{{ include.caption }}"
+   data-type="video"
+   class="local-video-thumb-link"
+   style="position:relative; display:block;">
+   
+  <!-- Use a custom thumbnail or a default one -->
+  <img src="{{ include.thumbnail | default: 'default-thumb.jpg' }}"
+       alt="{{ include.caption }}"
+       class="img-fluid rounded z-depth-1"
+       style="width:100%; height:auto;">
+  <span class="youtube-play-btn"></span> <!-- Optional: for play icon overlay -->
+</a>
+<p class="text-center small mb-0" style="font-weight: 400; margin-top: 10px;">{{ include.caption }}</p>

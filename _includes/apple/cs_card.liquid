@@ -1,0 +1,19 @@
+{% comment %}
+  A single challenge/solution card inside .apple-cs.
+
+  Parameters:
+    label            – micro label, e.g. "Performance"
+    challenge_title  – challenge heading (h4)
+    challenge_body   – challenge body paragraph
+    solution_body    – solution body paragraph
+{% endcomment %}
+<div class="apple-cs-card">
+  <span class="apple-cs-label">
+    <span class="dot"></span>{{ include.label }}
+  </span>
+  <h4>{{ include.challenge_title }}</h4>
+  <p>{{ include.challenge_body }}</p>
+  <div class="apple-cs-divider"></div>
+  <h4>Solution</h4>
+  <p>{{ include.solution_body }}</p>
+</div>

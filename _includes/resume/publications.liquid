@@ -1,0 +1,20 @@
+<div class="cv-entries">
+  {% assign publications = data[1] | sort: 'releaseDate' | reverse %}
+  {% for content in publications %}
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <a href="{{ content.url }}" target="_blank" class="cv-entry-title">{{ content.name }}</a>
+        {% if content.releaseDate %}
+          {% assign date = content.releaseDate | split: '-' | first %}
+          <span class="apple-chip flex-shrink-0">{{ date }}</span>
+        {% endif %}
+      </div>
+      {% if content.publisher %}
+        <p class="cv-entry-institution">{{ content.publisher }}</p>
+      {% endif %}
+      {% if content.summary %}
+        <p class="cv-entry-summary">{{ content.summary }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

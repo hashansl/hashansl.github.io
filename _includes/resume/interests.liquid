@@ -1,0 +1,8 @@
+{% assign pill_colors = "blue,purple,green,orange,pink,teal" | split: "," %}
+<div class="apple-tag-grid interests-tag-grid">
+  {% for content in data[1] %}
+    {% assign pidx = forloop.index0 | modulo: 6 %}
+    {% assign pill_color = pill_colors[pidx] %}
+    <span class="apple-pill apple-pill--{{ pill_color }}">{{ content.name }}</span>
+  {% endfor %}
+</div>

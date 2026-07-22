@@ -1,0 +1,17 @@
+<div class="cv-entries">
+  {% assign certificates = data[1] | sort: 'date' | reverse %}
+  {% for content in certificates %}
+    <div class="cv-entry">
+      <div class="cv-entry-header">
+        <a href="{{ content.url | default: '#' }}" class="cv-entry-title">{{ content.name }}</a>
+        {% if content.date %}
+          {% assign certYear = content.date | split: '-' | first %}
+          <span class="apple-chip flex-shrink-0">{{ certYear }}</span>
+        {% endif %}
+      </div>
+      {% if content.issuer %}
+        <p class="cv-entry-institution">{{ content.issuer }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

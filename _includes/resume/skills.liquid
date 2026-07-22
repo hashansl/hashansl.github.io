@@ -1,0 +1,17 @@
+{% assign chip_colors = "blue,purple,green,orange,pink,teal" | split: "," %}
+<div class="skills-tag-layout">
+  {% for content in data[1] %}
+    {% assign cidx = forloop.index0 | modulo: 6 %}
+    {% assign chip_color = chip_colors[cidx] %}
+    <div class="skills-group">
+      <div class="skills-group-head skills-group-head--{{ chip_color }}">
+        <span class="skills-group-name">{{ content.name }}</span>
+      </div>
+      <div class="apple-tag-grid">
+        {% for item in content.keywords %}
+          <span class="apple-chip apple-chip--{{ chip_color }}">{{ item }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
