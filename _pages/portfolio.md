@@ -28,7 +28,7 @@ toc:
       <a id="{{ category }}" href=".#{{ category }}">
         <h2 class="category">{{ category }} </h2>
       </a>
-      {% assign categorized_projects = site.portfolio | where: "category", category %}
+      {% assign categorized_projects = site.projects | where: "category", category %}
       {% assign sorted_projects = categorized_projects | sort: "importance" %}
       <!-- Certificates -->
       {% if category == "Certificates" %}
@@ -110,8 +110,8 @@ toc:
         </article>
       <!-- Work Experience with AI Engineer and Game Dev sub-sections -->
       {% elsif category == "Work Experience" %}
-        {% assign ai_projects = site.portfolio | where: "category", "Work Experience - AI Engineer" | sort: "importance" %}
-        {% assign gamedev_projects = site.portfolio | where: "category", "Work Experience - Game Dev" | sort: "importance" %}
+        {% assign ai_projects = site.projects | where: "category", "Work Experience - AI Engineer" | sort: "importance" %}
+        {% assign gamedev_projects = site.projects | where: "category", "Work Experience - Game Dev" | sort: "importance" %}
         <h3 id="ai-engineer" class="category">AI Engineer</h3>
         <div class="row row-cols-2 row-cols-md-5">
           {% for project in ai_projects %}

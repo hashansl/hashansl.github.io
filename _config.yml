@@ -145,8 +145,6 @@ collections:
     output: true
   projects:
     output: true
-  portfolio:
-    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

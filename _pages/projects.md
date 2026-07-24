@@ -13,11 +13,10 @@ _styles: >
   .projects h2.category, .projects h3.category { color: var(--apple-text-sub); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 1px solid var(--apple-border); padding-top: 0.25rem; }
 nav: false
 nav_order: 1
-display_categories: [Work Experience, Research, Publications, Game Jams, Projects, Education, Certificates, Technical Skills, Interests]
+display_categories: [Research, Projects, Publications, Work Experience, Technical Skills, Interests]
 horizontal: false
 toc:
   sidebar: left
-
 ---
 
 <!-- pages/projects.md -->
@@ -28,7 +27,7 @@ toc:
       <a id="{{ category }}" href=".#{{ category }}">
         <h2 class="category">{{ category }} </h2>
       </a>
-      {% assign categorized_projects = site.portfolio | where: "category", category %}
+      {% assign categorized_projects = site.projects | where: "category", category %}
       {% assign sorted_projects = categorized_projects | sort: "importance" %}
       <!-- Certificates -->
       {% if category == "Certificates" %}
@@ -110,8 +109,8 @@ toc:
         </article>
       <!-- Work Experience with AI Engineer and Game Dev sub-sections -->
       {% elsif category == "Work Experience" %}
-        {% assign ai_projects = site.portfolio | where: "category", "Work Experience - AI Engineer" | sort: "importance" %}
-        {% assign gamedev_projects = site.portfolio | where: "category", "Work Experience - Game Dev" | sort: "importance" %}
+        {% assign ai_projects = site.projects | where: "category", "Work Experience - AI Engineer" | sort: "importance" %}
+        {% assign gamedev_projects = site.projects | where: "category", "Work Experience - Game Dev" | sort: "importance" %}
         <h3 id="ai-engineer" class="category">AI Engineer</h3>
         <div class="row row-cols-2 row-cols-md-5">
           {% for project in ai_projects %}
@@ -168,7 +167,10 @@ toc:
 <script>
   window.addEventListener("load", function () {
     var navbar = document.getElementById("navbar");
-    var target = document.getElementById("Work Experience");
+    // Always lock to whichever category is first in `display_categories`,
+    // instead of a hardcoded name, so reordering the front matter list
+    // doesn't break the initial scroll / scroll-lock behavior.
+    var target = document.querySelector(".projects > a[id]");
 
     function navHeight() {
       return navbar ? navbar.offsetHeight : 56;
