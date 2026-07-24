@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Hashan's Notes # blog_name will be displayed in your blog page
-blog_description: Data ccience, AI/ML, and projects behind the scenes
+blog_name: Hashan's Blog # blog_name will be displayed in your blog page
+blog_description: Data Science, AI/ML, Theories and Projects
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -260,16 +260,16 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["ai", "game-dev", "unity", "unreal", "python", "devops"] # these tags will be displayed on the front page of your blog
-display_categories: ["tutorials", "retrospectives", "research-notes"] # these categories will be displayed on the front page of your blog
+display_tags: ["ai", "game-dev", "unity", "unreal", "python", "devops", "math", "linear-algebra", "algorithms", "dsa"] # these tags will be displayed on the front page of your blog
+display_categories: ["tutorials", "retrospectives", "research-notes", "research", "dsa"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Fernando]
+  first_name: [Hashan]
 
   style: apa
   locale: en

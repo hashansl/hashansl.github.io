@@ -11,9 +11,9 @@ _styles: >
   .projects h2.category:first-of-type,
   .projects h3.category:first-of-type { margin-top: 0; }
   .projects h2.category, .projects h3.category { color: var(--apple-text-sub); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 1px solid var(--apple-border); padding-top: 0.25rem; }
-nav: false
+nav: true
 nav_order: 1
-display_categories: [Research, Projects, Publications, Work Experience, Technical Skills, Interests]
+display_categories: [Research, Projects, Technical Skills, Interests]
 horizontal: false
 toc:
   sidebar: left
