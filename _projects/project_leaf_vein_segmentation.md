@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Unsupervised Leaf Vein Segmentation <br> <em>W-Net for Plant Phenotyping</em>
-img: assets/img/projects/project_leaf_vein_segmentation/full_leaf_segmentation_pimpal.jpg
+img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /leaf-vein-segmentation/
 importance: 5
 category: Projects

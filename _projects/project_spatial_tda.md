@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spatial-TDA <br> <em>A Python Package for Geospatial Topological Data Analysis</em>
-img: assets/img/projects/project_spatial_tda/logo.png
+img: assets/img/projects/project_spatial_tda/project-card.png
 permalink: /spatial-tda/
 importance: 4
 category: Projects

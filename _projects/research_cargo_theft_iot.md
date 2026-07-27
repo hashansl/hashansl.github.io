@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tampering & Sound-Based IoT Framework <br> <em>Real-Time Steel Cargo Theft Detection</em>
-img: assets/img/projects/research_cargo_theft_iot/smart_seal_prototype_pcb.jpg
+img: assets/img/projects/research_cargo_theft_iot/research-card.png
 permalink: /cargo-theft-iot/
 importance: 2
 category: Research

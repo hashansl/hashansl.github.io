@@ -1,7 +1,7 @@
 ---
 layout: page
 title: A Geospatial Study of Opioid Overdose Risk <br> <em>Topological Data Analysis + Deep Learning</em>
-img: assets/img/projects/research_tda_deeplearning/US_OD.png
+img: assets/img/projects/research_tda_deeplearning/research-card.png
 permalink: /opioid-risk-tda/
 importance: 1
 category: Research

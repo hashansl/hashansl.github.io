@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Segmenting and Classifying Clinical Notes <br> <em>NLP + Topological Data Analysis on MIMIC-III</em>
-img: assets/img/projects/project_clinical_notes_segmentation/embedding_1.png
+img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /clinical-notes-segmentation/
 importance: 3
 category: Projects

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Automatic Bird Sound Identification <br> <em>Deep Learning &amp; Transfer Learning on 397 Species</em>
-img: assets/img/projects/project_msc_final_peradeniya/recording_geo_distribution.jpg
+img: assets/img/projects/project_msc_final_peradeniya/project-card.png
 permalink: /bird-sound-classification/
 importance: 6
 category: Projects
