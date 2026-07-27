@@ -4,7 +4,7 @@
     - name: Full Name
       value: Hashan Fernando
     - name: Location
-      value: Knoxville, TN (open to relocate)
+      value: Winston-Salem, NC (open to relocate)
     - name: Email
       value: hashan.dan@gmail.com
     - name: Languages
@@ -13,7 +13,7 @@
 - title: Professional Summary
   type: list
   contents:
-    - Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to healthcare and public health problems. Proficient in R, Python, and high-performance computing environments. Experienced in extracting real-world clinical data, building reproducible pipelines, and translating technical research into practical solutions. Strong background in applied statistics, deep learning, and large language models.
+    - Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to marketing, healthcare and public health problems. Proficient in R, Python, and high-performance computing environments. Experienced in extracting real-world clinical data, building reproducible pipelines, and translating technical research into practical solutions. Strong background in applied statistics, deep learning, and large language models.
 
 - title: Education
   type: time_table

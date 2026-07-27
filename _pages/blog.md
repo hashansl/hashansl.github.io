@@ -30,17 +30,9 @@ pagination:
 {% endif %}
 
 {% comment %}
-  Only show tag/category chips that actually have ≥1 post; the jekyll-archives
-  plugin doesn't generate archive pages for empty tags, so unlinked chips 404.
+  Only show category chips that actually have ≥1 post; the jekyll-archives
+  plugin doesn't generate archive pages for empty categories, so unlinked chips 404.
 {% endcomment %}
-{% assign visible_tags = "" | split: "" %}
-{% for tag in site.display_tags %}
-  {% assign posts_for_tag = site.tags[tag] %}
-  {% if posts_for_tag and posts_for_tag.size > 0 %}
-    {% assign visible_tags = visible_tags | push: tag %}
-  {% endif %}
-{% endfor %}
-
 {% assign visible_categories = "" | split: "" %}
 {% for category in site.display_categories %}
   {% assign posts_for_cat = site.categories[category] %}
@@ -49,13 +41,8 @@ pagination:
   {% endif %}
 {% endfor %}
 
-{% if visible_tags.size > 0 or visible_categories.size > 0 %}
+{% if visible_categories.size > 0 %}
 <div class="blog-filter-row">
-  {% for tag in visible_tags %}
-    <a href="{{ tag | slugify | prepend: '/blog/tag/' | append: '/' | relative_url }}" class="apple-chip">
-      <i class="fa-solid fa-hashtag fa-xs"></i>&thinsp;{{ tag }}
-    </a>
-  {% endfor %}
   {% for category in visible_categories %}
     <a href="{{ category | slugify | prepend: '/blog/category/' | append: '/' | relative_url }}" class="apple-chip apple-chip--category">
       <i class="fa-solid fa-tag fa-xs"></i>&thinsp;{{ category }}

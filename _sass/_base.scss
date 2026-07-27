@@ -1205,6 +1205,19 @@ nav[data-toggle="toc"] {
       max-width: calc(100% - 200px);
     }
   }
+
+  /* Post article content has its own top margin baked in; zero it out here so the
+     article's first heading lines up with the top of the TOC sidebar instead of
+     sitting further down the page. The first heading inside #markdown-content also
+     has its own margin-top which collapses through and reintroduces the same gap,
+     so it needs to be zeroed directly too. */
+  .apple-post-content {
+    margin-top: 0;
+
+    #markdown-content > :first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .echarts {

@@ -21,8 +21,14 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="{% if page.toc and page.toc.sidebar %}container-fluid px-md-4 toc-sidebar-layout{% else %}container{% endif %} mt-5" role="main">
-      {% if page.toc and page.toc.sidebar %}
+    {% assign use_global_toc_sidebar = false %}
+    {% if page.toc and page.toc.sidebar %}
+      {% unless page.layout == 'post' %}
+        {% assign use_global_toc_sidebar = true %}
+      {% endunless %}
+    {% endif %}
+    <div class="{% if use_global_toc_sidebar %}container-fluid px-md-4 toc-sidebar-layout{% else %}container{% endif %} mt-5" role="main">
+      {% if use_global_toc_sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
             <!-- main content area -->

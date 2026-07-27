@@ -1,12 +1,12 @@
 {
-  "basics": {
+  "general information": {
     "name": "Hashan Fernando",
-    "label": "Data Scientist & Researcher",
+    "title": "Data Scientist & Researcher",
     "image": "",
     "email": "hashan.dan@gmail.com",
     "phone": "(865) 321-5237",
     "url": "https://hashansl.github.io/",
-    "summary": "Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to healthcare and public health problems. Proficient in R, Python, and high-performance computing environments. Experienced in extracting real-world clinical data, building reproducible pipelines, and translating technical research into practical solutions. Strong background in applied statistics, deep learning, and large language models.",
+    "summary": "Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to marketing, healthcare and public health problems. Proficient in R, Python, and high-performance computing environments. Experienced in extracting real-world clinical data, building reproducible pipelines, and translating technical research into practical solutions. Strong background in applied statistics, deep learning, and large language models.",
     "location": {
       "address": "",
       "postalCode": "TN 37996",
@@ -34,7 +34,7 @@
       "location": "Oak Ridge, TN",
       "url": "https://www.ornl.gov/section/achss",
       "startDate": "2022-08-01",
-      "endDate": "2026-04-30",
+      "endDate": "2026-05-30",
       "summary": "",
       "highlights": [
         "Extracted, cleaned, and integrated VA electronic health record and mortality data, mapping ICD diagnosis and cause-of-death codes to standardized risk categories to build research-ready datasets for county-level opioid overdose modeling.",
@@ -55,9 +55,9 @@
       ]
     },
     {
-      "name": "Freelance",
+      "name": "Freelance (Fiverr & Upwork)",
       "position": "Marketing Analytics Consultant",
-      "location": "Remote",
+      "location": "Sri Lanka (Remote)",
       "url": "",
       "startDate": "2020-06-01",
       "endDate": "2022-02-28",
@@ -96,13 +96,24 @@
   "volunteer": [],
   "education": [
     {
+      "institution": "Bredesen Center, University of Tennessee, Knoxville",
+      "location": "Knoxville, TN",
+      "url": "https://bredesencenter.utk.edu/data-science/",
+      "area": "Data Science and Engineering (DSE)",
+      "studyType": "Ph.D-Dropout",
+      "startDate": "2022-08-01",
+      "endDate": "2026-05-31",
+      "score": "GPA: 4.00 / 4.00",
+      "courses": []
+    },
+    {
       "institution": "Haslam College of Business, University of Tennessee, Knoxville",
       "location": "Knoxville, TN",
       "url": "https://haslam.utk.edu/business-analytics-statistics/statistics/",
       "area": "Statistics",
       "studyType": "M.S.",
       "startDate": "2022-08-01",
-      "endDate": "2026-05-01",
+      "endDate": "2026-05-31",
       "score": "GPA: 4.00 / 4.00",
       "courses": []
     },
@@ -125,14 +136,13 @@
       "studyType": "B.Sc.",
       "startDate": "2015-01-01",
       "endDate": "2018-12-30",
-      "score": "",
       "courses": []
     }
   ],
   "awards": [
     {
       "title": "Merit Award for M.S. in Data Science",
-      "date": "",
+      "date": "2022",
       "awarder": "University of Peradeniya",
       "url": "",
       "summary": ""
@@ -188,12 +198,13 @@
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Regression",
-        "Mixed-Effects Models",
-        "Bayesian Hierarchical & Spatial Modeling",
-        "MCMC",
+        "Marketing Mix Modeling",
         "Causal Inference",
+        "Regression",
+        "Bayesian Hierarchical & Spatial Modeling",
+        "Mixed-Effects Models",
         "Machine Learning",
+        "MCMC",
         "Deep Learning",
         "NLP",
         "LLMs",
@@ -236,7 +247,9 @@
         "Git",
         "GCP",
         "AWS",
-        "Slurm"
+        "Slurm",
+        "Docker",
+        "PySpark"
       ]
     }
   ],
@@ -254,7 +267,22 @@
   ],
   "interests": [
     {
+      "name": "Marketing Mix Modeling",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Causal Inference",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
       "name": "Bayesian Modeling",
+      "icon": "fa-solid fa-tag",
+      "keywords": []
+    },
+    {
+      "name": "Machine Learning & Deep Learning",
       "icon": "fa-solid fa-tag",
       "keywords": []
     },
@@ -269,17 +297,7 @@
       "keywords": []
     },
     {
-      "name": "Machine Learning & Deep Learning",
-      "icon": "fa-solid fa-tag",
-      "keywords": []
-    },
-    {
       "name": "NLP & Large Language Models",
-      "icon": "fa-solid fa-tag",
-      "keywords": []
-    },
-    {
-      "name": "Causal Inference",
       "icon": "fa-solid fa-tag",
       "keywords": []
     },
@@ -295,7 +313,7 @@
     }
   ],
   "references": [],
-  "projects": [
+  "selected projects": [
     {
       "name": "1st Place Winner — MOSSAIC Hackathon (ORNL, National Cancer Institute & Leidos Biomedical)",
       "summary": "Co-led a research team and empirically demonstrated data privacy leakage in cross-silo Federated Learning architectures by deploying gradient-based adversarial attacks against text transformer models.",

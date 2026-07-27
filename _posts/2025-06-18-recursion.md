@@ -9,7 +9,7 @@ featured: false
 giscus_comments: false
 related_posts: true
 toc:
-  beginning: true
+  sidebar: left
 ---
 
 As a student of Statistics and Data Science, I used to overlook certain topics in Data Structures and Algorithms. To be honest, I never really needed them in my research work, so I let myself believe they weren't relevant. But as I started taking on different kinds of projects, especially ones involving coding challenges and system design, I realized I was missing something important.

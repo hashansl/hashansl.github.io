@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Algebra, Part 1 — Linearity, Basis, and Span
+title: Linear Algebra, Part 1 - Linearity, Basis, and Span
 date: 2026-07-24 00:00:00 +0530
 description: An intuitive, ground-up introduction to linear algebra — starting with linearity and linear transformations instead of matrices, then building up through basis vectors, linear combinations, span, and linear (in)dependence.
 tags: math linear-algebra
@@ -9,7 +9,7 @@ featured: false
 giscus_comments: false
 related_posts: true
 toc:
-  beginning: true
+  sidebar: left
 ---
 
 ## Linear Algebra
