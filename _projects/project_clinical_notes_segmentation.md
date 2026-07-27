@@ -5,7 +5,7 @@ img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /clinical-notes-segmentation/
 importance: 3
 category: Projects
-description: "Data Engineering Course Project (UTK) <br> BioClinicalBERT, Doc2Vec, TF-IDF, Mapper (TDA), Hierarchical Clustering"
+description: "Data Engineering - University of Tennessee <br> BioClinicalBERT, Doc2Vec, TF-IDF, Mapper (TDA), Hierarchical Clustering"
 related_publications: false
 _styles: >
   .post-header { display: none; }

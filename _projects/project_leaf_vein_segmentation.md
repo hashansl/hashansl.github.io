@@ -5,7 +5,7 @@ img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /leaf-vein-segmentation/
 importance: 5
 category: Projects
-description: "Course Project (COSC 525, UTK) <br> W-Net, Unsupervised Segmentation, PyTorch"
+description: "Deep Learning - University of Tennessee <br> W-Net, Unsupervised Segmentation, PyTorch"
 related_publications: false
 _styles: >
   .post-header { display: none; }

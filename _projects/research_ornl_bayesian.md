@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Unmeasured Spatial Risk in Disease Modeling; A Topological Data Analysis Approach
-description: Research - Associated with Oak Ridge National Laboratory & University of Tennessee, TN, USA
+title: Unmeasured Spatial Risk in Disease Modeling <br> <em>A Topological Data Analysis Approach</em>
+description: Oak Ridge National Laboratory & University of Tennessee, USA <br> Topological Data Analysis, Bayesian Hirachical Modeling, NUTS, PyMC
 img: assets/img/projects/research_ornl_bayesian/research-card.png
 permalink: /ornl-research-1/
 importance: 1
@@ -12,7 +12,7 @@ _styles: >
 ---
 
 {% include apple/hero.liquid
-    eyebrow=" Research - Associated with Oak Ridge National Laboratory & University of Tennessee, TN, USA"
+    eyebrow=" Research - Associated with Oak Ridge National Laboratory & University of Tennessee, USA"
     title="Unmeasured Spatial Risk in Disease Modeling"
     subtitle="A Topological Data Analysis Approach."
     meta="!Research,ORNL & UTK,United States"

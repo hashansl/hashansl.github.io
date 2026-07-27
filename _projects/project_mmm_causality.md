@@ -5,7 +5,7 @@ img: assets/img/projects/marketingmixmodeling/mmm-card.png
 permalink: /mmm-causality/
 importance: 2
 category: Projects
-description: "Independent Research · July 2026 <br> Bayesian MMM, Causal Inference, PyMC-Marketing, Synthetic Data"
+description: "Independent Research - University of Tennessee <br> Bayesian MMM, Causal Inference, PyMC-Marketing, Synthetic Data"
 related_publications: true
 _styles: >
   .post-header { display: none; }
@@ -14,7 +14,7 @@ _styles: >
 
 
 {% include apple/hero.liquid
-    eyebrow="University of Tennessee Project · Summer 2026"
+    eyebrow="Independent Research - Associated with Haslam College of Business, University of Tennessee, Knoxville, TN, USA"
     title="Can We Trust Marketing ROI?"
     subtitle="A synthetic-data study testing whether observational Marketing Mix Modeling can recover true causal ROI — and what it takes to make it trustworthy when it can't."
     meta="!Independent Research,Causal Inference,Bayesian Modeling"

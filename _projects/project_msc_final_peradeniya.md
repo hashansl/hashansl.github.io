@@ -5,7 +5,7 @@ img: assets/img/projects/project_msc_final_peradeniya/project-card.png
 permalink: /bird-sound-classification/
 importance: 6
 category: Projects
-description: "MSc Independent Project (2021) <br> University of Peradeniya, Sri Lanka <br> ResNet Transfer Learning, Mel-Spectrograms"
+description: "MSc Independent Project - University of Peradeniya, Sri Lanka <br> ResNet Transfer Learning, Mel-Spectrograms"
 related_publications: false
 _styles: >
   .post-header { display: none; }

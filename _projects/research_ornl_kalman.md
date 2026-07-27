@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Identifying Spatiotemporal Patterns in Opioid Vulnerability; Investigating the Links Between Disability, Prescription Opioids, and Opioid-Related Mortality
-description: Research - Associated with Oak Ridge National Laboratory & University of Tennessee, TN, USA
+title: Identifying Spatiotemporal Patterns in Opioid Vulnerability <br> <em>A Spatial Kalman Filter Approach</em>
+description: Oak Ridge National Laboratory & University of Tennessee, USA <br> Kalman Filtering, Spatiotemporal Modeling, Geospatial Analysis
 img: assets/img/projects/research_ornl_kalman/research-card.png
 permalink: /ornl-research-2/
 importance: 1
