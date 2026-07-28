@@ -1775,6 +1775,13 @@ html[data-theme="dark"] {
   gap: 0.5rem;
 }
 
+// Center the tags in "Built With" style sections (their heading is already
+// centered via .apple-section-head), without touching the homepage skills
+// blocks, which stay left-aligned under their labels.
+.apple-section .apple-tag-grid {
+  justify-content: center;
+}
+
 .apple-tag {
   display: inline-flex;
   align-items: center;

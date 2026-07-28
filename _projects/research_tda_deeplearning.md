@@ -15,12 +15,16 @@ _styles: >
 {% include apple/hero.liquid
     eyebrow="PhD Dissertation Research · Oak Ridge National Laboratory & University of Tennessee · IPDLN 2024"
     title="A Geospatial Study of Opioid Overdose Risk in Diverse Regions"
-    subtitle="Turning county-level socioeconomic data into topological shape descriptors, then classifying high-risk opioid overdose counties with a channel-attention deep learning model."
+    subtitle="Turning census-level socioeconomic data into topological shape descriptors, then classifying high-risk opioid overdose counties with a multi-dimensional deep learning model."
     meta="!Research,ORNL & UTK,United States"
     tech="Topological Data Analysis,Persistence Images,SE-ResNet,PyTorch,Adjacency Complexes"
 %}
 
 <div class="apple-overview">
+  <p>
+    <strong>Supervisor:</strong> <a href="https://www.ornl.gov/staff-profile/adam-t-spannaus" target="_blank">Dr. Adam Spannaus</a> (Research Scientist; Oak Ridge National Laboratory, USA)
+  </p>
+
   <p>
     <strong>Authors:</strong> Hashan Fernando, <a href="https://www.ornl.gov/staff-profile/adam-t-spannaus" target="_blank">Adam Spannaus</a>, Anuj J. Kapadia
   </p>
@@ -64,7 +68,7 @@ _styles: >
     <article class="apple-card">
       <span class="apple-icon">03</span>
       <h3>Persistence Images</h3>
-      <p>Persistence diagrams are multisets, not fixed-size vectors, so they can't feed a neural network directly. Each diagram is mapped onto a fixed birth-persistence grid and Gaussian-smoothed into a 2D image a CNN can consume.</p>
+      <p>Persistence diagrams are multisets, not fixed-size vectors, so they can't feed a neural network directly. Each diagram is mapped onto a fixed birth-persistence grid and Gaussian-smoothed into a 2D image a CNN can use.</p>
     </article>
 
     <article class="apple-card">
@@ -105,7 +109,7 @@ _styles: >
         label="Top 5% Threshold"
         challenge_title="Can the model flag the most extreme overdose-risk counties correctly?"
         challenge_body="Labeling the top 5% of counties nationally as high-risk creates a highly imbalanced classification problem."
-        solution_body="90% test accuracy. The high-overdose class reached a 0.95 true positive rate with only a 0.18 false positive rate — the model is sharpest at the extremes."
+        solution_body="90% test accuracy. The high-overdose class reached a 0.95 true positive rate with only a 0.18 false positive rate; the model is sharpest at the extremes."
     %}
     {% include apple/cs_card.liquid
         label="Top 10% Threshold"
@@ -117,7 +121,7 @@ _styles: >
         label="Top 20% Threshold"
         challenge_title="Does the model still add value at a broader, noisier risk boundary?"
         challenge_body="At the top 20% threshold, nearly a fifth of all counties are labeled high-risk, and the class boundary is far less distinct."
-        solution_body="65.74% test accuracy. Performance degrades as expected with a noisier label, but the low-overdose class still holds a 0.92 true positive rate — the model consistently identifies genuinely low-risk counties."
+        solution_body="65.74% test accuracy. Performance degrades as expected with a noisier label, but the low-overdose class still holds a 0.92 true positive rate; the model consistently identifies genuinely low-risk counties."
     %}
   </div>
 </section>
@@ -136,43 +140,18 @@ _styles: >
 
   <div class="apple-gallery">
     <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/US_OD.png" thumb="assets/img/projects/research_tda_deeplearning/US_OD.png" loading="eager" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Counties with High Opioid Overdose Rates Across the US</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
       {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/single_2.jpg" thumb="assets/img/projects/research_tda_deeplearning/single_2.jpg" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Adjacency Complex — Census Tracts Connected by Shared Borders</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/Simplicial%20complex.drawio.png" thumb="assets/img/projects/research_tda_deeplearning/Simplicial%20complex.drawio.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Simplicial Complexes Approximate the Shape of Data</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/Data%20process.drawio.png" thumb="assets/img/projects/research_tda_deeplearning/Data%20process.drawio.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Pipeline — Variable to Filtration to Persistence Diagram to Persistence Image</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/Transformation.drawio.png" thumb="assets/img/projects/research_tda_deeplearning/Transformation.drawio.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Transforming a Persistence Diagram into a Persistence Image</figcaption>
+      <figcaption class="apple-shot-caption">Adjacency Complex - Census Tracts Connected by Shared Borders</figcaption>
     </figure>
 
     <figure class="apple-shot">
       {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/EP_POV_36081_peristence_image.png" thumb="assets/img/projects/research_tda_deeplearning/EP_POV_36081_peristence_image.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Poverty Persistence Image — Queens County, NY</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/EP_UNEMP_36081_peristence_image.png" thumb="assets/img/projects/research_tda_deeplearning/EP_UNEMP_36081_peristence_image.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Unemployment Persistence Image — Queens County, NY</figcaption>
+      <figcaption class="apple-shot-caption">Poverty Persistence Image - Queens County, NY</figcaption>
     </figure>
 
     <figure class="apple-shot">
       {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/EP_DISABL_36081_peristence_image.png" thumb="assets/img/projects/research_tda_deeplearning/EP_DISABL_36081_peristence_image.png" loading="lazy" category="tda figures" %}
-      <figcaption class="apple-shot-caption">Disability Persistence Image — Queens County, NY</figcaption>
+      <figcaption class="apple-shot-caption">Disability Persistence Image - Queens County, NY</figcaption>
     </figure>
   </div>
 </section>

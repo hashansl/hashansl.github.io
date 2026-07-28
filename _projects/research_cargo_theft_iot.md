@@ -22,7 +22,7 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    <strong>Supervisor:</strong> <a href="https://sci.pdn.ac.lk/scs/staff/Ruwan-Nawarathna" target="_blank">Dr. Ruwan D. Nawarathna</a> (Senior Lecturer, Department of Statistics and Computer Science, University of Peradeniya, Sri Lanka)
+    <strong>Supervisors:</strong> <a href="https://sci.pdn.ac.lk/scs/staff/Ruwan-Nawarathna" target="_blank">Dr. Ruwan D. Nawarathna</a> (Senior Lecturer, Department of Statistics and Computer Science, University of Peradeniya, Sri Lanka) and <a href="https://scholar.google.com/citations?user=1D4pv_kAAAAJ&hl=en" target="_blank"> Mr. Lahiru J. Ekanayake</a> (Lecturer, Department of Statistics and Computer Science, University of Peradeniya, Sri Lanka)
   </p>
   <p>
     <strong>Authors:</strong> <strong>Hashan D. Fernando</strong>, Lahiru J. Ekanayake, Prabath Gunathilake, Roshan D. Yapa, Amalka J. Pinidiyaarachchi, Ruwan D. Nawarathna
@@ -54,7 +54,7 @@ _styles: >
     <article class="apple-card">
       <span class="apple-icon">01</span>
       <h3>Smart Seal (Module 1)</h3>
-      <p>A conductive mesh wraps around the top layer of the steel bar stack. ESP8266 reads the mesh continuously in deep-sleep mode, pushing a status signal to MQTT every 15–60 seconds — and immediately on any break in the circuit.</p>
+      <p>A conductive mesh wraps around the top layer of the steel bar stack. ESP8266 reads the mesh continuously in deep-sleep mode, pushing a status signal to MQTT every 15–60 seconds, and immediately on any break in the circuit.</p>
     </article>
 
     <article class="apple-card">
@@ -107,13 +107,13 @@ _styles: >
         label="Audio Classification"
         challenge_title="Which model architecture best separates theft-related sounds from ambient noise?"
         challenge_body="A dataset combining a custom steel-bar-dragging recording set with UrbanSound8K and YorNoise classes (10,452 spectrograms across 11 classes) was used to train a basic CNN and five transfer-learning architectures pretrained on ImageNet."
-        solution_body="The basic CNN reached 76.23% accuracy. Transfer learning improved on that substantially — DenseNet201 was the strongest model at 93.75% accuracy, ahead of MobileNetV2 (91.00%), MobileNet (88.84%), VGG16 (86.54%), VGG19 (82.65%), and ResNet50 (59.76%)."
+        solution_body="The basic CNN reached 76.23% accuracy. Transfer learning improved on that substantially; DenseNet201 was the strongest model at 93.75% accuracy, ahead of MobileNetV2 (91.00%), MobileNet (88.84%), VGG16 (86.54%), VGG19 (82.65%), and ResNet50 (59.76%)."
     %}
     {% include apple/cs_card.liquid
         label="Hardware Validation"
         challenge_title="Does the physical device actually detect tampering and report it in real time?"
         challenge_body="A working smart-seal prototype PCB (ESP8266-12F) was built and tested against multiple simultaneous tampering attempts across multiple sensor nodes, powered from a range of sources including LiPo batteries and solar panels."
-        solution_body="The smart seals pushed status data over MQTT without delay, and tampering attempts triggered immediate, correctly attributed alerts — visible in real time on the dashboard with device ID, GPS coordinates, and a red-flagged tamper status."
+        solution_body="The smart seals pushed status data over MQTT without delay, and tampering attempts triggered immediate, correctly attributed alerts, visible in real time on the <a href='#dashboard-photo'>dashboard</a> with device ID, GPS coordinates, and a red-flagged tamper status. See the <a href='#device-photo'>device prototype</a> and dashboard in the gallery below."
     %}
   </div>
 </section>
@@ -125,39 +125,19 @@ _styles: >
   %}
 
   <div class="apple-gallery">
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/tmt_steel_bars.jpg" thumb="assets/img/projects/research_cargo_theft_iot/tmt_steel_bars.jpg" loading="eager" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Thermo-Mechanically Treated (TMT) Steel Bars</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" thumb="assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" loading="lazy" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Smart Seal Wrapping Around a Steel Bar Stack</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
+    <figure class="apple-shot" id="device-photo">
       {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/smart_seal_prototype_pcb.jpg" thumb="assets/img/projects/research_cargo_theft_iot/smart_seal_prototype_pcb.jpg" loading="lazy" category="cargo theft figures" %}
       <figcaption class="apple-shot-caption">Smart Seal Prototype PCB (ESP8266-12F)</figcaption>
     </figure>
 
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/audio_signal_to_melspectrogram.jpg" thumb="assets/img/projects/research_cargo_theft_iot/audio_signal_to_melspectrogram.jpg" loading="lazy" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Raw Audio Signal Transformed into a Mel-Spectrogram</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/melspectrograms_sound_classes.jpg" thumb="assets/img/projects/research_cargo_theft_iot/melspectrograms_sound_classes.jpg" loading="lazy" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Mel-Spectrograms Across the Audio Dataset's Sound Classes</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/training_validation_curves.jpg" thumb="assets/img/projects/research_cargo_theft_iot/training_validation_curves.jpg" loading="lazy" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Training/Validation Accuracy &amp; Loss Across All Six CNN Architectures</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
+    <figure class="apple-shot" id="dashboard-photo">
       {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/realtime_dashboard.jpg" thumb="assets/img/projects/research_cargo_theft_iot/realtime_dashboard.jpg" loading="lazy" category="cargo theft figures" %}
-      <figcaption class="apple-shot-caption">Real-Time Dashboard — Device Status, Tamper Alerts &amp; GPS Location</figcaption>
+      <figcaption class="apple-shot-caption">Real-Time Dashboard - Device Status, Tamper Alerts &amp; GPS Location</figcaption>
+    </figure>
+
+        <figure class="apple-shot">
+      {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" thumb="assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" loading="lazy" category="cargo theft figures" %}
+      <figcaption class="apple-shot-caption">Smart Seal Wrapping Around a Steel Bar Stack</figcaption>
     </figure>
   </div>
 </section>
