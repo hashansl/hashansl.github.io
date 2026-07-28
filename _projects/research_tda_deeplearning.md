@@ -13,7 +13,7 @@ _styles: >
 ---
 
 {% include apple/hero.liquid
-    eyebrow="Oak Ridge National Laboratory & University of Tennessee · IPDLN 2024"
+    eyebrow="PhD Dissertation Research · Oak Ridge National Laboratory & University of Tennessee · IPDLN 2024"
     title="A Geospatial Study of Opioid Overdose Risk in Diverse Regions"
     subtitle="Turning county-level socioeconomic data into topological shape descriptors, then classifying high-risk opioid overdose counties with a channel-attention deep learning model."
     meta="!Research,ORNL & UTK,United States"
@@ -28,16 +28,16 @@ _styles: >
     <strong>Additional Resources:</strong>
     <a href="https://ijpds.org/article/view/2700" target="_blank">Paper</a> ·
     <a href="https://github.com/hashansl/opioid-risk-conf-2024" target="_blank">Git Repository</a> ·
-    <a href="/assets/ppt/research_tda_deeplearning/poster%201%20-%20Hashan_AS.pptx" target="_blank">Poster</a>
+    <a href="/assets/pdf/research_tda_deeplearning/poster_ipdln_hashan.pdf" target="_blank">Poster</a>
   </p>
 </div>
 
 <div class="apple-overview">
   <p>
-    Predicting which counties are most at risk of opioid overdose usually means feeding socioeconomic factors — poverty, unemployment, disability — straight into a model as numbers. That approach throws away something important: <em>where</em> vulnerability is concentrated within a county matters as much as how much of it there is. Two counties can share the same average poverty rate while looking completely different on the ground — one with poverty clustered in a single hotspot, the other spread evenly across every census tract.
+    Predicting which counties are most at risk of opioid overdose usually means feeding socioeconomic factors ;poverty, unemployment, disability, straight into a model as numbers. That approach throws away something important: <em>where</em> vulnerability is concentrated within a county matters as much as how much of it there is. Two counties can share the same average poverty rate while looking completely different on the ground: one with poverty clustered in a single hotspot, the other spread evenly across every census tract.
   </p>
   <p>
-    This project uses Topological Data Analysis (TDA) {% cite feng2021persistent %} to capture exactly that shape information, then feeds it into a deep learning classifier. Each Social Vulnerability Index (SVI) variable for a county — poverty, unemployment, disability, and others — is converted into a "persistence image" that encodes how its high-risk census tracts cluster and connect geographically. Stacking these persistence images across variables gives each county a multi-channel topological fingerprint, which an SE-ResNet then learns to classify as high or low overdose risk. This work was published at the International Population Data Linkage Conference 2024 {% cite fernando2024geospatial %}.
+    This project uses Topological Data Analysis (TDA) {% cite feng2021persistent %} to capture exactly that shape information, then feeds it into a deep learning classifier. Each Social Vulnerability Index (SVI) variable for a county, poverty, unemployment, disability, and others, is converted into a "persistence image" that encodes how its high-risk census tracts cluster and connect geographically. Stacking these persistence images across variables gives each county a multi-channel topological fingerprint, which an SE-ResNet then learns to classify as high or low overdose risk. This work was published at the International Population Data Linkage Conference 2024 {% cite fernando2024geospatial %}.
   </p>
 </div>
 

@@ -12,7 +12,7 @@ _styles: >
 ---
 
 {% include apple/hero.liquid
-    eyebrow=" Research - Associated with Oak Ridge National Laboratory & University of Tennessee, USA"
+    eyebrow="PhD Dissertation Research · Associated with Oak Ridge National Laboratory & University of Tennessee · USA"
     title="Unmeasured Spatial Risk in Disease Modeling"
     subtitle="A Topological Data Analysis Approach."
     meta="!Research,ORNL & UTK,United States"
@@ -34,7 +34,7 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    Bayesian spatial models are widely used in disease mapping to estimate area-level overdose risk from socioeconomic covariates such as poverty and unemployment. These models work well at small spatial units, where they stabilize risk estimates in data-sparse areas by smoothing toward local neighborhood averages. But at the regional level — large spatial units like counties, where risk can shift sharply between neighbors, that same smoothing becomes a drawback: standard models impose a uniform level of smoothness across the whole region, masking sharp transitions in risk and producing overly uncertain estimates.
+    Bayesian spatial models are widely used in disease mapping to estimate area-level overdose risk from socioeconomic covariates such as poverty and unemployment. These models work well at small spatial units, where they stabilize risk estimates in data-sparse areas by smoothing toward local neighborhood averages. But at the regional level, large spatial units like counties, where risk can shift sharply between neighbors, that same smoothing becomes a drawback: standard models impose a uniform level of smoothness across the whole region, masking sharp transitions in risk and producing overly uncertain estimates.
   </p>
   <p>
     My research addresses this by introducing topological data analysis (TDA) into the disease-mapping pipeline. Using persistent homology, I extract topological summaries, statistics describing the shape of the data, such as how prominent and long-lived a cluster of high-poverty census tracts is, from finer-grained, subregional covariate data. I then integrate these summaries as a third component of the spatial random effect in a Bayesian hierarchical model (which I call BYM-T), alongside the usual structured (neighbor-dependent) and unstructured (localized noise) components. This gives the model region-specific structural information it previously had no way to access.

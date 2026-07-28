@@ -13,7 +13,7 @@ _styles: >
 ---
 
 {% include apple/hero.liquid
-    eyebrow="University of Peradeniya, Sri Lanka · AHEAD ICE Grant"
+    eyebrow="AHEAD Innovation Commercialization Enhancement (ICE) Grant · University of Peradeniya · Sri Lanka"
     title="Tampering and Sound-Based IoT Framework for Real-Time Steel Cargo Theft Detection"
     subtitle="A real-time theft detecting device combining a smart tamper-sensing seal with an audio-recognition CNN, designed for Thermo-Mechanically Treated (TMT) steel bar cargo."
     meta="!Research,University of Peradeniya,Sri Lanka"
@@ -22,7 +22,10 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    <strong>Authors:</strong> <strong>Hashan D. Fernando</strong>, Lahiru J. Ekanayake, Prabath Gunathilake, Roshan D. Yapa, Amalka J. Pinidiyaarachchi, Ruwan D. Nawarathna (corresponding author)
+    <strong>Supervisor:</strong> <a href="https://sci.pdn.ac.lk/scs/staff/Ruwan-Nawarathna" target="_blank">Dr. Ruwan D. Nawarathna</a> (Senior Lecturer, Department of Statistics and Computer Science, University of Peradeniya, Sri Lanka)
+  </p>
+  <p>
+    <strong>Authors:</strong> <strong>Hashan D. Fernando</strong>, Lahiru J. Ekanayake, Prabath Gunathilake, Roshan D. Yapa, Amalka J. Pinidiyaarachchi, Ruwan D. Nawarathna
   </p>
   <p>
     <strong>Additional Resources:</strong>
@@ -33,10 +36,10 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    Cargo theft costs the global economy billions of dollars a year, and steel cargo is a frequent target: TMT steel bars are dense, valuable, and shipped in huge volumes by sea, rail, and truck. Most existing anti-theft devices only watch the cargo door, and none of them listen to what's happening <em>inside</em> the container. Meanwhile, real-time detection is hard to get right — GPS/GSM trackers suffer from poor signal at sea, and adding more sensors usually means adding more power draw on a device that has to run unattended for months.
+    Cargo theft costs the global economy billions of dollars a year, and steel cargo is a frequent target: TMT steel bars are dense, valuable, and shipped in huge volumes by sea, rail, and truck. Most existing anti-theft devices only watch the cargo door, and none of them listen to what's happening <em>inside</em> the container. Meanwhile, real-time detection is hard to get right, GPS/GSM trackers suffer from poor signal at sea, and adding more sensors usually means adding more power draw on a device that has to run unattended for months.
   </p>
   <p>
-    This project designs, builds, and evaluates a real-time theft-detecting device with two complementary detection modules. A <strong>smart seal</strong> forms a conductive mesh wrapped around the top layer of a steel bar stack — break the mesh, and an ESP8266 microcontroller immediately flags the tampering over MQTT. In parallel, an <strong>audio detection module</strong> built on a Raspberry Pi continuously listens to the cargo hold, converts sound into Mel-spectrograms and MFCCs, and classifies it with a convolutional neural network to catch theft attempts that never touch a sensor. Both modules report to a cloud backend (Google Cloud IoT Core, Firebase, and BigQuery) that pushes real-time alerts and GPS location to a live dashboard.
+    This project designs, builds, and evaluates a real-time theft-detecting device with two complementary detection modules. A <strong>smart seal</strong> forms a conductive mesh wrapped around the top layer of a steel bar stack, break the mesh, and an ESP8266 microcontroller immediately flags the tampering over MQTT. In parallel, an <strong>audio detection module</strong> built on a Raspberry Pi continuously listens to the cargo hold, converts sound into Mel-spectrograms and MFCCs, and classifies it with a convolutional neural network to catch theft attempts that never touch a sensor. Both modules report to a cloud backend (Google Cloud IoT Core, Firebase, and BigQuery) that pushes real-time alerts and GPS location to a live dashboard.
   </p>
 </div>
 
