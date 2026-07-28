@@ -27,8 +27,8 @@ _styles: >
     <strong>Additional Resources:</strong>
     <em>Paper (manuscript in preparation)</em> ·
     <a href="https://github.com/hashansl/spatial-risk-tda" target="_blank">Git Repository</a> ·
-    <a href="assets/pdf/research_ornl_bayesian/meeting 2.pdf" target="_blank">Presentation</a> ·
-    <a href="assets/pdf/research_ornl_bayesian/poster ACM-Hashan.pdf" target="_blank">Poster</a> 
+    <a href="assets/pdf/research_ornl_bayesian/meeting.pdf" target="_blank">Presentation</a> ·
+    <a href="assets/pdf/research_ornl_bayesian/poster_ACM_Hashan.pdf" target="_blank">Poster</a> 
   </p>
 </div>
 
