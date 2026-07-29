@@ -13,7 +13,7 @@ _styles: >
 ---
 
 {% include apple/hero.liquid
-    eyebrow="MSc in Data Science · Postgraduate Institute of Science, University of Peradeniya, Sri Lanka · 2021"
+    eyebrow="MSc in Data Science · Postgraduate Institute of Science, University of Peradeniya · Sri Lanka · 2021"
     title="Automatic Bird Sound Identification Using Machine Learning"
     subtitle="Classifying 397 bird species from 62,874 field recordings by transforming raw audio into Mel-spectrograms and fine-tuning pretrained ResNet models."
     meta="!MSc Independent Project,University of Peradeniya,Sri Lanka"
@@ -21,6 +21,9 @@ _styles: >
 %}
 
 <div class="apple-overview">
+  <p>
+    <strong>Supervisor:</strong> <a href="https://scholar.google.com/citations?user=9OzkdJYAAAAJ&hl=en" target="_blank"> Mr. Prabath Gunathilake</a> (Lecturer, Department of Statistics and Computer Science, University of Peradeniya, Sri Lanka)
+  </p>
   <p>
     <strong>Additional Resources:</strong>
     <a href="/assets/pdf/project_msc_final_peradeniya/Independent%20project%20-%20PGIS_M_DTS_20_09.pdf" target="_blank">Project Report (PDF)</a> ·
@@ -30,10 +33,10 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    Identifying bird species from their calls matters for conservation — many species are endangered, and protecting them starts with knowing which species is present and where. But audio is a much harder classification problem than images: recordings are noisy, calls overlap with background species, and traditional machine learning approaches don't hold up well against that noise. Deep learning has changed that, though it typically demands more labeled data and compute than a single independent project can gather from scratch.
+    Identifying bird species from their calls matters for conservation, many species are endangered, and protecting them starts with knowing which species is present and where. But audio is a much harder classification problem than images: recordings are noisy, calls overlap with background species, and traditional machine learning approaches don't hold up well against that noise. Deep learning has changed that, though it typically demands more labeled data and compute than a single independent project can gather from scratch.
   </p>
   <p>
-    This project sidesteps that data bottleneck with transfer learning. Using 62,874 recordings across 397 bird species from Xeno-canto, a citizen-science bird sound archive, I converted each clip into a Mel-spectrogram and fine-tuned ImageNet-pretrained ResNet models to classify species from that image representation — rather than training a network from scratch on a comparatively small bioacoustic dataset. The best model, ResNet18, reached an average precision of 0.62 across all 397 species.
+    This project sidesteps that data bottleneck with transfer learning. Using 62,874 recordings across 397 bird species from Xeno-canto, a citizen-science bird sound archive, I converted each clip into a Mel-spectrogram and fine-tuned ImageNet-pretrained ResNet models to classify species from that image representation, rather than training a network from scratch on a comparatively small bioacoustic dataset. The best model, ResNet18, reached an average precision of 0.62 across all 397 species.
   </p>
 </div>
 
@@ -48,7 +51,7 @@ _styles: >
     <article class="apple-card">
       <span class="apple-icon">01</span>
       <h3>Dataset &amp; Long-Tail Imbalance</h3>
-      <p>62,874 recordings across 397 species, capped at 500 recordings per species — still a steep long-tail distribution. Recordings span the globe, are variable length, and are only weakly labeled: a clip's target species doesn't necessarily vocalize throughout.</p>
+      <p>62,874 recordings across 397 species, capped at 500 recordings per species, still a steep long-tail distribution. Recordings span the globe, are variable length, and are only weakly labeled: a clip's target species doesn't necessarily vocalize throughout.</p>
     </article>
 
     <article class="apple-card">
@@ -60,7 +63,7 @@ _styles: >
     <article class="apple-card">
       <span class="apple-icon">03</span>
       <h3>Transfer Learning with ResNet</h3>
-      <p>ImageNet-pretrained ResNet18, ResNet101, ResNet152, and resnext50_32x4d each had their final layer swapped for a 397-way classifier head, then fine-tuned with Adam (learning rate 0.005, categorical cross-entropy) for 20 epochs — roughly 5–6 hours per model.</p>
+      <p>ImageNet-pretrained ResNet18, ResNet101, ResNet152, and resnext50_32x4d each had their final layer swapped for a 397-way classifier head, then fine-tuned with Adam (learning rate 0.005, categorical cross-entropy) for 20 epochs, roughly 5–6 hours per model.</p>
     </article>
 
     <article class="apple-card">
@@ -93,20 +96,20 @@ _styles: >
   {% include apple/section_head.liquid
       eyebrow="Results"
       title="What actually moved the needle"
-      lead="Comparing four architectures under identical training conditions isolated what mattered — and what didn't."
+      lead="Comparing four architectures under identical training conditions isolated what mattered, and what didn't."
   %}
 
   <div class="apple-cs">
     {% include apple/cs_card.liquid
         label="Model Comparison"
         challenge_title="Which pretrained architecture generalizes best to 397 overlapping, noisy bird calls?"
-        challenge_body="Four ImageNet-pretrained backbones — ResNet18, ResNet101, ResNet152, and resnext50_32x4d — were fine-tuned identically: same Mel-spectrogram input, same 20-epoch schedule, same learning rate, to isolate the effect of architecture alone."
-        solution_body="The smallest model won. ResNet18 reached an average precision of 0.62, ahead of resnext50_32x4d at 0.57. More capacity didn't help here — deeper networks weren't the bottleneck; the audio representation and the long-tail, weakly-labeled dataset were."
+        challenge_body="Four ImageNet-pretrained backbones: ResNet18, ResNet101, ResNet152, and resnext50_32x4d, were fine-tuned identically: same Mel-spectrogram input, same 20-epoch schedule, same learning rate, to isolate the effect of architecture alone."
+        solution_body="The smallest model won. ResNet18 reached an average precision of 0.62, ahead of resnext50_32x4d at 0.57. More capacity didn't help here, deeper networks weren't the bottleneck; the audio representation and the long-tail, weakly-labeled dataset were."
     %}
     {% include apple/cs_card.liquid
         label="Class Imbalance & Weak Labels"
         challenge_title="Can species with only a handful of recordings be classified at all?"
-        challenge_body="Training data follows a steep long-tail distribution capped at 500 recordings for the most common species, and individual clips are only weakly labeled — the target species doesn't necessarily vocalize during every extracted chunk."
+        challenge_body="Training data follows a steep long-tail distribution capped at 500 recordings for the most common species, and individual clips are only weakly labeled, the target species doesn't necessarily vocalize during every extracted chunk."
         solution_body="Segments were extracted at a 7-second sweet spot, balancing memory against how much of a call gets captured, with padding for short clips and random-start sampling for long ones. The project's own conclusion flags better handling of this weak labeling as the most promising lever left to pull."
     %}
   </div>
@@ -114,45 +117,7 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    The on-device side of this project — using the trained model to build a low-power TinyML bird call identification device on a microcontroller — was scoped but ultimately set aside due to time constraints. It remains the most concrete next step: on-sensor inference would cut both the power cost and the privacy concerns of streaming raw audio to the cloud for classification.
+    The on-device side of this project, using the trained model to build a low-power TinyML bird call identification device on a microcontroller, was scoped but ultimately set aside due to time constraints. It remains the most concrete next step: on-sensor inference would cut both the power cost and the privacy concerns of streaming raw audio to the cloud for classification.
   </p>
 </div>
 
-<section class="apple-section">
-  {% include apple/section_head.liquid
-      eyebrow="Gallery"
-      title="Figures"
-  %}
-
-  <div class="apple-gallery">
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/training_samples_per_species.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/training_samples_per_species.jpg" loading="eager" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">Number of Training Samples per Species — a Long-Tail Distribution</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/recording_geo_distribution.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/recording_geo_distribution.jpg" loading="lazy" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">Recording Locations by Species Across the Xeno-canto Dataset</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/audio_waveform_bird_call.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/audio_waveform_bird_call.jpg" loading="lazy" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">Raw Audio Waveform of a Bird Call</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/spectrogram_raw_signal.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/spectrogram_raw_signal.jpg" loading="lazy" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">Spectrogram Representation of the Raw Signal</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/melspectrogram_resolution_comparison.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/melspectrogram_resolution_comparison.jpg" loading="lazy" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">15s, 10s, and 5s Mel-Spectrograms at 64×256 Resolution</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_msc_final_peradeniya/training_validation_f1_precision.jpg" thumb="assets/img/projects/project_msc_final_peradeniya/training_validation_f1_precision.jpg" loading="lazy" category="bird sound figures" %}
-      <figcaption class="apple-shot-caption">Training/Validation F1-Score &amp; Precision — ResNet18, ResNet101, ResNet152, resnext50_32x4d</figcaption>
-    </figure>
-  </div>
-</section>
