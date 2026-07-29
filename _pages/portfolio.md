@@ -17,7 +17,6 @@ display_categories: [Work Experience, Research, Publications, Game Jams, Project
 horizontal: false
 toc:
   sidebar: left
-
 ---
 
 <!-- pages/portfolio.md -->

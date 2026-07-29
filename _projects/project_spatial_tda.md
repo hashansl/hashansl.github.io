@@ -83,6 +83,7 @@ pip install spatial-tda
       <h3>Efficient by Design</h3>
       <p>Adjacency computations are optimized for large datasets, integrate directly with Pandas, GeoPandas, and Gudhi, and support dynamic selection of any numerical attribute for filtering and sorting.</p>
     </article>
+
   </div>
 </section>
 

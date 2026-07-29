@@ -176,7 +176,7 @@ ul.task-list input[type="checkbox"] {
 
   .card-title {
     color: var(--global-text-color);
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   .card-body {
@@ -428,14 +428,14 @@ ul.task-list input[type="checkbox"] {
 
     a {
       img {
-        width: 1.6rem;  // previously 3.2rem
+        width: 1.6rem; // previously 3.2rem
         height: 1.6rem;
         margin-bottom: 0.5rem; // adjusted for balance
       }
 
       svg {
-        width: 1.75rem;   // previously 3.5rem
-        height: 2rem;     // previously 4rem
+        width: 1.75rem; // previously 3.5rem
+        height: 2rem; // previously 4rem
         margin-bottom: 0.25rem;
 
         image {
@@ -1523,13 +1523,15 @@ figure.cover {
 
 .youtube-play-btn {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 64px; height: 64px;
-  background: url('https://img.icons8.com/ios-filled/100/ffffff/play--v1.png') no-repeat center center;
+  width: 64px;
+  height: 64px;
+  background: url("https://img.icons8.com/ios-filled/100/ffffff/play--v1.png") no-repeat center center;
   background-size: 64px 64px;
   opacity: 0.85;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.8));
   pointer-events: none;
 }
 .youtube-thumb-link:hover .youtube-play-btn {

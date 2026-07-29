@@ -88,9 +88,7 @@
       "startDate": "2018-10-01",
       "endDate": "2019-01-31",
       "summary": "",
-      "highlights": [
-        "Developed multiple VBA applications for planning inventory."
-      ]
+      "highlights": ["Developed multiple VBA applications for planning inventory."]
     }
   ],
   "volunteer": [],
@@ -204,14 +202,7 @@
       "name": "Languages",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "R",
-        "Python",
-        "SQL",
-        "Spark",
-        "C/C++",
-        "Java"
-      ]
+      "keywords": ["R", "Python", "SQL", "Spark", "C/C++", "Java"]
     },
     {
       "name": "Statistics & Methods",
@@ -236,41 +227,19 @@
       "name": "Data & Databases",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "SQL & Relational Databases",
-        "Data Extraction / ETL",
-        "Data Cleaning & QA",
-        "REST / Web APIs",
-        "Spark"
-      ]
+      "keywords": ["SQL & Relational Databases", "Data Extraction / ETL", "Data Cleaning & QA", "REST / Web APIs", "Spark"]
     },
     {
       "name": "Dashboards & Visualization",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Shiny",
-        "Tableau",
-        "Looker (Data Studio)",
-        "React"
-      ]
+      "keywords": ["Shiny", "Tableau", "Looker (Data Studio)", "React"]
     },
     {
       "name": "Frameworks & Tools",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "PyTorch",
-        "TensorFlow",
-        "scikit-learn",
-        "RStudio",
-        "Git",
-        "GCP",
-        "AWS",
-        "Slurm",
-        "Docker",
-        "PySpark"
-      ]
+      "keywords": ["PyTorch", "TensorFlow", "scikit-learn", "RStudio", "Git", "GCP", "AWS", "Slurm", "Docker", "PySpark"]
     }
   ],
   "languages": [

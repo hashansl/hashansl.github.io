@@ -4,17 +4,18 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Hashan
-middle_name: 
+middle_name:
 last_name: Fernando
 #contact_note: >
-  # You can even add a little note about which of these is the best way to reach you.
+# You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
 
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website, game development, gameplay programmer, unreal engine, unity, ai in games, video game ai, player modelling, game analytics, player behavior, game research, academic portfolio, game programmer, multiplayer games, procedural generation, steam games, game ai research, information visualization, hci, games user research, commercial games development, indie games, interactive media
- # add your own keywords or leave empty
+keywords:
+  jekyll, jekyll-theme, academic-website, portfolio-website, game development, gameplay programmer, unreal engine, unity, ai in games, video game ai, player modelling, game analytics, player behavior, game research, academic portfolio, game programmer, multiplayer games, procedural generation, steam games, game ai research, information visualization, hci, games user research, commercial games development, indie games, interactive media
+  # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

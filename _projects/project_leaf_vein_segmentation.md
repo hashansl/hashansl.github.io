@@ -73,6 +73,7 @@ _styles: >
       <h3>Postprocessing &amp; Evaluation</h3>
       <p>Predicted tiles are reassembled by their saved grid index into a full-leaf segmentation map, then compared pixel-wise against eight manually labeled test leaves and against a supervised segmentation baseline.</p>
     </article>
+
   </div>
 </section>
 
@@ -157,5 +158,6 @@ _styles: >
       {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_1.png" thumb="assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_1.png" loading="lazy" category="leaf vein figures" %}
       <figcaption class="apple-shot-caption">UC Davis - Full Leaf Segmentation</figcaption>
     </figure>
+
   </div>
 </section>

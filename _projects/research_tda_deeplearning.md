@@ -76,6 +76,7 @@ _styles: >
       <h3>Multi-Channel Classification</h3>
       <p>Every county's per-variable persistence images are stacked into one multi-channel input. An SE-ResNet adaptively weighs each channel to classify the county as high- or low-overdose risk.</p>
     </article>
+
   </div>
 </section>
 
@@ -153,5 +154,6 @@ _styles: >
       {% include image_fancybox.liquid full="/assets/img/projects/research_tda_deeplearning/EP_DISABL_36081_peristence_image.png" thumb="assets/img/projects/research_tda_deeplearning/EP_DISABL_36081_peristence_image.png" loading="lazy" category="tda figures" %}
       <figcaption class="apple-shot-caption">Disability Persistence Image - Queens County, NY</figcaption>
     </figure>
+
   </div>
 </section>

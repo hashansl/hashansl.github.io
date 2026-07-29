@@ -7,11 +7,10 @@
 // ── 1. Design tokens ────────────────────────────────────────────────────────
 
 :root {
-  --apple-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-                "Helvetica Neue", Arial, sans-serif;
+  --apple-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --apple-mono: "SF Mono", ui-monospace, "Cascadia Code", "Fira Code", monospace;
   --apple-accent: #0071e3;
-  --apple-accent-soft: rgba(0, 113, 227, 0.10);
+  --apple-accent-soft: rgba(0, 113, 227, 0.1);
   --apple-surface: #ffffff;
   --apple-surface-alt: #f5f5f7;
   --apple-text: #1d1d1f;
@@ -34,7 +33,7 @@ html[data-theme="dark"] {
   --apple-text-sub: #a1a1a6;
   --apple-border: rgba(255, 255, 255, 0.08);
   --apple-border-strong: rgba(255, 255, 255, 0.14);
-  --apple-shadow: 0 1px 2px rgba(0, 0, 0, 0.50), 0 10px 30px rgba(0, 0, 0, 0.45);
+  --apple-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.45);
   --apple-shadow-hover: 0 2px 6px rgba(0, 0, 0, 0.55), 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
@@ -49,14 +48,20 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: -0.015em;
   font-family: var(--apple-font);
 }
 
 // ── 3. Links ────────────────────────────────────────────────────────────────
 
-a, table.table a {
+a,
+table.table a {
   color: var(--apple-accent);
 
   &:hover {
@@ -93,7 +98,9 @@ html[data-theme="dark"] .navbar {
     letter-spacing: -0.005em;
     color: var(--apple-text);
 
-    &:hover { color: var(--apple-accent); }
+    &:hover {
+      color: var(--apple-accent);
+    }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
@@ -176,9 +183,10 @@ footer.sticky-bottom {
   display: flex;
   flex-direction: column;
   height: 100%;
-  transition: transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              border-color 280ms ease;
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 280ms ease;
 
   .card-title {
     letter-spacing: -0.015em;
@@ -247,7 +255,9 @@ a:hover > .card {
     margin-bottom: 0.2rem;
 
     // Hide the hard <br> so layout is controlled by em { display: block }
-    br { display: none; }
+    br {
+      display: none;
+    }
 
     // Subtitle (genre/type) e.g. "Dark-Fantasy MMORPG"
     em {
@@ -292,7 +302,9 @@ a:hover > .card {
     &:hover {
       text-decoration: none;
 
-      .card-title { color: var(--apple-text); }
+      .card-title {
+        color: var(--apple-text);
+      }
     }
 
     // Animated arrow after card body on hover
@@ -306,7 +318,9 @@ a:hover > .card {
       letter-spacing: -0.003em;
       opacity: 0;
       transform: translateY(4px);
-      transition: opacity 220ms ease, transform 220ms ease;
+      transition:
+        opacity 220ms ease,
+        transform 220ms ease;
     }
 
     &:hover .card::after {
@@ -342,7 +356,8 @@ a:hover > .card {
 .tag-category-list {
   border-bottom: 1px solid var(--apple-border);
 
-  ul li, ul p {
+  ul li,
+  ul p {
     color: var(--apple-text-sub);
     font-size: 0.9375rem;
     letter-spacing: -0.005em;
@@ -350,7 +365,10 @@ a:hover > .card {
     a {
       color: var(--apple-text-sub);
 
-      &:hover { color: var(--apple-accent); text-decoration: none; }
+      &:hover {
+        color: var(--apple-accent);
+        text-decoration: none;
+      }
     }
   }
 }
@@ -361,7 +379,8 @@ a:hover > .card {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
 
-    .post-meta, .post-tags {
+    .post-meta,
+    .post-tags {
       font-size: 0.8125rem;
       color: var(--apple-text-sub);
       letter-spacing: -0.003em;
@@ -372,7 +391,10 @@ a:hover > .card {
       font-weight: 500;
       letter-spacing: -0.01em;
 
-      &:hover { color: var(--apple-accent); text-decoration: none; }
+      &:hover {
+        color: var(--apple-accent);
+        text-decoration: none;
+      }
     }
   }
 }
@@ -413,7 +435,10 @@ a:hover > .card {
   .apple-chip {
     text-decoration: none;
     color: var(--apple-text-sub);
-    transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+    transition:
+      background 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease;
 
     &:hover {
       color: var(--apple-accent);
@@ -428,7 +453,9 @@ a:hover > .card {
     background: var(--apple-accent-soft);
     border-color: transparent;
 
-    &:hover { opacity: 0.8; }
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -439,8 +466,12 @@ a:hover > .card {
   gap: 1.25rem;
   margin-top: 1.5rem;
 
-  @media (max-width: 960px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 580px) { grid-template-columns: 1fr; }
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 // Link wrapper – removes underline, preserves block behaviour
@@ -450,7 +481,9 @@ a:hover > .card {
   height: 100%;
   text-decoration: none;
 
-  &:hover { text-decoration: none; }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // Individual post card
@@ -463,9 +496,10 @@ a:hover > .card {
   border-radius: var(--apple-radius);
   box-shadow: var(--apple-shadow);
   overflow: hidden;
-  transition: transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              border-color 280ms ease;
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 280ms ease;
 
   .blog-card-link:hover & {
     transform: translateY(-4px);
@@ -490,7 +524,9 @@ a:hover > .card {
   display: block;
   transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
 
-  .blog-card-link:hover & { transform: scale(1.03); }
+  .blog-card-link:hover & {
+    transform: scale(1.03);
+  }
 }
 
 // Card body
@@ -529,7 +565,9 @@ a:hover > .card {
   color: var(--apple-text);
   margin: 0 0 0.5rem;
 
-  .blog-card-link:hover & { color: var(--apple-accent); }
+  .blog-card-link:hover & {
+    color: var(--apple-accent);
+  }
 }
 
 .blog-card-desc {
@@ -623,7 +661,9 @@ a:hover > .card {
   max-width: 780px;
   margin: 3rem auto 0;
 
-  h2, h3, h4 {
+  h2,
+  h3,
+  h4 {
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
@@ -636,7 +676,8 @@ a:hover > .card {
     margin-bottom: 1.25rem;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 1.5rem;
     margin-bottom: 1.25rem;
 
@@ -678,7 +719,8 @@ a:hover > .card {
   .apple-post-content {
     padding-inline: 1rem;
 
-    p, li {
+    p,
+    li {
       font-size: 1rem;
       line-height: 1.7;
     }
@@ -798,7 +840,10 @@ a:hover > .card {
       color: var(--apple-text);
       font-weight: 500;
 
-      &:hover { color: var(--apple-accent); text-decoration: none; }
+      &:hover {
+        color: var(--apple-accent);
+        text-decoration: none;
+      }
     }
   }
 }
@@ -809,8 +854,9 @@ figure.cover {
   img {
     border-radius: var(--apple-radius-sm);
     box-shadow: var(--apple-shadow);
-    transition: transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-                box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition:
+      transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+      box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
   &:hover img {
@@ -831,7 +877,10 @@ figure.cover {
 .apple-card,
 .apple-cs-card,
 .apple-two-col-body {
-  em, i { font-style: normal; }
+  em,
+  i {
+    font-style: normal;
+  }
 }
 
 // ── 14. Apple page components ────────────────────────────────────────────────
@@ -847,8 +896,7 @@ figure.cover {
   padding: 3rem 1.25rem 2.5rem;
   text-align: center;
   overflow: hidden;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, var(--apple-accent-soft), transparent 60%),
+  background: radial-gradient(1200px 600px at 50% -10%, var(--apple-accent-soft), transparent 60%),
     linear-gradient(180deg, var(--apple-surface-alt) 0%, var(--apple-surface) 100%);
   border-bottom: 1px solid var(--apple-border);
 }
@@ -956,7 +1004,9 @@ figure.cover {
     margin: 0 0 1rem;
     letter-spacing: -0.005em;
 
-    &:last-child { margin-bottom: 0; }
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     .lead-emphasis {
       color: var(--apple-text);
@@ -1009,8 +1059,12 @@ figure.cover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
 
-  @media (max-width: 960px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 600px) { grid-template-columns: 1fr; }
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apple-card {
@@ -1020,9 +1074,10 @@ figure.cover {
   border: 1px solid var(--apple-border) !important;
   border-radius: var(--apple-radius) !important;
   box-shadow: var(--apple-shadow);
-  transition: transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              border-color 280ms ease;
+  transition:
+    transform 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 280ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 280ms ease;
 
   &:hover {
     transform: translateY(-3px);
@@ -1068,7 +1123,9 @@ figure.cover {
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 
-  @media (max-width: 760px) { grid-template-columns: 1fr; }
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apple-cs-card {
@@ -1090,7 +1147,8 @@ figure.cover {
     margin-bottom: 0.75rem;
 
     .dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       border-radius: 999px;
       background: var(--apple-accent);
     }
@@ -1111,7 +1169,9 @@ figure.cover {
     margin: 0 0 0.75rem;
     letter-spacing: -0.003em;
 
-    &:last-child { margin-bottom: 0; }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .apple-cs-divider {
@@ -1128,7 +1188,9 @@ figure.cover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 
-  @media (max-width: 760px) { grid-template-columns: 1fr; }
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apple-shot {
@@ -1141,15 +1203,19 @@ figure.cover {
   border-radius: var(--apple-radius);
   overflow: hidden;
   box-shadow: var(--apple-shadow);
-  transition: transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
-              box-shadow 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition:
+    transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 320ms cubic-bezier(0.2, 0.7, 0.2, 1);
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: var(--apple-shadow-hover);
   }
 
-  a { display: block; line-height: 0; }
+  a {
+    display: block;
+    line-height: 0;
+  }
 
   img {
     width: 100%;
@@ -1160,7 +1226,9 @@ figure.cover {
     transition: transform 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
   }
 
-  &:hover img { transform: scale(1.02); }
+  &:hover img {
+    transform: scale(1.02);
+  }
 
   .apple-shot-caption {
     margin-top: auto;
@@ -1175,8 +1243,12 @@ figure.cover {
   }
 
   // Undo _base theme styling on figures inside shots
-  figure { margin: 0; }
-  p.text-center { display: none; } // fancybox caption paragraph — replaced by .apple-shot-caption
+  figure {
+    margin: 0;
+  }
+  p.text-center {
+    display: none;
+  } // fancybox caption paragraph — replaced by .apple-shot-caption
 }
 
 // --- Product walkthrough video ---
@@ -1190,7 +1262,10 @@ figure.cover {
   overflow: hidden;
   box-shadow: var(--apple-shadow);
 
-  figure { margin: 0; line-height: 0; }
+  figure {
+    margin: 0;
+    line-height: 0;
+  }
 
   video {
     width: 100%;
@@ -1221,8 +1296,11 @@ figure.cover {
   border-radius: 999px;
   cursor: pointer;
   box-shadow: var(--apple-shadow);
-  transition: transform 200ms ease, box-shadow 200ms ease,
-              color 200ms ease, border-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
 
   svg {
     width: 18px;
@@ -1237,7 +1315,9 @@ figure.cover {
     box-shadow: var(--apple-shadow-hover);
   }
 
-  &:active { transform: translateY(0); }
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 // --- Two-column layout (media + content) ---
@@ -1248,7 +1328,9 @@ figure.cover {
   gap: 2rem;
   margin-bottom: 2.5rem;
 
-  @media (max-width: 768px) { grid-template-columns: 1fr; }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .apple-two-col-media {
@@ -1263,16 +1345,22 @@ figure.cover {
   color: var(--apple-text);
   letter-spacing: -0.005em;
 
-  p { margin-bottom: 0.85rem; }
+  p {
+    margin-bottom: 0.85rem;
+  }
 
   ul {
     padding-left: 1.25rem;
     margin-bottom: 0.85rem;
 
-    li { margin-bottom: 0.35rem; }
+    li {
+      margin-bottom: 0.35rem;
+    }
   }
 
-  strong { color: var(--apple-text); }
+  strong {
+    color: var(--apple-text);
+  }
 }
 
 // --- Video grid ---
@@ -1283,8 +1371,12 @@ figure.cover {
   gap: 1.25rem;
   margin-bottom: 2rem;
 
-  @media (max-width: 768px) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  @media (max-width: 500px) { grid-template-columns: 1fr; }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 
   &.cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1326,7 +1418,9 @@ figure.cover {
   color: var(--apple-accent);
   text-decoration: none;
 
-  &:hover { text-decoration: underline; }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // --- Sample briefing showcase (Telegram light chat preview) ---
@@ -1366,13 +1460,18 @@ figure.cover {
   max-width: 680px;
   margin: 0 auto;
 
-  em, i { font-style: normal; }
+  em,
+  i {
+    font-style: normal;
+  }
 
   a {
     color: #168acd;
     text-decoration: none;
 
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -1448,7 +1547,9 @@ figure.cover {
   background: var(--tg-bubble);
   border-radius: 0 12px 12px 12px;
   color: var(--tg-text);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.06);
 
   &::before {
     content: "";
@@ -1481,7 +1582,9 @@ figure.cover {
     margin: 0 0 7px;
     color: var(--tg-text);
 
-    &:last-child { margin-bottom: 0; }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .telegram-line--head {
@@ -1503,7 +1606,9 @@ figure.cover {
       padding: 0;
       color: var(--tg-text);
 
-      &:last-child { margin-bottom: 0; }
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       p {
         display: inline;
@@ -1524,7 +1629,9 @@ figure.cover {
     color: var(--tg-text);
   }
 
-  em { font-style: normal; }
+  em {
+    font-style: normal;
+  }
 
   code {
     font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace;
@@ -1613,7 +1720,9 @@ figure.cover {
     text-decoration: none !important;
     transition: opacity 200ms ease;
 
-    &:hover { opacity: 0.88; }
+    &:hover {
+      opacity: 0.88;
+    }
   }
 }
 
@@ -1654,7 +1763,10 @@ figure.cover {
   line-height: 1.3;
   text-decoration: none;
 
-  &:hover { color: var(--apple-accent); text-decoration: none; }
+  &:hover {
+    color: var(--apple-accent);
+    text-decoration: none;
+  }
 }
 
 .cv-entry-subtitle {
@@ -1717,11 +1829,22 @@ figure.cover {
   color: var(--apple-text-sub); // overridden per-group by --color variant
 }
 
-.skills-group-name { color: inherit; }
+.skills-group-name {
+  color: inherit;
+}
 
-$head-colors: (blue: #0071e3, purple: #5e5ce6, green: #1a9e3f, orange: #c7600a, pink: #c4003d, teal: #0077a8);
+$head-colors: (
+  blue: #0071e3,
+  purple: #5e5ce6,
+  green: #1a9e3f,
+  orange: #c7600a,
+  pink: #c4003d,
+  teal: #0077a8,
+);
 @each $name, $color in $head-colors {
-  .skills-group-head--#{$name} { color: $color; }
+  .skills-group-head--#{$name} {
+    color: $color;
+  }
 }
 
 .interests-tag-grid {
@@ -1732,17 +1855,41 @@ $head-colors: (blue: #0071e3, purple: #5e5ce6, green: #1a9e3f, orange: #c7600a, 
 // Each variant sets bg, border, and text for both .apple-chip and .apple-pill.
 
 $tag-palette: (
-  blue:   (#0071e3, rgba(0,   113, 227, 0.10), rgba(0,   113, 227, 0.22)),
-  purple: (#5e5ce6, rgba(94,  92,  230, 0.10), rgba(94,  92,  230, 0.22)),
-  green:  (#1a9e3f, rgba(52,  199,  89, 0.10), rgba(52,  199,  89, 0.22)),
-  orange: (#c7600a, rgba(255, 149,   0, 0.10), rgba(255, 149,   0, 0.22)),
-  pink:   (#c4003d, rgba(255,  45,  85, 0.10), rgba(255,  45,  85, 0.22)),
-  teal:   (#0077a8, rgba(90,  200, 250, 0.10), rgba(90,  200, 250, 0.22)),
+  blue: (
+    #0071e3,
+    rgba(0, 113, 227, 0.1),
+    rgba(0, 113, 227, 0.22),
+  ),
+  purple: (
+    #5e5ce6,
+    rgba(94, 92, 230, 0.1),
+    rgba(94, 92, 230, 0.22),
+  ),
+  green: (
+    #1a9e3f,
+    rgba(52, 199, 89, 0.1),
+    rgba(52, 199, 89, 0.22),
+  ),
+  orange: (
+    #c7600a,
+    rgba(255, 149, 0, 0.1),
+    rgba(255, 149, 0, 0.22),
+  ),
+  pink: (
+    #c4003d,
+    rgba(255, 45, 85, 0.1),
+    rgba(255, 45, 85, 0.22),
+  ),
+  teal: (
+    #0077a8,
+    rgba(90, 200, 250, 0.1),
+    rgba(90, 200, 250, 0.22),
+  ),
 );
 
 @each $name, $vals in $tag-palette {
-  $color:  nth($vals, 1);
-  $bg:     nth($vals, 2);
+  $color: nth($vals, 1);
+  $bg: nth($vals, 2);
   $border: nth($vals, 3);
 
   .apple-chip--#{$name},
@@ -1755,8 +1902,8 @@ $tag-palette: (
 
 html[data-theme="dark"] {
   @each $name, $vals in $tag-palette {
-    $color:  nth($vals, 1);
-    $bg:     nth($vals, 2);
+    $color: nth($vals, 1);
+    $bg: nth($vals, 2);
     $border: nth($vals, 3);
 
     .apple-chip--#{$name},
@@ -1827,8 +1974,12 @@ html[data-theme="dark"] {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.45rem;
-  &--ai    { color: #1a9e3f; }
-  &--gamedev { color: #0071e3; }
+  &--ai {
+    color: #1a9e3f;
+  }
+  &--gamedev {
+    color: #0071e3;
+  }
 }
 
 .home-tech-stack--gamedev .apple-tag,

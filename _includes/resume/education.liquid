@@ -5,7 +5,9 @@
       <div class="cv-entry-header">
         <div class="cv-entry-title-group">
           <a href="{{ content.url }}" class="cv-entry-title">{{ content.studyType }}</a>
-          {% if content.area %}<span class="cv-entry-subtitle">{{ content.area }}</span>{% endif %}
+          {% if content.area -%}
+            <span class="cv-entry-subtitle">{{ content.area }}</span>
+          {%- endif %}
         </div>
         {% if content.startDate and content.startDate != '' %}
           {% assign startYear = content.startDate | split: '-' | first %}
@@ -15,9 +17,12 @@
       </div>
       <div class="cv-entry-body">
         <span class="cv-entry-institution">
-          {{ content.institution }}{% if content.location %} · {{ content.location }}{% endif %}
+          {{ content.institution -}}
+          {%- if content.location %} · {{ content.location }}{% endif %}
         </span>
-        {% if content.score %}<span class="apple-chip apple-chip--blue">{{ content.score }}</span>{% endif %}
+        {% if content.score -%}
+          <span class="apple-chip apple-chip--blue">{{ content.score }}</span>
+        {%- endif %}
       </div>
       {% if content.courses.size > 0 %}
         <div class="apple-tag-grid cv-entry-courses">

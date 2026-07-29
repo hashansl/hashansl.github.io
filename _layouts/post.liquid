@@ -12,14 +12,13 @@ layout: default
 {% endif %}
 
 <div class="post">
-
   <section class="apple-hero apple-post-hero">
     {% if categories != '' %}
-    <span class="apple-eyebrow">{{ page.categories | first }}</span>
+      <span class="apple-eyebrow">{{ page.categories | first }}</span>
     {% endif %}
     <h1 class="apple-title">{{ page.title }}</h1>
     {% if page.description %}
-    <p class="apple-subtitle">{{ page.description }}</p>
+      <p class="apple-subtitle">{{ page.description }}</p>
     {% endif %}
 
     <div class="apple-meta">
@@ -28,52 +27,48 @@ layout: default
         <a href="{{ year | prepend: '/blog/' | relative_url }}" class="apple-pill-link">{{ page.date | date: '%B %d, %Y' }}</a>
       </span>
       {% assign read_time = content | number_of_words | divided_by: 180 | plus: 1 %}
-      <span class="apple-pill">
-        <i class="fa-solid fa-clock fa-xs"></i>&nbsp;{{ read_time }} min read
-      </span>
+      <span class="apple-pill"> <i class="fa-solid fa-clock fa-xs"></i>&nbsp;{{ read_time }} min read </span>
       {% if page.author %}
-      <span class="apple-pill">
-        <i class="fa-solid fa-user fa-xs"></i>&nbsp;{{ page.author }}
-      </span>
+        <span class="apple-pill"> <i class="fa-solid fa-user fa-xs"></i>&nbsp;{{ page.author }} </span>
       {% endif %}
     </div>
 
     {% if tags != '' %}
-    <div class="apple-tech">
-      {% for tag in page.tags %}
-        <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}" class="apple-chip">#{{ tag }}</a>
-      {% endfor %}
-    </div>
+      <div class="apple-tech">
+        {% for tag in page.tags %}
+          <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}" class="apple-chip">#{{ tag }}</a>
+        {% endfor %}
+      </div>
     {% endif %}
   </section>
 
   {% if page.toc and page.toc.sidebar %}
     <div class="toc-sidebar-layout">
-    <div class="row">
-      {% if page.toc.sidebar == 'right' %}
-        <div class="col-sm-10">
-          <article class="post-content apple-post-content">
-            <div id="markdown-content">
-              {{ content }}
-            </div>
-          </article>
-        </div>
-        <div class="col-sm-2">
-          <nav id="toc-sidebar" class="sticky-top"></nav>
-        </div>
-      {% else %}
-        <div class="col-sm-2">
-          <nav id="toc-sidebar" class="sticky-top"></nav>
-        </div>
-        <div class="col-sm-10">
-          <article class="post-content apple-post-content">
-            <div id="markdown-content">
-              {{ content }}
-            </div>
-          </article>
-        </div>
-      {% endif %}
-    </div>
+      <div class="row">
+        {% if page.toc.sidebar == 'right' %}
+          <div class="col-sm-10">
+            <article class="post-content apple-post-content">
+              <div id="markdown-content">
+                {{ content }}
+              </div>
+            </article>
+          </div>
+          <div class="col-sm-2">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+        {% else %}
+          <div class="col-sm-2">
+            <nav id="toc-sidebar" class="sticky-top"></nav>
+          </div>
+          <div class="col-sm-10">
+            <article class="post-content apple-post-content">
+              <div id="markdown-content">
+                {{ content }}
+              </div>
+            </article>
+          </div>
+        {% endif %}
+      </div>
     </div>
   {% else %}
     <article class="post-content apple-post-content">
@@ -112,5 +107,4 @@ layout: default
   {% if site.giscus and page.giscus_comments %}
     {% include giscus.liquid %}
   {% endif %}
-
 </div>

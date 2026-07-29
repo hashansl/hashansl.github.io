@@ -14,7 +14,7 @@ toc:
 
 As a student of Statistics and Data Science, I used to overlook certain topics in Data Structures and Algorithms. To be honest, I never really needed them in my research work, so I let myself believe they weren't relevant. But as I started taking on different kinds of projects, especially ones involving coding challenges and system design, I realized I was missing something important.
 
-One of the concepts I struggled with the most was **recursion**. It felt confusing and even a bit intimidating. I would look at recursive code and wonder, *Where does it end? How does it even work?* So, I ignored it until I couldn't anymore.
+One of the concepts I struggled with the most was **recursion**. It felt confusing and even a bit intimidating. I would look at recursive code and wonder, _Where does it end? How does it even work?_ So, I ignored it until I couldn't anymore.
 
 Eventually, I decided to face it head-on. And when I did, I felt kind of silly… because it wasn't as complicated as I had built it up to be.
 
@@ -22,11 +22,11 @@ Eventually, I decided to face it head-on. And when I did, I felt kind of silly�
 
 ## Where it went wrong
 
-The part that always tripped me up was understanding what happens after a function calls itself. I couldn't wrap my head around the idea that the code *after* the recursive call still gets executed—*but only after* the function starts returning.
+The part that always tripped me up was understanding what happens after a function calls itself. I couldn't wrap my head around the idea that the code _after_ the recursive call still gets executed—_but only after_ the function starts returning.
 
 Back then, I had this image in my mind that recursion just keeps going deeper and deeper, never to return. So I gave up. But what I didn't grasp was the power of the **base case**—that small but crucial condition that stops the recursion from going on forever.
 
-Once I truly understood that each recursive call pauses and stacks up, waiting for the one below it to finish, it clicked. Everything after the recursive call *does* run—just in reverse order as the call stack unwinds. It was like watching a row of dominoes fall… and then suddenly realizing they were being picked up in reverse.
+Once I truly understood that each recursive call pauses and stacks up, waiting for the one below it to finish, it clicked. Everything after the recursive call _does_ run—just in reverse order as the call stack unwinds. It was like watching a row of dominoes fall… and then suddenly realizing they were being picked up in reverse.
 
 ---
 

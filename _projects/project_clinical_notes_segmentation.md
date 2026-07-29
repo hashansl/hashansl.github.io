@@ -75,6 +75,7 @@ _styles: >
       <h3>Label-Space Clustering</h3>
       <p>Segment titles are grouped by average embedding similarity using Hierarchical Agglomerative Clustering (k=72, chosen via silhouette score) and the TDA Mapper algorithm, which builds a network directly from the embedding space.</p>
     </article>
+
   </div>
 </section>
 

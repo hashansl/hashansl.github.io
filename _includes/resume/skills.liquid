@@ -1,4 +1,4 @@
-{% assign chip_colors = "blue,purple,green,orange,pink,teal" | split: "," %}
+{% assign chip_colors = 'blue,purple,green,orange,pink,teal' | split: ',' %}
 <div class="skills-tag-layout">
   {% for content in data[1] %}
     {% assign cidx = forloop.index0 | modulo: 6 %}

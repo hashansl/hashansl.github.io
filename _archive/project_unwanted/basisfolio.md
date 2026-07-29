@@ -59,6 +59,7 @@ _styles: >
       <h3>AI Assistance Across the App</h3>
       <p>AI is integrated into trade suggestions, report analysis, news summarization, and the advisor chat. The advisor can use portfolio context, report outputs, watchlist data, conversation history, model selection, and stored memories rather than answering in isolation.</p>
     </article>
+
   </div>
 </section>
 
@@ -105,6 +106,7 @@ _styles: >
       <h3>Companies, Risk, Watchlist &amp; Wiki</h3>
       <p>Company directory and detail pages combine profile data, quotes, charts, dividends, news, filings, and report outputs. The app also includes realized P&amp;L, risk analysis, categorized watchlists, settings, AI usage tracking, and an internal wiki.</p>
     </article>
+
   </div>
 </section>
 
@@ -367,5 +369,6 @@ _styles: >
       {% include image_fancybox.liquid full="/assets/img/portfolio/basisfolio/basisfolio-settings.png" thumb="assets/img/portfolio/basisfolio/basisfolio-settings.png" loading="lazy" category="screen captures" %}
       <figcaption class="apple-shot-caption">Settings and AI Usage</figcaption>
     </figure>
+
   </div>
 </section>

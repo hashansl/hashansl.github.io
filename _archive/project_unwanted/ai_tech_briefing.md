@@ -300,6 +300,7 @@ _styles: >
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="apple-briefing-wrap">
@@ -407,6 +408,7 @@ _styles: >
         </div>
       </div>
     </div>
+
   </div>
 
   </div>

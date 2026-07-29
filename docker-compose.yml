@@ -21,4 +21,4 @@ services:
     command: ./bin/entry_point.sh
     environment:
       - JEKYLL_ENV=development
-    mem_limit: 4g 
+    mem_limit: 4g

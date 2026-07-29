@@ -20,6 +20,7 @@ pagination:
 {% assign blog_description_size = site.blog_description | size %}
 
 {% if blog_name_size > 0 or blog_description_size > 0 %}
+
 <section class="apple-hero apple-blog-hero">
   <span class="apple-eyebrow">Writing</span>
   <h1 class="apple-title">{{ site.blog_name }}</h1>
@@ -30,18 +31,19 @@ pagination:
 {% endif %}
 
 {% comment %}
-  Only show category chips that actually have ≥1 post; the jekyll-archives
-  plugin doesn't generate archive pages for empty categories, so unlinked chips 404.
+Only show category chips that actually have ≥1 post; the jekyll-archives
+plugin doesn't generate archive pages for empty categories, so unlinked chips 404.
 {% endcomment %}
 {% assign visible_categories = "" | split: "" %}
 {% for category in site.display_categories %}
-  {% assign posts_for_cat = site.categories[category] %}
-  {% if posts_for_cat and posts_for_cat.size > 0 %}
-    {% assign visible_categories = visible_categories | push: category %}
-  {% endif %}
+{% assign posts_for_cat = site.categories[category] %}
+{% if posts_for_cat and posts_for_cat.size > 0 %}
+{% assign visible_categories = visible_categories | push: category %}
+{% endif %}
 {% endfor %}
 
 {% if visible_categories.size > 0 %}
+
 <div class="blog-filter-row">
   {% for category in visible_categories %}
     <a href="{{ category | slugify | prepend: '/blog/category/' | append: '/' | relative_url }}" class="apple-chip apple-chip--category">
@@ -53,6 +55,7 @@ pagination:
 
 {% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}
+
 <div class="apple-section blog-section">
   {% include apple/section_head.liquid eyebrow="Pinned" title="Featured Posts" %}
   <div class="blog-post-grid">
@@ -108,13 +111,14 @@ pagination:
     {% include apple/section_head.liquid eyebrow="All Posts" title="Latest Writing" %}
   {% endif %}
 
-  {% if page.pagination.enabled %}
-    {% assign postlist = paginator.posts %}
-  {% else %}
-    {% assign postlist = site.posts %}
-  {% endif %}
+{% if page.pagination.enabled %}
+{% assign postlist = paginator.posts %}
+{% else %}
+{% assign postlist = site.posts %}
+{% endif %}
 
-  {% if postlist.size > 0 %}
+{% if postlist.size > 0 %}
+
   <div class="blog-post-grid">
     {% for post in postlist %}
     {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}

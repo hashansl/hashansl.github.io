@@ -71,6 +71,7 @@ _styles: >
       <h3>Evaluation</h3>
       <p>Training and validation precision and F1-score were tracked across all four architectures to compare how well each generalized to species it hadn't overfit to, rather than relying on raw accuracy alone in a heavily imbalanced, 397-class setting.</p>
     </article>
+
   </div>
 </section>
 
@@ -120,4 +121,3 @@ _styles: >
     The on-device side of this project, using the trained model to build a low-power TinyML bird call identification device on a microcontroller, was scoped but ultimately set aside due to time constraints. It remains the most concrete next step: on-sensor inference would cut both the power cost and the privacy concerns of streaming raw audio to the cloud for classification.
   </p>
 </div>
-

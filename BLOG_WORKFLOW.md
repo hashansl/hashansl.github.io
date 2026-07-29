@@ -36,14 +36,15 @@ This document covers the full authoring flow for posts on this al-folio Jekyll s
 
 Scaffolds a new post from `_drafts/_template.md`.
 
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `-Title` | yes | — | Post title (will be slugified) |
-| `-Tags` | no | `""` | Space-separated tags e.g. `"ai python"` |
-| `-Category` | no | `tutorials` | Post category |
-| `-NoDraft` | no | off | Write directly to `_posts/` instead of `_drafts/` |
+| Parameter   | Required | Default     | Description                                       |
+| ----------- | -------- | ----------- | ------------------------------------------------- |
+| `-Title`    | yes      | —           | Post title (will be slugified)                    |
+| `-Tags`     | no       | `""`        | Space-separated tags e.g. `"ai python"`           |
+| `-Category` | no       | `tutorials` | Post category                                     |
+| `-NoDraft`  | no       | off         | Write directly to `_posts/` instead of `_drafts/` |
 
 Creates:
+
 - `_drafts/<slug>.md` (or `_posts/<date>-<slug>.md` with `-NoDraft`)
 - `assets/img/blog/<slug>/` image folder
 
@@ -51,10 +52,10 @@ Creates:
 
 Moves a finished draft into `_posts/` with today's date and updates the `date:` frontmatter field.
 
-| Parameter | Required | Default | Description |
-|-----------|----------|---------|-------------|
-| `-Slug` | yes | — | Filename slug (without `.md`) |
-| `-Date` | no | today | Publish date in `yyyy-MM-dd` format |
+| Parameter | Required | Default | Description                         |
+| --------- | -------- | ------- | ----------------------------------- |
+| `-Slug`   | yes      | —       | Filename slug (without `.md`)       |
+| `-Date`   | no       | today   | Publish date in `yyyy-MM-dd` format |
 
 Prints the post URL after publishing.
 
@@ -66,24 +67,24 @@ These are all the frontmatter fields the blog layout reads:
 
 ```yaml
 ---
-layout: post               # always "post"
+layout: post # always "post"
 title: Your Post Title
 date: 2026-05-19 00:00:00 +0530
 description: One-line summary displayed in post listings (~140 chars)
-tags: tag1 tag2            # space-separated, lowercase, hyphenated
-categories: tutorials      # single category
-thumbnail: assets/img/blog/<slug>/cover.jpg  # shown in post list; ~1200x630 recommended
-featured: false            # true = pinned card at top of /blog/
-giscus_comments: false     # flip to true after Giscus is configured
-related_posts: true        # show related posts at the bottom
+tags: tag1 tag2 # space-separated, lowercase, hyphenated
+categories: tutorials # single category
+thumbnail: assets/img/blog/<slug>/cover.jpg # shown in post list; ~1200x630 recommended
+featured: false # true = pinned card at top of /blog/
+giscus_comments: false # flip to true after Giscus is configured
+related_posts: true # show related posts at the bottom
 toc:
-  beginning: true          # render table of contents at the start
-  sidebar: left            # alternative: sidebar TOC (use instead of beginning)
-redirect: /some/url        # redirect this post URL elsewhere (optional)
-external_source: medium.com  # label for cross-posted content (optional)
+  beginning: true # render table of contents at the start
+  sidebar: left # alternative: sidebar TOC (use instead of beginning)
+redirect: /some/url # redirect this post URL elsewhere (optional)
+external_source: medium.com # label for cross-posted content (optional)
 images:
-  compare: true            # enable image comparison slider
-  slider: true             # enable image slider (Swiper)
+  compare: true # enable image comparison slider
+  slider: true # enable image slider (Swiper)
 ---
 ```
 
@@ -120,33 +121,33 @@ Tags and categories in `display_tags` / `display_categories` in `_config.yml` ar
 
 The `_samples/` folder contains reference posts for every al-folio feature. They are excluded from the build but available to copy from.
 
-| Feature | Reference file |
-|---------|---------------|
-| Math (KaTeX) | `_samples/2015-10-20-math.md` |
-| Code blocks + syntax highlight | `_samples/2015-07-15-code.md` |
-| Code diff view | `_samples/2024-01-27-code-diff.md` |
-| Images (basic) | `_samples/2015-05-15-images.md` |
-| Images (advanced: slider, compare) | `_samples/2024-01-27-advanced-images.md` |
-| Tables | `_samples/2023-03-21-tables.md` |
-| Table of contents | `_samples/2023-03-20-table-of-contents.md` |
-| Sidebar TOC | `_samples/2023-04-25-sidebar-table-of-contents.md` |
-| Custom blockquotes | `_samples/2023-05-12-custom-blockquotes.md` |
-| Diagrams (Mermaid) | `_samples/2021-07-04-diagrams.md` |
-| Charts (Chart.js) | `_samples/2024-01-26-chartjs.md` |
-| Charts (ECharts) | `_samples/2024-01-26-echarts.md` |
-| Charts (Plotly) | `_samples/2025-03-26-plotly.md` |
-| Charts (Vega-Lite) | `_samples/2024-01-27-vega-lite.md` |
-| GeoJSON map | `_samples/2024-01-26-geojson-map.md` |
-| Photo gallery | `_samples/2024-12-04-photo-gallery.md` |
-| Video embed | `_samples/2023-04-24-videos.md` |
-| Audio embed | `_samples/2023-04-25-audios.md` |
-| Tabs | `_samples/2024-05-01-tabs.md` |
-| Pseudocode | `_samples/2024-04-15-pseudocode.md` |
-| Typograms | `_samples/2024-04-29-typograms.md` |
-| TikZ diagrams | `_samples/2023-12-12-tikzjax.md` |
-| Jupyter notebook | `_samples/2023-07-04-jupyter-notebook.md` |
-| Bibliography / citations | `_samples/2023-07-12-post-bibliography.md` |
-| Distill-style post | `_samples/2018-12-22-distill.md` |
+| Feature                            | Reference file                                     |
+| ---------------------------------- | -------------------------------------------------- |
+| Math (KaTeX)                       | `_samples/2015-10-20-math.md`                      |
+| Code blocks + syntax highlight     | `_samples/2015-07-15-code.md`                      |
+| Code diff view                     | `_samples/2024-01-27-code-diff.md`                 |
+| Images (basic)                     | `_samples/2015-05-15-images.md`                    |
+| Images (advanced: slider, compare) | `_samples/2024-01-27-advanced-images.md`           |
+| Tables                             | `_samples/2023-03-21-tables.md`                    |
+| Table of contents                  | `_samples/2023-03-20-table-of-contents.md`         |
+| Sidebar TOC                        | `_samples/2023-04-25-sidebar-table-of-contents.md` |
+| Custom blockquotes                 | `_samples/2023-05-12-custom-blockquotes.md`        |
+| Diagrams (Mermaid)                 | `_samples/2021-07-04-diagrams.md`                  |
+| Charts (Chart.js)                  | `_samples/2024-01-26-chartjs.md`                   |
+| Charts (ECharts)                   | `_samples/2024-01-26-echarts.md`                   |
+| Charts (Plotly)                    | `_samples/2025-03-26-plotly.md`                    |
+| Charts (Vega-Lite)                 | `_samples/2024-01-27-vega-lite.md`                 |
+| GeoJSON map                        | `_samples/2024-01-26-geojson-map.md`               |
+| Photo gallery                      | `_samples/2024-12-04-photo-gallery.md`             |
+| Video embed                        | `_samples/2023-04-24-videos.md`                    |
+| Audio embed                        | `_samples/2023-04-25-audios.md`                    |
+| Tabs                               | `_samples/2024-05-01-tabs.md`                      |
+| Pseudocode                         | `_samples/2024-04-15-pseudocode.md`                |
+| Typograms                          | `_samples/2024-04-29-typograms.md`                 |
+| TikZ diagrams                      | `_samples/2023-12-12-tikzjax.md`                   |
+| Jupyter notebook                   | `_samples/2023-07-04-jupyter-notebook.md`          |
+| Bibliography / citations           | `_samples/2023-07-12-post-bibliography.md`         |
+| Distill-style post                 | `_samples/2018-12-22-distill.md`                   |
 
 ---
 

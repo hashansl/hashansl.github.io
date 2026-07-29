@@ -74,6 +74,7 @@ _styles: >
       <h3>Cloud &amp; Dashboard</h3>
       <p>Google Cloud IoT Core ingests device telemetry over MQTT, Firebase Cloud Functions process it and update real-time state, and BigQuery stores the raw history. Owners see live device status, tamper alerts, and GPS location on a map-based dashboard.</p>
     </article>
+
   </div>
 </section>
 
@@ -139,5 +140,6 @@ _styles: >
       {% include image_fancybox.liquid full="/assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" thumb="assets/img/projects/research_cargo_theft_iot/smart_seal_wrapping_concept.jpg" loading="lazy" category="cargo theft figures" %}
       <figcaption class="apple-shot-caption">Smart Seal Wrapping Around a Steel Bar Stack</figcaption>
     </figure>
+
   </div>
 </section>

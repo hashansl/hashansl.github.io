@@ -12,7 +12,6 @@ _styles: >
   .post > article { margin-top: 0; padding-top: 0; }
 ---
 
-
 {% include apple/hero.liquid
     eyebrow="Independent Research · Associated with Haslam College of Business ·  University of Tennessee, Knoxville ·  USA"
     title="Can We Trust Marketing ROI?"
@@ -66,6 +65,7 @@ _styles: >
       <h3>Calibration</h3>
       <p>Can an experimental lift estimate, injected as a prior, correct an MMM that observational data alone gets wrong?</p>
     </article>
+
   </div>
 </section>
 
@@ -100,6 +100,7 @@ _styles: >
       <h3>Real-World Validation</h3>
       <p>Refit the Bayesian MMM on Meta's public Robyn dataset (208 weeks, five channels), with and without a competitor-sales control, to check whether the synthetic failure pattern replicates on real data.</p>
     </article>
+
   </div>
 </section>
 

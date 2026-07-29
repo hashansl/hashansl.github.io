@@ -25,7 +25,7 @@ When we learn linear algebra for the first time, we might not grasp the intuitiv
 3. **More use cases:** projections, various kinds of decompositions
 4. **Null spaces, bases, dimensions, kernels, etc.**
 5. **Eigenvalues and eigenvectors**
-6. **Finally, we talk about *linear transformations*!**
+6. **Finally, we talk about _linear transformations_!**
 
 This way of learning is not going to give us intuitive understanding. Linear transformations helps us to understand the math behind vectors, matrices and vector-matrix product and all. Knowing how to play with these concepts are important, but it is more important to understand the concepts rather than trying to remember it. We will start to learn in this order:
 
@@ -45,11 +45,11 @@ I am not sure how long it will take me to cover this, but I am going to do it. I
 
 In words: Scaling the input by a scales the output by a. Adding two input produces same output as applying each input individually and adding the two separate outputs.
 
-If we have two related physical properties, for example the speed you can run and the distance you can run. If you double your speed, you will double your distance. If you triple your speed, you triple your distance. This is called a *linear* relationship. The term *linearity* refers to the property of *scaling*.
+If we have two related physical properties, for example the speed you can run and the distance you can run. If you double your speed, you will double your distance. If you triple your speed, you triple your distance. This is called a _linear_ relationship. The term _linearity_ refers to the property of _scaling_.
 
-The term "linear" in everyday use describes something resembling a line ( Latin word *linearis* is "made of lines").. Also, in high school mathematics, the word linear is used to describe a straight line (Geometry, a line), $y = ax+b$. This use of the term linear is not what we are talking about here. A function like this does not satisfy above properties. So the difference is that in linear algebra, *linear* refers to transformations that pass through the origin and preserve the structure of vector addition and scaling, not just to shapes that look like straight lines.
+The term "linear" in everyday use describes something resembling a line ( Latin word _linearis_ is "made of lines").. Also, in high school mathematics, the word linear is used to describe a straight line (Geometry, a line), $y = ax+b$. This use of the term linear is not what we are talking about here. A function like this does not satisfy above properties. So the difference is that in linear algebra, _linear_ refers to transformations that pass through the origin and preserve the structure of vector addition and scaling, not just to shapes that look like straight lines.
 
-What do I mean by "passing through the origin"? In linear algebra, the **origin** corresponds to the **zero vector**. A *linear transformation* T must satisfy:
+What do I mean by "passing through the origin"? In linear algebra, the **origin** corresponds to the **zero vector**. A _linear transformation_ T must satisfy:
 
 $$
 T(0) = 0
@@ -100,7 +100,7 @@ To main perspectives of linear algebra happens in coordinate systems. Therefore 
 
 ## Standard coordinate system
 
-When we say *standard (or xy) coordinate system* in $\mathbb{R}^2$, we mean:
+When we say _standard (or xy) coordinate system_ in $\mathbb{R}^2$, we mean:
 
 - There is a horizontal axis \(x\) and a vertical axis \(y\).
 - The two axes intersect at the origin \((0, 0)\).
