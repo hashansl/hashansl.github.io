@@ -179,6 +179,26 @@
       "summary": "H. Fernando, A. Spannaus, A. Kapadia."
     }
   ],
+  "presentations": [
+    {
+      "title": "Unmeasured Spatial Risk in Disease Modeling: A Topological Data Analysis Approach",
+      "event": "UT-Oak Ridge Innovation Institute's Second Annual Research Symposium",
+      "location": "Knoxville, TN",
+      "date": "2025-02"
+    },
+    {
+      "title": "A Geospatial Study of Opioid Overdose Risk in Washington D.C. Metropolitan Area",
+      "event": "Interdisciplinary Association for Population Health Science Conference",
+      "location": "St. Louis, MO",
+      "date": "2024-09"
+    },
+    {
+      "title": "A Geospatial Study of Opioid Overdose Risk in Diverse Regions",
+      "event": "International Population Data Linkage Network Conference",
+      "location": "Chicago, IL",
+      "date": "2024-09"
+    }
+  ],
   "skills": [
     {
       "name": "Languages",
