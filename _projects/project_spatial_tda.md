@@ -15,9 +15,9 @@ _styles: >
 {% include apple/hero.liquid
     eyebrow="Open-Source Python Package · MIT License"
     title="Spatial-TDA"
-    subtitle="A Python package for extracting topological information from spatial data — adjacency detection, simplicial complex construction, and persistent homology, built on GeoPandas, Gudhi, and Matplotlib."
-    meta="!Open-Source,PyPI & conda-forge,Python"
-    tech="GeoPandas,Gudhi,Matplotlib,Persistent Homology,Simplicial Complexes"
+    subtitle="A Python package for extracting topological information from spatial data: adjacency detection, simplicial complex construction, and persistent homology, built on GeoPandas, Gudhi, and Matplotlib."
+    meta="!Open-Source,PyPI & Python"
+    tech="GeoPandas,Gudhi,Matplotlib,Persistent Homology,Simplicial Complexes, Geographical Adjacency"
 %}
 
 <div class="apple-overview">
@@ -25,17 +25,16 @@ _styles: >
     <strong>Additional Resources:</strong>
     <a href="https://hashansl.github.io/spatial-tda/" target="_blank">Documentation</a> ·
     <a href="https://github.com/hashansl/spatial-tda" target="_blank">Git Repository</a> ·
-    <a href="https://pypi.org/project/spatial-tda" target="_blank">PyPI</a> ·
-    <a href="https://anaconda.org/conda-forge/spatial-tda" target="_blank">conda-forge</a>
+    <a href="https://pypi.org/project/spatial-tda" target="_blank">PyPI</a>
   </p>
 </div>
 
 <div class="apple-overview">
   <p>
-    Every research project I've done on geospatial disease risk — from the BYM-T Bayesian spatial model to the opioid overdose risk classifier — needed the same underlying machinery: turn a map of regions into a network based on adjacency, build a simplicial complex from that network, and compute persistent homology to extract topological summaries. I kept rewriting that pipeline from scratch for each project, so I packaged it into a reusable, general-purpose library instead.
+    Every research project I've done on geospatial disease risk, from the BYM-T Bayesian spatial model to the opioid overdose risk classifier, needed the same underlying machinery: turn a map of regions into a network based on adjacency, build a simplicial complex from that network, and compute persistent homology to extract topological summaries. I kept rewriting that pipeline from scratch for each project, so I packaged it into a reusable, general-purpose library instead.
   </p>
   <p>
-    <strong>Spatial-TDA</strong> extracts topological information from spatial data with minimal code. It handles threshold-based filtering, builds adjacency relationships between regions using Queen contiguity, constructs adjacency simplicial complexes for both filtering-up and filtering-down directions, and computes persistence diagrams and topological summaries — all while preserving the geometric properties and CRS of the original geospatial data. It's built for epidemiology, environmental studies, urban planning, and regional connectivity analysis, and it's published on both PyPI and conda-forge.
+    <strong>Spatial-TDA</strong> extracts topological information from spatial data with minimal code. It handles threshold-based filtering, builds adjacency relationships between regions using Queen contiguity, constructs adjacency simplicial complexes for both filtering-up and filtering-down directions, and computes persistence diagrams and topological summaries; all while preserving the geometric properties and CRS of the original geospatial data. It's built for epidemiology, environmental studies, urban planning, and regional connectivity analysis, and it's published on PyPI.
   </p>
 </div>
 
