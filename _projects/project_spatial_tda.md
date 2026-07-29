@@ -10,6 +10,8 @@ related_publications: false
 _styles: >
   .post-header { display: none; }
   .post > article { margin-top: 0; padding-top: 0; }
+  .apple-gallery { display: flex; justify-content: center; }
+  .apple-gallery .apple-shot { max-width: 480px; width: 100%; }
 ---
 
 {% include apple/hero.liquid
@@ -44,9 +46,9 @@ _styles: >
       title="Get started in one line"
   %}
 
-```bash
+{% highlight bash %}
 pip install spatial-tda
-```
+{% endhighlight %}
 
 </section>
 
@@ -67,7 +69,7 @@ pip install spatial-tda
     <article class="apple-card">
       <span class="apple-icon">02</span>
       <h3>Adjacency &amp; Simplicial Complexes</h3>
-      <p>Adjacency is computed with Queen contiguity — regions are neighbors if they share at least one vertex — then used to build adjacency simplicial complexes for both filtering-up and filtering-down analysis.</p>
+      <p>Adjacency is computed with Queen contiguity; regions are neighbors if they share at least one vertex; then used to build adjacency simplicial complexes for both filtering-up and filtering-down analysis.</p>
     </article>
 
     <article class="apple-card">
@@ -120,13 +122,13 @@ pip install spatial-tda
   {% include apple/section_head.liquid
       eyebrow="Demo"
       title="Adjacency simplex construction"
-      lead="Filtering down on the poverty (EP_POV) variable — the simplicial complex grows as the filtration threshold sweeps through the data."
+      lead="Filtering down on the poverty variable - the simplicial complex grows as the filtration threshold sweeps through the data."
   %}
 
   <div class="apple-gallery">
     <figure class="apple-shot">
       {% include image_fancybox.liquid full="/assets/img/projects/project_spatial_tda/adj_simplex_EP_POV_down.gif" thumb="assets/img/projects/project_spatial_tda/adj_simplex_EP_POV_down.gif" loading="lazy" category="spatial-tda demo" %}
-      <figcaption class="apple-shot-caption">Adjacency Simplicial Complex — Filtering Down on Poverty (EP_POV)</figcaption>
+      <figcaption class="apple-shot-caption">Adjacency Simplicial Complex - Filtering Down on Poverty</figcaption>
     </figure>
   </div>
 </section>

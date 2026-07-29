@@ -3,7 +3,7 @@ layout: page
 title: Segmenting and Classifying Clinical Notes <br> <em>NLP + Topological Data Analysis on MIMIC-III</em>
 img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /clinical-notes-segmentation/
-importance: 3
+importance: 5
 category: Projects
 description: "Data Engineering - University of Tennessee <br> BioClinicalBERT, Doc2Vec, TF-IDF, Mapper (TDA), Hierarchical Clustering"
 related_publications: false

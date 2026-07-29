@@ -3,17 +3,19 @@ layout: page
 title: Unsupervised Leaf Vein Segmentation <br> <em>W-Net for Plant Phenotyping</em>
 img: assets/img/projects/project_leaf_vein_segmentation/project-card.png
 permalink: /leaf-vein-segmentation/
-importance: 5
+importance: 3
 category: Projects
 description: "Deep Learning - University of Tennessee <br> W-Net, Unsupervised Segmentation, PyTorch"
 related_publications: false
 _styles: >
   .post-header { display: none; }
   .post > article { margin-top: 0; padding-top: 0; }
+  .apple-gallery--single { display: flex; justify-content: center; margin-top: 1.5rem; }
+  .apple-gallery--single .apple-shot { max-width: 780px; width: 100%; }
 ---
 
 {% include apple/hero.liquid
-    eyebrow="Bredesen Center for Interdisciplinary Research · University of Tennessee, Knoxville"
+    eyebrow="Deep Learning (COSC 525) · University of Tennessee, Knoxville · USA"
     title="Unsupervised Image Segmentation for Plant Phenotyping"
     subtitle="Training a W-Net to segment leaf veins from over 14,000 leaf scans, without a single hand-labeled pixel."
     meta="!Deep Learning,University of Tennessee,United States"
@@ -22,7 +24,7 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    <strong>Authors:</strong> <strong>Hashan Fernando</strong>, Peter Kruse
+    <strong>Authors:</strong> <strong>Hashan Fernando</strong>, <a href="https://www.linkedin.com/in/peter-kruse/">Peter Kruse</a>
   </p>
   <p>
     <strong>Additional Resources:</strong>
@@ -33,10 +35,10 @@ _styles: >
 
 <div class="apple-overview">
   <p>
-    Plant phenotyping — measuring and characterizing a plant's expressed traits — is a bottleneck in genetic and breeding research precisely because it's so manual. Leaf vein segmentation is a good example: understanding how veins respond to drought or other treatments requires isolating vein pixels from the rest of the leaf, but the deep learning models that do this well are almost all supervised, and hand-labeling veins at the pixel level across thousands of high-resolution leaf scans is exactly the kind of tedious, expensive process phenotyping is trying to escape.
+    Plant phenotyping, measuring and characterizing a plant's expressed traits, is a bottleneck in genetic and breeding research precisely because it's so manual. Leaf vein segmentation is a good example: understanding how veins respond to drought or other treatments requires isolating vein pixels from the rest of the leaf, but the deep learning models that do this well are almost all supervised, and hand-labeling veins at the pixel level across thousands of high-resolution leaf scans is exactly the kind of tedious, expensive process phenotyping is trying to escape.
   </p>
   <p>
-    This project trains a <strong>W-Net</strong> — an unsupervised segmentation architecture that pairs two U-Nets in an encoder-decoder loop — to segment leaf veins with no labeled training data at all. The encoder produces a pixel-wise segmentation map directly from an RGB leaf image; the decoder reconstructs the original image from that map. Training balances two loss functions: soft normalized cut loss, which pushes the encoder toward coherent segment boundaries, and reconstruction loss, which keeps those segments faithful to the original image. We trained and evaluated it on over 14,000 scanned leaf images from a UC Davis plantation, with preliminary testing on an open Ficus Religiosa ("Pimpal") leaf dataset, and compared results against a state-of-the-art supervised vein-segmentation baseline.
+    This project trains a <strong>W-Net</strong>, an unsupervised segmentation architecture that pairs two U-Nets in an encoder-decoder loop,  to segment leaf veins with no labeled training data at all. The encoder produces a pixel-wise segmentation map directly from an RGB leaf image; the decoder reconstructs the original image from that map. Training balances two loss functions: soft normalized cut loss, which pushes the encoder toward coherent segment boundaries, and reconstruction loss, which keeps those segments faithful to the original image. We trained and evaluated it on over 14,000 scanned leaf images from a UC Davis plantation, with preliminary testing on an open Ficus Religiosa ("Pimpal") leaf dataset, and compared results against a state-of-the-art supervised vein-segmentation baseline.
   </p>
 </div>
 
@@ -57,13 +59,13 @@ _styles: >
     <article class="apple-card">
       <span class="apple-icon">02</span>
       <h3>W-Net Architecture</h3>
-      <p>Two symmetric U-Nets — nine convolutional blocks each, with skip connections between matching contractive and expansive layers — form an encoder (U<sub>enc</sub>) that segments and a decoder (U<sub>dec</sub>) that reconstructs from that segmentation.</p>
+      <p>Two symmetric U-Nets, nine convolutional blocks each, with skip connections between matching contractive and expansive layers, form an encoder (U<sub>enc</sub>) that segments and a decoder (U<sub>dec</sub>) that reconstructs from that segmentation.</p>
     </article>
 
     <article class="apple-card">
       <span class="apple-icon">03</span>
       <h3>Dual-Loss Training</h3>
-      <p>Each batch is optimized in two steps: soft normalized cut loss shapes the encoder's segmentation quality, then reconstruction loss (comparing U<sub>dec</sub>'s output to the original tile) is minimized across the full network — no ground-truth labels required either time.</p>
+      <p>Each batch is optimized in two steps: soft normalized cut loss shapes the encoder's segmentation quality, then reconstruction loss (comparing U<sub>dec</sub>'s output to the original tile) is minimized across the full network; no ground-truth labels required either time.</p>
     </article>
 
     <article class="apple-card">
@@ -71,6 +73,20 @@ _styles: >
       <h3>Postprocessing &amp; Evaluation</h3>
       <p>Predicted tiles are reassembled by their saved grid index into a full-leaf segmentation map, then compared pixel-wise against eight manually labeled test leaves and against a supervised segmentation baseline.</p>
     </article>
+  </div>
+</section>
+
+<section class="apple-section">
+  {% include apple/section_head.liquid
+      eyebrow="Pipeline Overview"
+      title="The full pipeline, end to end"
+  %}
+
+  <div class="apple-gallery apple-gallery--single">
+    <figure class="apple-shot">
+      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/project_pipliine.png" thumb="assets/img/projects/project_leaf_vein_segmentation/project_pipliine.png" loading="lazy" category="leaf vein figures" %}
+      <figcaption class="apple-shot-caption">Project Pipeline - From Leaf Scan to Segmentation Map</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -109,14 +125,14 @@ _styles: >
         label="Full-Leaf Generalization"
         challenge_title="Does a model trained on 224×224 tiles hold together when reassembled into a full leaf?"
         challenge_body="Individual tiles trained well in isolation, but a full leaf image requires hundreds of independently-classified tiles to agree with each other at their shared borders."
-        solution_body="The reassembled maps clearly capture major veins and the leaf-body boundary, but tile-to-tile vein continuity breaks down, blank background tiles pick up spurious borders, and discolored or unhealthy leaf regions get segmented as if they were veins — the model was learning texture contrast in general, not veins specifically."
+        solution_body="The reassembled maps clearly capture major veins and the leaf-body boundary, but tile-to-tile vein continuity breaks down, blank background tiles pick up spurious borders, and discolored or unhealthy leaf regions get segmented as if they were veins,  the model was learning texture contrast in general, not veins specifically."
     %}
   </div>
 </section>
 
 <div class="apple-overview">
   <p>
-    We were genuinely impressed that W-Net could learn coherent vein structure with zero labeled pixels — but it isn't yet a replacement for supervised, state-of-the-art vein segmentation. The clearest next steps: incorporating principal curvature analysis to enforce vein continuity, switching to a loss function better suited to tiled high-resolution inputs, and testing whether adjusting <em>k</em> further could help the model separate damaged or discolored leaf regions from true veins instead of confusing the two.
+    We were genuinely impressed that W-Net could learn coherent vein structure with zero labeled pixels, but it isn't yet a replacement for supervised, state-of-the-art vein segmentation. The clearest next steps: incorporating principal curvature analysis to enforce vein continuity, switching to a loss function better suited to tiled high-resolution inputs, and testing whether adjusting <em>k</em> further could help the model separate damaged or discolored leaf regions from true veins instead of confusing the two.
   </p>
 </div>
 
@@ -128,33 +144,18 @@ _styles: >
 
   <div class="apple-gallery">
     <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/wnet_architecture.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/wnet_architecture.jpg" loading="eager" category="leaf vein figures" %}
-      <figcaption class="apple-shot-caption">W-Net Architecture — Two U-Nets in an Encoder-Decoder Loop</figcaption>
+      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/segmented_tiles_k_2_64.png" thumb="assets/img/projects/project_leaf_vein_segmentation/segmented_tiles_k_2_64.png" loading="lazy" category="leaf vein figures" %}
+      <figcaption class="apple-shot-caption">Segmentation Map vs. Actual Tile (k=2 vs. k=64)</figcaption>
     </figure>
 
     <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/segmentation_tile_k2.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/segmentation_tile_k2.jpg" loading="lazy" category="leaf vein figures" %}
-      <figcaption class="apple-shot-caption">Segmentation Map vs. Actual Tile (k=2)</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/segmentation_tile_k64.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/segmentation_tile_k64.jpg" loading="lazy" category="leaf vein figures" %}
-      <figcaption class="apple-shot-caption">Segmentation Map vs. Actual Tile (k=64)</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/full_leaf_segmentation_pimpal.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/full_leaf_segmentation_pimpal.jpg" loading="lazy" category="leaf vein figures" %}
+      {% include image_fancybox.liquid full="//assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_2.png" thumb="/assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_2.png" loading="lazy" category="leaf vein figures" %}
       <figcaption class="apple-shot-caption">Unsupervised Segmentation of a Full Pimpal Leaf</figcaption>
     </figure>
 
     <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/ucdavis_tile_segmentation.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/ucdavis_tile_segmentation.jpg" loading="lazy" category="leaf vein figures" %}
-      <figcaption class="apple-shot-caption">UC Davis Leaf — Single Tile Segmentation</figcaption>
-    </figure>
-
-    <figure class="apple-shot">
-      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation.jpg" thumb="assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation.jpg" loading="lazy" category="leaf vein figures" %}
-      <figcaption class="apple-shot-caption">UC Davis — Full Leaf Segmentation</figcaption>
+      {% include image_fancybox.liquid full="/assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_1.png" thumb="assets/img/projects/project_leaf_vein_segmentation/ucdavis_full_leaf_segmentation_1.png" loading="lazy" category="leaf vein figures" %}
+      <figcaption class="apple-shot-caption">UC Davis - Full Leaf Segmentation</figcaption>
     </figure>
   </div>
 </section>
