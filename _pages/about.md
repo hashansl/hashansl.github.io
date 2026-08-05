@@ -26,13 +26,13 @@ latest_posts:
 ---
 
 <p align="justify">
-I'm a Data Scientist and Researcher with 6+ years of experience applying Bayesian modeling, machine learning, and NLP to marketing, healthcare and public health domains.
+I'm a Data Scientist and Researcher with 6+ years of experience applying machine learning, Bayesian modeling and NLP to healthcare, public health and marketing domains.
 <br>
 <br>
-My research work centers on extracting real-world clinical data, building reproducible pipelines, and translating technical methods into practical solutions. As a Graduate Research Assistant at Oak Ridge National Laboratory, I designed novel algorithms combining topological data analysis with Bayesian spatial modeling to uncover complex spatial patterns in opioid overdose risk across the USA.
+My research focus on unlocking insights from real-world clinical and public health data, developing reproducible data frameworks, and delivering deployable, domain-specific solutions. As a Graduate Research Assistant at Oak Ridge National Laboratory, I designed novel algorithms combining topological data analysis with Bayesian spatial modeling to uncover complex spatial patterns in opioid overdose risk across the USA.
 <br>
 <br>
-I work fluently in R, Python, and high-performance computing environments, with a strong background in applied statistics, deep learning, and large language models. I care about rigor, reproducibility, and turning research into usable, well-documented tools.
+In industry and applied research, I have developed models for marketing modeling, inventory optimization, risk prediction, route optimization, and IoT-based monitoring systems. My work spans academia, labs, and startup environments, where I have learned to balance curiosity with impact.
 <br>
 <br>
 I hold an M.S. in Statistics from the University of Tennessee, Knoxville, an M.S. in Data Science from the University of Peradeniya, and a B.Sc. in Statistics and Operations Research.
@@ -46,14 +46,15 @@ I hold an M.S. in Statistics from the University of Tennessee, Knoxville, an M.S
       <span class="apple-tag">R</span>
       <span class="apple-tag">SQL &amp; Spark</span>
       <span class="apple-tag">PySpark</span>
-      <span class="apple-tag">Machine Learning</span>
       <span class="apple-tag">Data Pipelines &amp; ETL</span>
-      <span class="apple-tag">Shiny / Tableau</span>
+      <span class="apple-tag">Shiny &amp; Tableau</span>
       <span class="apple-tag">NLP &amp; LLMs</span>
+      <span class="apple-tag">Machine Learning</span>
       <span class="apple-tag">Deep Learning</span>
       <span class="apple-tag">PyTorch</span>
       <span class="apple-tag">TensorFlow</span>
-      <span class="apple-tag">scikit-learn</span>
+      <span class="apple-tag">Claude Code</span>
+      <span class="apple-tag">Codex</span>
       <span class="apple-tag">Docker</span>
     </div>
   </div>
@@ -65,13 +66,12 @@ I hold an M.S. in Statistics from the University of Tennessee, Knoxville, an M.S
       <span class="apple-tag apple-tag--gamedev">Causal Inference</span>
       <span class="apple-tag apple-tag--gamedev">Bayesian Modeling</span>
       <span class="apple-tag apple-tag--gamedev">Applied Statistics</span>
-      <span class="apple-tag apple-tag--gamedev">Mixed-Effects Models</span>
       <span class="apple-tag apple-tag--gamedev">MCMC</span>
       <span class="apple-tag apple-tag--gamedev">Spatial Modeling</span>
       <span class="apple-tag apple-tag--gamedev">Topological Data Analysis</span>
       <span class="apple-tag apple-tag--gamedev">Healthcare &amp; Public Health</span>
+      <span class="apple-tag apple-tag--gamedev">Epidemiology</span>
       <span class="apple-tag apple-tag--gamedev">Operations Research</span>
-      <span class="apple-tag apple-tag--gamedev">HPC / Slurm</span>
     </div>
   </div>
 </div>
