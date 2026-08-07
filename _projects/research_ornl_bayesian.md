@@ -25,7 +25,7 @@ _styles: >
   </p>
   <p>
     <strong>Additional Resources:</strong>
-    <em>Paper (manuscript in preparation)</em> ·
+    <a href="/assets/pdf/research_ornl_bayesian/Unmeasured Spatial Risk in Disease Modeling.pdf" target="_blank">Paper (Draft)</a> ·
     <a href="https://github.com/hashansl/spatial-risk-tda" target="_blank">Git Repository</a> ·
     <a href="/assets/pdf/research_ornl_bayesian/meeting.pdf" target="_blank">Presentation</a> ·
     <a href="/assets/pdf/research_ornl_bayesian/poster_ACM_Hashan.pdf" target="_blank">Poster</a> 
